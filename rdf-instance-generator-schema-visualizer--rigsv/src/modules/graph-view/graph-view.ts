@@ -1,23 +1,30 @@
 import * as vscode from "vscode";
+import * as path from 'path';
+import * as fs from 'fs';
+import Graph from "graphology";
+import Sigma from "sigma";
 
-const getWebviewContent = (): string => {
-    return `
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Webview Example</title>
-          </head>
-          <body>
-              <h1>Hello from Webview!</h1>
-              <p>This is an HTML page displayed in a VS Code Webview.</p>
-              <script>
-                  console.log('Webview loaded!');
-              </script>
-          </body>
-          </html>
-      `;
+const getWebviewContent = (webview: vscode.Webview, context: vscode.ExtensionContext): string => {
+
+      // Path to the HTML file
+      const htmlPath = path.join(context.extensionPath, 'src', 'modules', 'graph-view', 'graph.html');
+    
+      // Read the HTML content
+      let htmlContent = fs.readFileSync(htmlPath, 'utf8');
+    
+      // Replace resource paths (e.g., for scripts, styles)
+      htmlContent = htmlContent.replace(
+        /src="([^"]+)"/g,
+        (match, src) => {
+          const resourcePath = vscode.Uri.file(
+            path.join(context.extensionPath, 'src', 'modules', 'graph-view', src)
+          );
+          const resourceUri = webview.asWebviewUri(resourcePath);
+          return `src="${resourceUri}"`;
+        }
+      );
+    
+      return htmlContent;
 };
 
 // detect the focus document if it's RDF
@@ -39,7 +46,7 @@ const getRDFFromFilePicker = async () => {
 const debugRDF = async (filePath: any) => {
     const config = vscode.workspace.getConfiguration("debugMode");
     const defaultDebugMode = config.get("defaultDebugMode");
-    if(!defaultDebugMode) return
+    if (!defaultDebugMode) return;
 
     const document = await vscode.workspace.openTextDocument(filePath);
     const content = document.getText();
@@ -56,12 +63,17 @@ const debugRDF = async (filePath: any) => {
 
 // or if you have a document in memory run it
 
-export const runGraph = vscode.commands.registerCommand(
+
+
+
+export function runGraphTest(context: vscode.ExtensionContext) {
+
+const runGraph = vscode.commands.registerCommand(
     "extension.runGraph",
     async () => {
         vscode.window.showInformationMessage("Graph is loaded");
 
-        let filePath = getRDFFromFocusFile()
+        let filePath = getRDFFromFocusFile();
 
         //debug mode
         debugRDF(filePath);
@@ -72,9 +84,20 @@ export const runGraph = vscode.commands.registerCommand(
             {
                 preserveFocus: true,
                 viewColumn: vscode.ViewColumn.Beside,
+            },
+            {
+                enableScripts: true,
+                retainContextWhenHidden: true,
+                localResourceRoots: [
+                    vscode.Uri.file(path.join(context.extensionPath, 'src', 'modules', 'graph-view')),
+                  ]
             }
         );
 
-        panel.webview.html = getWebviewContent();
+        panel.webview.html = getWebviewContent(panel.webview, context);
     }
 );
+
+context.subscriptions.push(runGraph);
+
+}
