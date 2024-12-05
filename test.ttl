@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix schema: <https://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.org/> 
+
+
+# _:Wesley a foaf:Person  ;
+#         foaf:name "Wesley" ; 
+#         foaf:mbox <mailto:obi.wesley.giovanni@gmail.com> ;
+#         foaf:homepage <https://google.com> ;
+#         foaf:knows foaf:Bob .
+
+# _:Bob a foaf:Person  ;     
+#         foaf:name "Bob" .
+
+
+_:Dev a rdfs:Class ;
+    rdfs:subClassOf ex:Programmer ;
+    rdfs:label "Web Developer" ;
+    rdfs:comment "A programmer specialized in building websites and web applications." .
+    
+ex:Alice rdf:type ex:WebDeveloper ;
+    foaf:name "Alice" ;
+    foaf:mbox <mailto:alice@example.com> ;
+    foaf:homepage <http://alice.example.com> .
