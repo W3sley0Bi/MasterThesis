@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import {subscriptionsPushAll} from "./modules/commands"
-import { runGraphTest } from "./modules/graph-view/graph-view";
+import { openWebView } from "./modules/graph-view/graph-view";
 export function activate(context: vscode.ExtensionContext) {
 
 
@@ -8,7 +8,7 @@ export function activate(context: vscode.ExtensionContext) {
     'Congratulations, your extension "rdf-instance-generator-schema-visualizer--rigsv" is now active!'
   );
 
-  runGraphTest(context)
+  openWebView(context)
   subscriptionsPushAll(context)
   
 

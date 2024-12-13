@@ -4,51 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Graph</title>
-  <!-- <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    #sigma-container {
-      width: 100%;
-      height: 100%;
-    }
-  </style> -->
+  <style>
+  </style> 
   <script src="libs/sigma.min.js"></script>
   <script src="libs/graphology.umd.min.js"></script>
-
+  <script>
+    const vscode = acquireVsCodeApi();
+    window.addEventListener('load', () => {
+    vscode.postMessage({ command: 'webviewReady' });
+});
+  </script>
 </head>
 <body style="background: lightgrey">
-
-    <script>
-        const canvas = document.createElement('canvas');
-        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-        if (!gl) {
-          console.error('WebGL not supported in this environment');
-        } else {
-          console.log('WebGL initialized successfully');
-        }
-      </script>
     
-    <div id="container" style="width: 800px; height: 600px; background: white"></div><!-- TODO the style is important here -->
-  <script>
-    // Create a basic graph
-    try {
-    const graph = new graphology.Graph();
-      graph.addNode("1", { label: "Node 1", x: 0, y: 0, size: 10, color: "blue" });
-      graph.addNode("2", { label: "Node 2", x: 1, y: 1, size: 20, color: "red" });
-      graph.addEdge("1", "2", { size: 5, color: "purple" });
-
-
-    // Instantiate Sigma.js
-    const sigmaInstance = new Sigma(graph, document.getElementById("container"));
-
-    } catch (error) {
-    console.error('Error initializing Sigma.js:', error);
-  }
-  </script>
+    <div id="container" style="width: 800px; height: 600px; background: white"></div>
+    <script type="module" src="graph.js"></script>
 </body>
 </html>
