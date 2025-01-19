@@ -1,125 +1,95 @@
-# @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-# @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-# @prefix dbo: <http://dbpedia.org/ontology/> .
-# @prefix dbr: <http://dbpedia.org/resource/> .
-# @prefix schema: <https://schema.org/> .
-# @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-# @prefix ex: <http://example.org/> .
-
-# # Wesley and Bob as instances of foaf:Person
-# _:Wesley a foaf:Person ;
-#     foaf:name "Wesley" ; 
-#     foaf:mbox <mailto:obi.wesley.giovanni@gmail.com> ;
-#     foaf:homepage <https://google.com> ;
-#     foaf:knows _:Bob .
-
-# _:Bob a foaf:Person ;     
-#     foaf:name "Bob" .
-
-# # Developer class hierarchy and properties
-# _:Dev a rdfs:Class ;
-#     rdfs:subClassOf ex:Programmer ;
-#     rdfs:label "Web Developer" ;
-#     rdfs:comment "A programmer specialized in building websites and web applications." .
-
-# # Alice as an instance of ex:WebDeveloper
-# ex:Alice a _:Dev ;
-#     foaf:name "Alice" ;
-#     foaf:mbox <mailto:alice@example.com> ;
-#     foaf:homepage <http://alice.example.com> .
-
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ex: <http://example.org/> .
 
 # Classes
-ex:Person rdf:type rdfs:Class ;
-    rdfs:label "Person" ;
-    rdfs:comment "A human being" .
+# ex:Person rdf:type rdfs:Class ;
+#     rdfs:label "Person" ;
+#     rdfs:comment "A human being" .
 
-ex:Programmer rdf:type rdfs:Class ;
-    rdfs:subClassOf ex:Person ;
-    rdfs:label "Programmer" ;
-    rdfs:comment "A person who writes code" .
+# ex:Programmer rdf:type rdfs:Class ;
+#     rdfs:subClassOf ex:Person ;
+#     rdfs:label "Programmer" ;
+#     rdfs:comment "A person who writes code" .
 
-ex:Designer rdf:type rdfs:Class ;
-    rdfs:subClassOf ex:Person ;
-    rdfs:label "Designer" ;
-    rdfs:comment "A person who designs things" .
+# ex:Designer rdf:type rdfs:Class ;
+#     rdfs:subClassOf ex:Person ;
+#     rdfs:label "Designer" ;
+#     rdfs:comment "A person who designs things" .
 
-# Individuals
-ex:Alice rdf:type ex:Programmer ;
-    foaf:name "Alice" ;
-    foaf:mbox <mailto:alice@example.com> ;
-    foaf:homepage <http://alice.example.com> ;
-    foaf:knows ex:Bob, ex:Carol ;
-    foaf:interest ex:ArtificialIntelligence, ex:Blockchain .
+# # Individuals
+# ex:Alice rdf:type ex:Programmer ;
+#     foaf:name "Alice" ;
+#     foaf:mbox <mailto:alice@example.com> ;
+#     foaf:homepage <http://alice.example.com> ;
+#     foaf:knows ex:Bob, ex:Carol ;
+#     foaf:interest ex:ArtificialIntelligence, ex:Blockchain .
 
-ex:Bob rdf:type ex:Designer ;
-    foaf:name "Bob" ;
-    foaf:mbox <mailto:bob@example.com> ;
-    foaf:homepage <http://bob.example.com> ;
-    foaf:knows ex:Alice, ex:Carol ;
-    foaf:interest ex:UserExperience, ex:GraphicDesign .
+# ex:Bob rdf:type ex:Designer ;
+#     foaf:name "Bob" ;
+#     foaf:mbox <mailto:bob@example.com> ;
+#     foaf:homepage <http://bob.example.com> ;
+#     foaf:knows ex:Alice, ex:Carol ;
+#     foaf:interest ex:UserExperience, ex:GraphicDesign .
 
-ex:Carol rdf:type ex:Person ;
-    foaf:name "Carol" ;
-    foaf:mbox <mailto:carol@example.com> ;
-    foaf:knows ex:Alice, ex:Bob ;
-    foaf:interest ex:Music, ex:Travel .
+# ex:Carol rdf:type ex:Person ;
+#     foaf:name "Carol" ;
+#     foaf:mbox <mailto:carol@example.com> ;
+#     foaf:knows ex:Alice, ex:Bob ;
+#     foaf:interest ex:Music, ex:Travel .
 
-# Topics of Interest
-ex:ArtificialIntelligence rdf:type rdfs:Class ;
-    rdfs:label "Artificial Intelligence" ;
-    rdfs:comment "The simulation of human intelligence in machines" .
+# # Topics of Interest
+# ex:ArtificialIntelligence rdf:type rdfs:Class ;
+#     rdfs:label "Artificial Intelligence" ;
+#     rdfs:comment "The simulation of human intelligence in machines" .
 
 ex:Blockchain rdf:type rdfs:Class ;
     rdfs:label "Blockchain" ;
     rdfs:comment "A decentralized ledger technology" .
 
-ex:UserExperience rdf:type rdfs:Class ;
-    rdfs:label "User Experience" ;
-    rdfs:comment "The experience of a user with a product or service" .
+# ex:UserExperience rdf:type rdfs:Class ;
+#     rdfs:label "User Experience" ;
+#     rdfs:comment "The experience of a user with a product or service" .
 
-ex:GraphicDesign rdf:type rdfs:Class ;
-    rdfs:label "Graphic Design" ;
-    rdfs:comment "The art of combining text and pictures in advertisements" .
+# ex:GraphicDesign rdf:type rdfs:Class ;
+#     rdfs:label "Graphic Design" ;
+#     rdfs:comment "The art of combining text and pictures in advertisements" .
 
-ex:Music rdf:type rdfs:Class ;
-    rdfs:label "Music" ;
-    rdfs:comment "The art of arranging sounds in time" .
+# ex:Music rdf:type rdfs:Class ;
+#     rdfs:label "Music" ;
+#     rdfs:comment "The art of arranging sounds in time" .
 
-ex:Travel rdf:type rdfs:Class ;
-    rdfs:label "Travel" ;
-    rdfs:comment "The movement of people between distant locations" .
+# ex:Travel rdf:type rdfs:Class ;
+#     rdfs:label "Travel" ;
+#     rdfs:comment "The movement of people between distant locations" .
 
-# Relationships
-ex:Bob ex:worksOn ex:WebsiteDesign, ex:LogoCreation .
-ex:Alice ex:worksOn ex:MachineLearning, ex:SmartContracts .
-ex:Carol ex:worksOn ex:MusicComposition, ex:Photography .
+# # Relationships
+# ex:Bob ex:worksOn ex:WebsiteDesign, ex:LogoCreation .
+# ex:Alice ex:worksOn ex:MachineLearning, ex:SmartContracts .
+# ex:Carol ex:worksOn ex:MusicComposition, ex:Photography .
 
-# Projects
-ex:WebsiteDesign rdf:type rdfs:Class ;
-    rdfs:label "Website Design" ;
-    rdfs:comment "The process of creating websites" .
+# # Projects
+# ex:WebsiteDesign rdf:type rdfs:Class ;
+#     rdfs:label "Website Design" ;
+#     rdfs:comment "The process of creating websites" .
 
-ex:LogoCreation rdf:type rdfs:Class ;
-    rdfs:label "Logo Creation" ;
-    rdfs:comment "The process of creating logos" .
+# ex:LogoCreation rdf:type rdfs:Class ;
+#     rdfs:label "Logo Creation" ;
+#     rdfs:comment "The process of creating logos" .
 
-ex:MachineLearning rdf:type rdfs:Class ;
-    rdfs:label "Machine Learning" ;
-    rdfs:comment "A subset of artificial intelligence" .
+# ex:MachineLearning rdf:type rdfs:Class ;
+#     rdfs:label "Machine Learning" ;
+#     rdfs:comment "A subset of artificial intelligence" .
 
-ex:SmartContracts rdf:type rdfs:Class ;
-    rdfs:label "Smart Contracts" ;
-    rdfs:comment "Self-executing contracts on the blockchain" .
+# ex:SmartContracts rdf:type rdfs:Class ;
+#     rdfs:label "Smart Contracts" ;
+#     rdfs:comment "Self-executing contracts on the blockchain" .
 
-ex:MusicComposition rdf:type rdfs:Class ;
-    rdfs:label "Music Composition" ;
-    rdfs:comment "The process of creating music" .
+# ex:MusicComposition rdf:type rdfs:Class ;
+#     rdfs:label "Music Composition" ;
+#     rdfs:comment "The process of creating music" .
 
-ex:Photography rdf:type rdfs:Class ;
-    rdfs:label "Photography" ;
-    rdfs:comment "The art of capturing images" .
+# ex:Photography rdf:type rdfs:Class ;
+#     rdfs:label "Photography" ;
+#     rdfs:comment "The art of capturing images" .

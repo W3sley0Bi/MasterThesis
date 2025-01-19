@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 import * as path from "path";
 import * as fs from "fs";
 import { getRDFContent } from "../rdf-interpreter/rdf-interpreter";
+import forceAtlas2 from 'graphology-layout-forceatlas2';
 
 const getWebviewContent = (
   webview: vscode.Webview,
@@ -64,7 +65,7 @@ export function openWebView(context: vscode.ExtensionContext) {
             if (rdfContent) {
               panel.webview.postMessage({
                 command: "setRDFContent",
-                content: rdfContent,
+                content: {rdfContent: rdfContent, forceAtlas2: forceAtlas2},
               });
             } else {
               vscode.window.showErrorMessage("No RDF content found");
