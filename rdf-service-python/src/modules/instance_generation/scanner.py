@@ -9,16 +9,17 @@ def detect_classes(graph):
 
     # Detect explicitly defined classes
     for s in graph.subjects(RDF.type, RDFS.Class):
-        classes[s] = create_class_entry(graph, s)
+        classes[s] = create_class_entry(graph, s, declared=True)
 
     # Handle indirectly referenced classes (e.g., via rdfs:subClassOf)
     for s, p, o in graph.triples((None, RDFS.subClassOf, None)):
         if o not in classes:
-            classes[o] = create_class_entry(graph, o)
+            classes[o] = create_class_entry(graph, o, declared=False)
         if s not in classes:
-            classes[s] = create_class_entry(graph, s)
+            classes[s] = create_class_entry(graph, s, declared=False)
 
     return classes
+
 
 
 def detect_properties(graph, classes):
@@ -52,15 +53,20 @@ def ensure_all_classes_covered(graph, classes):
             classes[o] = create_class_entry(graph, o)
 
 
-def create_class_entry(graph, class_uri):
+def create_class_entry(graph, class_uri, declared=False):
+    """
+    Create a dictionary entry for a class, including its properties, annotations, and instances.
+    """
     return {
         "properties": {},
         "annotations": {
             "label": list(graph.objects(class_uri, RDFS.label)),
             "comment": list(graph.objects(class_uri, RDFS.comment))
         },
-        "instances": list(graph.subjects(RDF.type, class_uri))
+        "instances": list(graph.subjects(RDF.type, class_uri)),
+        "declared": declared  # Flag indicating if the class is explicitly declared
     }
+
 
 
 def scan(graph):

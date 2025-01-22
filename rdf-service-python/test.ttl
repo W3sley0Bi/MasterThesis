@@ -2,15 +2,18 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 # Classes
 ex:Employee a rdfs:Class ;
     rdfs:subClassOf foaf:Person ;
     rdfs:label "Employee" ;
     rdfs:comment "A class representing an employee." .
-    
+
+
+
+# Properties
 ex:hasCar a rdf:Property ;
     rdfs:domain ex:Employee ;
     rdfs:range schema:Car ;
@@ -18,18 +21,5 @@ ex:hasCar a rdf:Property ;
     rdfs:comment "A property linking an employee to their car." .
 
 # # Instances
-# ex:John a ex:Manager ;
-#     ex:manages ex:Jane ;
-#     ex:hasCar ex:JohnsCar .
-
-# ex:Jane a ex:Intern ;
-#     ex:hasCar ex:Toyota .
-
-# ex:JohnsCar a schema:Car ;
-#     rdfs:label "John's Car" ;
-#     rdfs:comment "A car owned by John." .
-
-# ex:Toyota a schema:Car ;
-#     rdfs:label "Toyota Corolla" ;
-#     rdfs:comment "A car owned by Jane." .
-
+# ex:John a ex:Employee ;
+#     ex:hasCar ex:TeslaModelS .
