@@ -1,11 +1,9 @@
 from rdflib import Graph, Namespace, RDF, RDFS, Literal, URIRef
 
-# Define Namespaces
 EX = Namespace("http://example.org/")
 YAGO = Namespace("http://yago-knowledge.org/resource/")
 DBPEDIA = Namespace("http://dbpedia.org/resource/")
 
-# Function to Generate RDF Instances from JSON-like Object
 def generate_rdf_instances(data):
     graph = Graph()
     graph.bind("ex", EX)
@@ -13,7 +11,6 @@ def generate_rdf_instances(data):
     graph.bind("dbpedia", DBPEDIA)
     graph.bind("rdfs", RDFS)
     
-    # Ensure data is in a list format for consistent processing
     if isinstance(data, dict):
         data = [data]
     

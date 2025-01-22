@@ -1,0 +1,23 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+
+ex:Employee a rdfs:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "Employee" ;
+    rdfs:comment "A class representing an employee." .
+
+ex:hasCar a rdf:Property ;
+    rdfs:domain ex:Employee ;
+    rdfs:range schema:Car ;
+    rdfs:label "hasCar" ;
+    rdfs:comment "A property representing an employee having a car." .
+
+
+ex:John a ex:Employee ;
+    ex:hasCar ex:car1 .
+

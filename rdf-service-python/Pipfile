@@ -7,6 +7,9 @@ name = "pypi"
 rdflib = "*"
 aiohttp = "*"
 sparqlwrapper = "*"
+pytest = "*"
+ollama = "*"
+bs4 = "*"
 
 [dev-packages]
 
