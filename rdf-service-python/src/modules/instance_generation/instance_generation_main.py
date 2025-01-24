@@ -1,7 +1,8 @@
 from rdflib import Graph, RDF, RDFS, URIRef, Literal
 from scanner import scan
 from vocabularies.find_prop import find_properties
-
+from generate_instance import generate_instance
+import validators 
 
 def save_to_new_ttl_file(original_graph, new_instances_graph, output_file):
     # Combine prefixes and class definitions
@@ -22,6 +23,24 @@ def save_to_new_ttl_file(original_graph, new_instances_graph, output_file):
     print(f"New TTL file saved at: {output_file}")
 
 
+def update_props(props,new_props):
+    for uri, properties in new_props.items():
+        class_key = URIRef(uri)  # Convert the class URI to URIRef
+        if class_key in props:
+            # Add each property to the existing dictionary
+            for prop in properties:
+                property_key = URIRef(prop['property'])
+                if (validators.url(prop['exampleValue']) == True):
+                    object = URIRef(prop['exampleValue'])
+                else:
+                    object = Literal(prop['exampleValue'])
+                props[class_key][property_key] = object
+        else:
+            # Initialize the class with the new properties if it doesn't exist
+            props[class_key] = {URIRef(prop['property']): prop['label'] for prop in properties}
+        
+    return props
+
 def instance_generation_main(turtle_file, output_file):
     
     # TODO: this needs to support multiple rdf formats in the future
@@ -34,15 +53,15 @@ def instance_generation_main(turtle_file, output_file):
 
     # Detect classes and their properties
     classes = scan(original_graph)
-    find_properties(classes)
     property_definitions = {class_uri: details["properties"] for class_uri, details in classes.items()}
-    # Generate instances for each class and add to the new graph
-    # for class_uri in classes:
-    #     instances = generate_instance(class_uri, new_instances_graph, num_instances=1, property_definitions=property_definitions)
-    #     print(f"Generated instances for class {class_uri}: {instances}")
+    undeclared_classes_props = find_properties(classes,10)
+    new_property_definitions = update_props(property_definitions,undeclared_classes_props)
+    
+    for class_uri in classes:
+        instances = generate_instance(class_uri, new_instances_graph, num_instances=10, property_definitions=new_property_definitions)
 
-    # # Save the combined graph (original + new instances) to a new TTL file
-    # save_to_new_ttl_file(original_graph, new_instances_graph, output_file)
+    # Save the combined graph (original + new instances) to a new TTL file
+    save_to_new_ttl_file(original_graph, new_instances_graph, output_file)
 
 
 # TESTING

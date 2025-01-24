@@ -1,17 +1,204 @@
-@prefix ex: <https://example.org/> .
-@prefix foaf1: <https://xmlns.com/foaf/0.1/> .
-@prefix rdf1: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs1: <https://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <https://schema.org/> .
+@prefix ex: <http://example.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:hasCar a rdf1:Property ;
-    rdfs1:comment "A property linking an employee to their car." ;
-    rdfs1:domain ex:Employee ;
-    rdfs1:label "hasCar" ;
-    rdfs1:range schema:Car .
+ex:Employee a rdfs:Class ;
+    rdfs:label "Employee" ;
+    rdfs:comment "A class representing an employee." ;
+    rdfs:subClassOf foaf:Person .
 
-ex:Employee a rdfs1:Class ;
-    rdfs1:comment "A class representing an employee." ;
-    rdfs1:label "Employee" ;
-    rdfs1:subClassOf foaf1:Person .
+ex:Car_Instance1 a schema1:Car ;
+    schema1:name "A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF" ;
+    schema1:url <https://inpn.mnhn.fr/docs-web/docs/download/396404> .
+
+ex:Car_Instance10 a schema1:Car ;
+    schema1:name "A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF" ;
+    schema1:url <https://inpn.mnhn.fr/docs-web/docs/download/396404> .
+
+ex:Car_Instance2 a schema1:Car ;
+    schema1:name "A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF" ;
+    schema1:url <https://inpn.mnhn.fr/docs-web/docs/download/396404> .
+
+ex:Car_Instance3 a schema1:Car ;
+    schema1:name "A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF" ;
+    schema1:url <https://inpn.mnhn.fr/docs-web/docs/download/396404> .
+
+ex:Car_Instance4 a schema1:Car ;
+    schema1:name "A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF" ;
+    schema1:url <https://inpn.mnhn.fr/docs-web/docs/download/396404> .
+
+ex:Car_Instance5 a schema1:Car ;
+    schema1:name "A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF" ;
+    schema1:url <https://inpn.mnhn.fr/docs-web/docs/download/396404> .
+
+ex:Car_Instance6 a schema1:Car ;
+    schema1:name "A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF" ;
+    schema1:url <https://inpn.mnhn.fr/docs-web/docs/download/396404> .
+
+ex:Car_Instance7 a schema1:Car ;
+    schema1:name "A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF" ;
+    schema1:url <https://inpn.mnhn.fr/docs-web/docs/download/396404> .
+
+ex:Car_Instance8 a schema1:Car ;
+    schema1:name "A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF" ;
+    schema1:url <https://inpn.mnhn.fr/docs-web/docs/download/396404> .
+
+ex:Car_Instance9 a schema1:Car ;
+    schema1:name "A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF" ;
+    schema1:url <https://inpn.mnhn.fr/docs-web/docs/download/396404> .
+
+ex:Employee_Instance1 a ex:Employee ;
+    ex:age 0 ;
+    ex:hasCar schema1:Car ;
+    ex:hasProfilePic foaf:Image ;
+    ex:isAtHome false ;
+    ex:ishuman "unknown"^^xsd:string .
+
+ex:Employee_Instance10 a ex:Employee ;
+    ex:age 0 ;
+    ex:hasCar schema1:Car ;
+    ex:hasProfilePic foaf:Image ;
+    ex:isAtHome false ;
+    ex:ishuman "unknown"^^xsd:string .
+
+ex:Employee_Instance2 a ex:Employee ;
+    ex:age 0 ;
+    ex:hasCar schema1:Car ;
+    ex:hasProfilePic foaf:Image ;
+    ex:isAtHome false ;
+    ex:ishuman "unknown"^^xsd:string .
+
+ex:Employee_Instance3 a ex:Employee ;
+    ex:age 0 ;
+    ex:hasCar schema1:Car ;
+    ex:hasProfilePic foaf:Image ;
+    ex:isAtHome false ;
+    ex:ishuman "unknown"^^xsd:string .
+
+ex:Employee_Instance4 a ex:Employee ;
+    ex:age 0 ;
+    ex:hasCar schema1:Car ;
+    ex:hasProfilePic foaf:Image ;
+    ex:isAtHome false ;
+    ex:ishuman "unknown"^^xsd:string .
+
+ex:Employee_Instance5 a ex:Employee ;
+    ex:age 0 ;
+    ex:hasCar schema1:Car ;
+    ex:hasProfilePic foaf:Image ;
+    ex:isAtHome false ;
+    ex:ishuman "unknown"^^xsd:string .
+
+ex:Employee_Instance6 a ex:Employee ;
+    ex:age 0 ;
+    ex:hasCar schema1:Car ;
+    ex:hasProfilePic foaf:Image ;
+    ex:isAtHome false ;
+    ex:ishuman "unknown"^^xsd:string .
+
+ex:Employee_Instance7 a ex:Employee ;
+    ex:age 0 ;
+    ex:hasCar schema1:Car ;
+    ex:hasProfilePic foaf:Image ;
+    ex:isAtHome false ;
+    ex:ishuman "unknown"^^xsd:string .
+
+ex:Employee_Instance8 a ex:Employee ;
+    ex:age 0 ;
+    ex:hasCar schema1:Car ;
+    ex:hasProfilePic foaf:Image ;
+    ex:isAtHome false ;
+    ex:ishuman "unknown"^^xsd:string .
+
+ex:Employee_Instance9 a ex:Employee ;
+    ex:age 0 ;
+    ex:hasCar schema1:Car ;
+    ex:hasProfilePic foaf:Image ;
+    ex:isAtHome false ;
+    ex:ishuman "unknown"^^xsd:string .
+
+ex:Image_Instance1 a foaf:Image ;
+    foaf:name "Zena Sharman" .
+
+ex:Image_Instance10 a foaf:Image ;
+    foaf:name "Zena Sharman" .
+
+ex:Image_Instance2 a foaf:Image ;
+    foaf:name "Zena Sharman" .
+
+ex:Image_Instance3 a foaf:Image ;
+    foaf:name "Zena Sharman" .
+
+ex:Image_Instance4 a foaf:Image ;
+    foaf:name "Zena Sharman" .
+
+ex:Image_Instance5 a foaf:Image ;
+    foaf:name "Zena Sharman" .
+
+ex:Image_Instance6 a foaf:Image ;
+    foaf:name "Zena Sharman" .
+
+ex:Image_Instance7 a foaf:Image ;
+    foaf:name "Zena Sharman" .
+
+ex:Image_Instance8 a foaf:Image ;
+    foaf:name "Zena Sharman" .
+
+ex:Image_Instance9 a foaf:Image ;
+    foaf:name "Zena Sharman" .
+
+ex:Person_Instance1 a foaf:Person ;
+    foaf:name "Aidan Hogan" .
+
+ex:Person_Instance10 a foaf:Person ;
+    foaf:name "Aidan Hogan" .
+
+ex:Person_Instance2 a foaf:Person ;
+    foaf:name "Aidan Hogan" .
+
+ex:Person_Instance3 a foaf:Person ;
+    foaf:name "Aidan Hogan" .
+
+ex:Person_Instance4 a foaf:Person ;
+    foaf:name "Aidan Hogan" .
+
+ex:Person_Instance5 a foaf:Person ;
+    foaf:name "Aidan Hogan" .
+
+ex:Person_Instance6 a foaf:Person ;
+    foaf:name "Aidan Hogan" .
+
+ex:Person_Instance7 a foaf:Person ;
+    foaf:name "Aidan Hogan" .
+
+ex:Person_Instance8 a foaf:Person ;
+    foaf:name "Aidan Hogan" .
+
+ex:Person_Instance9 a foaf:Person ;
+    foaf:name "Aidan Hogan" .
+
+ex:age a rdf:Property ;
+    rdfs:domain ex:Employee ;
+    rdfs:range xsd:integer .
+
+ex:hasCar a rdf:Property ;
+    rdfs:label "hasCar" ;
+    rdfs:comment "A property linking an employee to their car." ;
+    rdfs:domain ex:Employee ;
+    rdfs:range schema1:Car .
+
+ex:hasProfilePic a rdf:Property ;
+    rdfs:domain ex:Employee ;
+    rdfs:range foaf:Image .
+
+ex:isAtHome a rdf:Property ;
+    rdfs:domain ex:Employee ;
+    rdfs:range xsd:boolean .
+
+ex:ishuman a rdf:Property ;
+    rdfs:domain ex:Employee ;
+    rdfs:range xsd:string .
 
