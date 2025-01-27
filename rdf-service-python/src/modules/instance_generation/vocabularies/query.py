@@ -87,6 +87,7 @@ def query(class_term, n, ontology):
         ]
 
         random_results = random.sample(filtered_results, min(n, len(filtered_results)))
+        print(random_results)
         return random_results
         
     except Exception as e:

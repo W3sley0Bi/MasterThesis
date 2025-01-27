@@ -24,6 +24,7 @@ def save_to_new_ttl_file(original_graph, new_instances_graph, output_file):
 
 
 def update_props(props,new_props):
+    # TODO: randomize the selection fo the props. if you have 10 props for 10 instances randomize the selection for each of your instances
     for uri, properties in new_props.items():
         class_key = URIRef(uri)  # Convert the class URI to URIRef
         if class_key in props:
@@ -54,7 +55,7 @@ def instance_generation_main(turtle_file, output_file):
     # Detect classes and their properties
     classes = scan(original_graph)
     property_definitions = {class_uri: details["properties"] for class_uri, details in classes.items()}
-    undeclared_classes_props = find_properties(classes,10)
+    undeclared_classes_props = find_properties(classes,1)
     new_property_definitions = update_props(property_definitions,undeclared_classes_props)
     
     for class_uri in classes:
