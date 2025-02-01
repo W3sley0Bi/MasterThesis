@@ -122,16 +122,6 @@
             "markers": "python_version >= '3.7'",
             "version": "==3.4.1"
         },
-        "gpt4all": {
-            "hashes": [
-                "sha256:41d6de60fe1f9c9a29bcbb585c5eb39083893cf00db0b836de1f2d88e2fbbb17",
-                "sha256:a164674943df732808266e5bf63332fadef95eac802c201b47c7b378e5bd9f45",
-                "sha256:c61e977afa72475c076211fd9b59a88334fc0062615be8c2f7716363a21fbafa"
-            ],
-            "index": "pypi",
-            "markers": "python_version >= '3.8'",
-            "version": "==2.8.2"
-        },
         "idna": {
             "hashes": [
                 "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9",

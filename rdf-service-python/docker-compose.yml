@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  fastapi:
+    container_name: fastapi_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PIPENV_VENV_IN_PROJECT=true
+    # The command is defined in the Dockerfile via CMD.

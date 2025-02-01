@@ -24,7 +24,6 @@ ex:hasProfilePic a rdf:Property ;
     rdfs:domain ex:Employee ;
     rdfs:range foaf:Image .
 
-
 ex:ishuman a rdf:Property ;
     rdfs:domain ex:Employee ;
     rdfs:range xsd:string .
@@ -36,5 +35,4 @@ ex:isAtHome a rdf:Property ;
 ex:age a rdf:Property ;
     rdfs:domain ex:Employee ;
     rdfs:range xsd:integer .
-
 

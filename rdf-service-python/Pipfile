@@ -11,6 +11,7 @@ pytest = "*"
 ollama = "*"
 bs4 = "*"
 validators = "*"
+fastapi = "*"
 
 [dev-packages]
 

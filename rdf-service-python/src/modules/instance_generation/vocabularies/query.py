@@ -60,8 +60,10 @@ def query(class_term, n, ontology):
     
     sparql_endpoint = "https://lov.linkeddata.es/dataset/lov/sparql"
     
-    query = fetchQuery(class_term, ontology)
     
+    query = fetchQuery(class_term, ontology)
+  
+
     # Initialize the SPARQL wrapper
     sparql = SPARQLWrapper(sparql_endpoint)
     sparql.setQuery(query)
@@ -70,6 +72,13 @@ def query(class_term, n, ontology):
     try:
 
         results = sparql.query().convert()
+        
+        
+        # TODO: speed up this process
+        print(results)
+        
+        
+        
         bindings = results["results"]["bindings"]
         structured_results = [
             {
@@ -87,7 +96,6 @@ def query(class_term, n, ontology):
         ]
 
         random_results = random.sample(filtered_results, min(n, len(filtered_results)))
-        print(random_results)
         return random_results
         
     except Exception as e:

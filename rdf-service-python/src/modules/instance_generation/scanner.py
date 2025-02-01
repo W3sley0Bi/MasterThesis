@@ -68,7 +68,6 @@ def create_class_entry(graph, class_uri, declared=False):
     }
 
 
-
 def scan(graph):
     """
     Main function to analyze the RDF graph and detect all classes, properties, and instances.

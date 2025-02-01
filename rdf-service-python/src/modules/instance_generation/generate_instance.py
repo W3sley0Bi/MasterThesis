@@ -57,9 +57,8 @@ def generate_instance(
 
 
 
-    
-    # Skip generating instances for primitive types
-    if (str(class_uri).startswith("http://www.w3.org/2001/XMLSchema#")):
+# Skip generating instances for primitive types
+    if str(class_uri).startswith("http://www.w3.org/2001/XMLSchema#"):
         return []
 
     instances = []
@@ -83,19 +82,35 @@ def generate_instance(
 
         # Add the triple (instance, rdf:type, class)
         graph.add((instance_uri, RDF.type, class_uri))
+
         # Initialize properties for the class
+        
         if property_definitions and class_uri in property_definitions:
+            
             for prop, value in property_definitions[class_uri].items():
                 if isinstance(value, URIRef):
-                    if(str(value).startswith("http://www.w3.org/2001/XMLSchema#")):
+                    # If the value is a URI (e.g., instance of another class), create the instance if needed
+                    if str(value).startswith("http://www.w3.org/2001/XMLSchema#"):
                         graph.add((instance_uri, prop, Literal(xsd[str(value)], datatype=value)))
                     else:
-                        graph.add((instance_uri, prop, value))
+                        sub_instances = generate_instance(
+                            value, graph, num_instances=1, property_definitions=property_definitions,
+                            processed_instances=processed_instances,
+                            initialized_instances=initialized_instances
+                        )
+                        # Ensure at least one instance exists for the referenced class
+                        if sub_instances:
+                            value = sub_instances[0]
+                            graph.add((instance_uri, prop, value))
+                elif str(value) in xsd:
+                    # Add default literal values based on XSD type
+                    graph.add((instance_uri, prop, Literal(xsd[str(value)], datatype=URIRef(value))))
                 elif isinstance(value, Literal):
                     graph.add((instance_uri, prop, value))
                 else:
                     raise ValueError(f"Unsupported value type: {type(value)} for property {prop}")
 
+                # Track initialized properties for the instance
                 if instance_uri not in initialized_instances:
                     initialized_instances[instance_uri] = set()
                 initialized_instances[instance_uri].add(prop)
@@ -104,7 +119,3 @@ def generate_instance(
         instances.append(instance_uri)
 
     return instances
-
-
-    
-    

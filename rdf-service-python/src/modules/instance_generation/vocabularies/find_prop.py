@@ -37,6 +37,5 @@ def find_properties(classes,n):
                 # TODO: add xsd
             case _: 
                 print(f"ontology not supported yet: {matches[match]}")
-        
     return results  
 
