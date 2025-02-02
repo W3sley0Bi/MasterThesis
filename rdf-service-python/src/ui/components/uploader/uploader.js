@@ -2,7 +2,10 @@ class TurtleFileUploader extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = `
+    
+        const isVSCodeWebView = typeof acquireVsCodeApi === "function";
+    
+        const sharedStyles = `
             <style>
                 :host {
                     font-family: Arial, sans-serif;
@@ -26,7 +29,11 @@ class TurtleFileUploader extends HTMLElement {
                     height: 300px;
                     overflow-y: auto;
                 }
-            </style>
+            </style>`;
+    
+        const webviewContent = `<h2>Visualize a Turtle File (.ttl)</h2>`;
+    
+        const standardContent = `
             <h2>Upload & Visualize a Turtle File (.ttl)</h2>
             <input type="file" id="fileInput" accept=".ttl">
             <br>
@@ -34,12 +41,13 @@ class TurtleFileUploader extends HTMLElement {
             <h3>Raw Turtle RDF:</h3>
             <div id="response">No response yet.</div>
         `;
+    
+        this.shadowRoot.innerHTML = sharedStyles + (isVSCodeWebView ? webviewContent : standardContent);
     }
+    
 
+    
     connectedCallback() {
-
-        // TODO: use check if you are in the browser or in vscode or in IDE
-        console.log(navigator)
         this.shadowRoot.getElementById('uploadBtn').addEventListener('click', () => this.uploadFile());
     }
 
@@ -60,7 +68,7 @@ class TurtleFileUploader extends HTMLElement {
         try {
 
             // fire and forget
-            const response = await fetch("http://0.0.0.0:8000/generate?n=10", {
+            const response = await fetch("http://localhost:8000/generate?n=1", {
                 method: "POST",
                 body: formData
             });

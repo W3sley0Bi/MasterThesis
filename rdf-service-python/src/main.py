@@ -16,6 +16,7 @@ app.add_middleware(
 
 app.mount("/visualizer", StaticFiles(directory="src/ui/components/visualizer"), name="visualizer")
 app.mount("/uploader", StaticFiles(directory="src/ui/components/uploader"), name="uploader")
+app.mount("/visualizer", StaticFiles(directory="src/ui/components/visualizer"), name="style")
 
 # to run the server locally 
 # fastapi dev src/main.py --host 0.0.0.0 --port 8000

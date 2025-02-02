@@ -79,7 +79,6 @@ def update_props(props,new_props):
 
 
 def instance_generation_main(turtle_file,n=2,property_search=False):
-    
     # TODO: this needs to support multiple rdf formats in the future
     original_graph = Graph()
     original_graph.parse(turtle_file, format="turtle")

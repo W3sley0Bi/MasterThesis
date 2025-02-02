@@ -1,82 +1,98 @@
 import * as vscode from "vscode";
-import * as path from "path";
-import * as fs from "fs";
-import { getRDFContent } from "../rdf-interpreter/rdf-interpreter";
-import forceAtlas2 from 'graphology-layout-forceatlas2';
 
-const getWebviewContent = (
-  webview: vscode.Webview,
-  context: vscode.ExtensionContext
-): string => {
-  // Path to the HTML file
-  const htmlPath = path.join(
-    context.extensionPath,
-    "src",
-    "modules",
-    "graph-view",
-    "graph.html"
-  );
+import {getRDFContent} from "../rdf-rw/rdf-rw";
 
-  // Read the HTML content
-  let htmlContent = fs.readFileSync(htmlPath, "utf8");
 
-  // Replace resource paths (e.g., for scripts, styles)
-  htmlContent = htmlContent.replace(/src="([^"]+)"/g, (match, src) => {
-    const resourcePath = vscode.Uri.file(
-      path.join(context.extensionPath, "src", "modules", "graph-view", src)
-    );
-    const resourceUri = webview.asWebviewUri(resourcePath);
-    return `src="${resourceUri}"`;
+export const sendRDFContent = async () => {
+  let rdf = await getRDFContent();
+
+  // Convert text content into a Blob and create a File object
+  const file = new File([rdf], "data.ttl", { type: "text/turtle" });
+
+  // Prepare FormData
+  const formData = new FormData();
+  formData.append("fileUpload", file);
+
+  // Send to the backend
+  const response = await fetch("http://localhost:8000/", {
+      method: "POST",
+      body: formData
   });
 
-  return htmlContent;
+  const result = await response.text();
+  console.log("Server Response:", result);
+  return result;
 };
 
+
+async function getWebviewContent(webview: vscode.Webview, url: string): Promise<string> {
+  try {
+
+    let rawHtml = await sendRDFContent();
+
+    // Define absolute URLs for the backend-served scripts.
+    const visualizerScriptUrl = "http://localhost:8000/visualizer/visualizer.js";
+    const uploaderScriptUrl = "http://localhost:8000/uploader/uploader.js";
+
+    // Replace script src attributes for your backend files with the absolute URLs.
+    rawHtml = rawHtml.replace(
+      /src=["']\/?visualizer\/visualizer\.js["']/g,
+      `src="${visualizerScriptUrl}"`
+    );
+    rawHtml = rawHtml.replace(
+      /src=["']\/?uploader\/uploader\.js["']/g,
+      `src="${uploaderScriptUrl}"`
+    );
+
+    // Update the CSP to allow scripts, styles, fonts, and connections from:
+    // - Your WebView’s own source
+    // - The CDN (https://unpkg.com)
+    // - Your backend (http://localhost:8000)
+    const csp = `
+      default-src 'none';
+      img-src ${webview.cspSource} http:;
+      script-src ${webview.cspSource} 'unsafe-inline' 'unsafe-eval' https://unpkg.com http://localhost:8000;
+      style-src ${webview.cspSource} 'unsafe-inline' https://unpkg.com http://localhost:8000;
+      font-src ${webview.cspSource} https://unpkg.com http://localhost:8000;
+      connect-src ${webview.cspSource} https://unpkg.com http://localhost:8000;
+    `.replace(/\n/g, ''); // Remove newlines to ensure a valid meta tag.
+
+    return `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>RDF Visualizer Demo</title>
+        <meta http-equiv="Content-Security-Policy" content="${csp}">
+      </head>
+      <body>
+        ${rawHtml}
+      </body>
+      </html>
+    `;
+  } catch (error) {
+    console.error("Error fetching HTML:", error);
+    return `<h1>Error loading content</h1><p>${error}</p>`;
+  }
+}
+
 export function openWebView(context: vscode.ExtensionContext) {
-  const runGraph = vscode.commands.registerCommand(
-    "extension.runGraph",
-    async () => {
-      vscode.window.showInformationMessage("Graph is loaded");
+  const runGraph = vscode.commands.registerCommand("extension.runGraph", async () => {
+    vscode.window.showInformationMessage("Graph is loaded");
 
-      let panel = vscode.window.createWebviewPanel(
-        "placeholderRDFFileName",
-        "placeholderRDFFileName",
-        {
-          preserveFocus: true,
-          viewColumn: vscode.ViewColumn.Beside,
-        },
-        {
-          enableScripts: true,
-          retainContextWhenHidden: true,
-          localResourceRoots: [
-            vscode.Uri.file(
-              path.join(context.extensionPath, "src", "modules", "graph-view")
-            ),
-          ],
-        }
-      );
-
-      panel.webview.html = getWebviewContent(panel.webview, context);
-      
-      panel.webview.onDidReceiveMessage(async (message) => {
-        try {
-          if (message.command === "webviewReady") {
-            const rdfContent = await getRDFContent();
-            if (rdfContent) {
-              panel.webview.postMessage({
-                command: "setRDFContent",
-                content: {rdfContent: rdfContent, forceAtlas2: forceAtlas2},
-              });
-            } else {
-              vscode.window.showErrorMessage("No RDF content found");
-            }
-          }
-        } catch (error) {
-          vscode.window.showErrorMessage(`Error loading RDF content: ${error}`);
-        }
-      });
-    }
-  );
+    let panel = vscode.window.createWebviewPanel(
+      "rdfVisualizer",
+      "RDF Visualizer",
+      vscode.ViewColumn.Beside,
+      {
+        enableScripts: true,
+        retainContextWhenHidden: true,
+      }
+    );
+    const endpointUrl = "http://localhost:8000/";
+    const htmlContent = await getWebviewContent(panel.webview, endpointUrl);
+    panel.webview.html = htmlContent;
+  });
 
   context.subscriptions.push(runGraph);
 }
