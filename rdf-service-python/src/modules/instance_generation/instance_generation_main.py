@@ -107,7 +107,6 @@ async def instance_generation_main(file,n=2,property_search=False):
     
     json_dl = rdf_format_json(rdf_data, fileFormatName)
     
-    # TODO: change the name also in the fronted before changing it here. it's not turtle anymore but all the new supported types
     return {"data": rdf_data, "fileName": f"new_rdf{format}", "json_dl": json_dl}
     
 
