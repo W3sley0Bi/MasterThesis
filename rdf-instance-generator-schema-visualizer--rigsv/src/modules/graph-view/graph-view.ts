@@ -3,25 +3,30 @@ import * as vscode from "vscode";
 import {getRDFContent} from "../rdf-rw/rdf-rw";
 
 
+
 export const sendRDFContent = async () => {
-  let rdf = await getRDFContent();
+  let rdf  = await getRDFContent();
 
-  // Convert text content into a Blob and create a File object
-  const file = new File([rdf], "data.ttl", { type: "text/turtle" });
+  console.log(rdf)
+  if(rdf && rdf.mime) {
+    const file = new File([rdf.content], rdf.fileName, { type: rdf.mime });
 
-  // Prepare FormData
   const formData = new FormData();
   formData.append("fileUpload", file);
 
-  // Send to the backend
   const response = await fetch("http://localhost:8000/", {
       method: "POST",
       body: formData
   });
 
   const result = await response.text();
-  console.log("Server Response:", result);
   return result;
+
+}else{
+  //TODO: handle this better
+  return "No RDF content found";
+}
+
 };
 
 

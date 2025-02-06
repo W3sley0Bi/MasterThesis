@@ -35,7 +35,7 @@ class TurtleFileUploader extends HTMLElement {
     
         const standardContent = `
             <h2>Upload & Visualize a Turtle File (.ttl)</h2>
-            <input type="file" id="fileInput" accept=".ttl">
+            <input type="file" id="fileInput">
             <br>
             <button id="uploadBtn">Upload & Visualize</button>
             <h3>Raw Turtle RDF:</h3>
@@ -78,18 +78,20 @@ class TurtleFileUploader extends HTMLElement {
             }
 
             let res = await response.json();
-            let ttlText = res.turtle;
+            let data = res.data;
             let jsonData = res.json_dl; // The data needed for visualization
-            
-            responseDiv.innerText = ttlText;
+            let fileName = res.fileName
 
-            const blob = new Blob([ttlText], { type: "text/turtle" });
+        
+            responseDiv.innerText = data;
+
+            const blob = new Blob([data]);
             const url = URL.createObjectURL(blob);
 
             const a = document.createElement("a");
             a.href = url;
-            a.download = "generated.ttl";
-            a.innerText = "Download generated.ttl";
+            a.download = res.fileName;
+            a.innerText = `Download ${fileName}`;
             a.style.display = "block";
             a.style.marginTop = "10px";
 

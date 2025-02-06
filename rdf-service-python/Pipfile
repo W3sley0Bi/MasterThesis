@@ -12,6 +12,7 @@ ollama = "*"
 bs4 = "*"
 validators = "*"
 fastapi = "*"
+python-magic = "*"
 
 [dev-packages]
 

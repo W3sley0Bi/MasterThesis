@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import mime from "mime-types";
 
 // detect the focus document if it's RDF
 const getRDFFromFocusFile = () => {
@@ -37,13 +38,32 @@ const debugRDF = async (filePath: any) => {
 
 // TODO: or if you have a document in memory run it
 
+
+function getFileName(filePath:any) {
+    // Use Node.js path module if running in a Node environment
+    if (typeof require !== 'undefined') {
+        const path = require('path');
+        return path.basename(filePath);
+    }
+    
+    // Browser-friendly approach
+    return filePath.split('/').pop().split('\\').pop();
+}
+
+
 export const getRDFContent = async() =>{
 
     let filePath = getRDFFromFocusFile();
     //@ts-ignore
+
+    
     let document = await vscode.workspace.openTextDocument(filePath);
+    
     const content = document.getText();
-    return content;
+
+    let fileName = getFileName(filePath);
+
+    return {content: content, fileName : fileName, mime: mime.lookup(fileName)};
 
 };
 

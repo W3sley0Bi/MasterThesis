@@ -1,8 +1,8 @@
 from typing import Union
 import json
 from fastapi import APIRouter, UploadFile, File
-from fastapi.responses import HTMLResponse
-
+from fastapi.responses import HTMLResponse, JSONResponse
+from ..modules.validation.validator import is_valid_rdf
 from ..modules.instance_generation.instance_generation_main import instance_generation_main
 
 
@@ -15,35 +15,48 @@ async def upload_file():
     with open("src/ui/index.html", "r", encoding="utf-8") as file:
         content = file.read()
         
-        # TODO: use the commended code fore vs code since you are not doing a file upload in a normal way but in the IDE
-    rdfs = instance_generation_main("test.ttl") # leave test.tll  so that the user cna se some default values
-    jsondl_string = rdfs["json_dl"].replace('"', '&quot;')
-    content = content.replace('jsonData=""', f'jsonData="{jsondl_string}"')
+    #     # TODO: use the commended code fore vs code since you are not doing a file upload in a normal way but in the IDE
+    # rdfs = await instance_generation_main("test.ttl") # leave test.tll  so that the user cna se some default values
+    # jsondl_string = rdfs["json_dl"].replace('"', '&quot;')
+    # content = content.replace('jsonData=""', f'jsonData="{jsondl_string}"')
     return HTMLResponse(content)
 
 
-# main endpoint for the instance generation
-# the support instances have no properties
-# everything must be declared in the turtle file TODO: add this check. if something is not specifically declared in the turtle file it will not be generated
 
 @router.post("/generate", tags=["users"])
 async def scan_file(file: UploadFile = File(...), n: int = 2, property_search: bool = False):
-    return instance_generation_main(file.file, n, property_search)
+    
+    isValid = await is_valid_rdf(file)
+    if isValid: return await instance_generation_main(file, n, property_search)
+    else: return {"turtle": "File is invalid, please upload one of the following formats: RDF/XML → .rdf or .xml; N3 (Notation3) → .n3; N-Triples → .nt; N-Quads → .nq; Turtle → .ttl; TriX (RDF Triples in XML) → .trix; JSON-LD → .jsonld; HexTuples → .hext"}
+    
 
 
+# FOR EXTENSION ------------------------------------
 
-@router.post("/", response_class=HTMLResponse)
+
+@router.post("/", response_class=HTMLResponse | JSONResponse)
 async def upload_file(fileUpload: UploadFile = File(...), n: int = 2, property_search: bool = False):
 
-    with open("src/ui/index.html", "r", encoding="utf-8") as file:
-        content = file.read()
+    isValid = await is_valid_rdf(fileUpload)
+    if isValid: 
+        with open("src/ui/index.html", "r", encoding="utf-8") as file:
+            content = file.read()
 
-    rdfs = instance_generation_main(fileUpload.file, n, property_search)
-    jsondl_string = rdfs["json_dl"].replace('"', '&quot;')
-    content = content.replace('jsonData=""', f'jsonData="{jsondl_string}"')
-    return HTMLResponse(content)
-
-
+        
+        rdfs = await instance_generation_main(fileUpload, n, property_search)
+        jsondl_string = rdfs["json_dl"].replace('"', '&quot;')
+        content = content.replace('jsonData=""', f'jsonData="{jsondl_string}"')
+        return HTMLResponse(content)
+    else: 
+        return JSONResponse(
+            content={
+                "ERROR": "File is invalid, please upload one of the following formats: RDF/XML → .rdf or .xml; "
+                        "N3 (Notation3) → .n3; N-Triples → .nt; N-Quads → .nq; Turtle → .ttl; "
+                        "TriX (RDF Triples in XML) → .trix; JSON-LD → .jsonld; HexTuples → .hext"
+            },
+            status_code=400
+    )
 #         # 
 # TESTING #         
 #         # 

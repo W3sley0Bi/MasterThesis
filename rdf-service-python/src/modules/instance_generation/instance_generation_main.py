@@ -5,6 +5,7 @@ from .generate_instance import generate_instance
 import validators 
 import io
 from fastapi.responses import StreamingResponse
+from ..validation.validator import getGraph
 
 # OLD FOR TESTING
 # def save_to_new_ttl_file(original_graph, new_instances_graph, output_file):
@@ -26,7 +27,7 @@ from fastapi.responses import StreamingResponse
 #     print(f"New TTL file saved at: {output_file}")
 
 
-def save_to_new_ttl_response(original_graph, new_instances_graph):
+def save_to_new_response(original_graph, new_instances_graph, fileFormatName):
     
     combined_graph = Graph()
 
@@ -42,9 +43,9 @@ def save_to_new_ttl_response(original_graph, new_instances_graph):
         combined_graph.add(triple)
 
     # Serialize the combined graph to a bytes buffer
-    ttl_data = combined_graph.serialize(format="turtle")
+    data = combined_graph.serialize(format=fileFormatName)
     
-    return ttl_data
+    return data
     
     # buffer = io.BytesIO(ttl_data.encode("utf-8"))
 
@@ -78,17 +79,19 @@ def update_props(props,new_props):
 
 
 
-def instance_generation_main(turtle_file,n=2,property_search=False):
-    # TODO: this needs to support multiple rdf formats in the future
-    original_graph = Graph()
-    original_graph.parse(turtle_file, format="turtle")
+async def instance_generation_main(file,n=2,property_search=False):
+
+    or_graph, format, fileFormatName = await getGraph(file)
+
+    if or_graph is None:
+        return None
 
     new_instances_graph = Graph()
-    for prefix, namespace in original_graph.namespace_manager.namespaces():
+    for prefix, namespace in or_graph.namespace_manager.namespaces():
         new_instances_graph.namespace_manager.bind(prefix, namespace)
 
     # Detect classes and their properties
-    classes = scan(original_graph)
+    classes = scan(or_graph)
     property_definitions = {class_uri: details["properties"] for class_uri, details in classes.items()}
     
     if property_search == True :
@@ -100,17 +103,17 @@ def instance_generation_main(turtle_file,n=2,property_search=False):
         for class_uri in classes:
             generate_instance(class_uri, new_instances_graph, num_instances=n, property_definitions=property_definitions)
       
-    rdf_data = save_to_new_ttl_response(original_graph, new_instances_graph) 
+    rdf_data = save_to_new_response(or_graph, new_instances_graph, fileFormatName) 
     
-    json_dl = rdf_format_json(rdf_data)
+    json_dl = rdf_format_json(rdf_data, fileFormatName)
     
-    
-    return {"turtle": rdf_data, "json_dl": json_dl}
+    # TODO: change the name also in the fronted before changing it here. it's not turtle anymore but all the new supported types
+    return {"data": rdf_data, "fileName": f"new_rdf{format}", "json_dl": json_dl}
     
 
-def rdf_format_json(data):
+def rdf_format_json(data, fileFormatName):
     g = Graph()
-    g.parse(data=data, format='turtle')
+    g.parse(data=data, format=fileFormatName)
     json_ld_output = g.serialize(format='json-ld')
     
     

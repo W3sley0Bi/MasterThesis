@@ -1,0 +1,26 @@
+<http://example.org/age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://example.org/isAtHome> <http://www.w3.org/2000/01/rdf-schema#label> "isAtHome" .
+<http://example.org/isAtHome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://example.org/ishuman> <http://www.w3.org/2000/01/rdf-schema#label> "ishuman" .
+<http://example.org/Employee> <http://www.w3.org/2000/01/rdf-schema#label> "Employee" .
+<http://example.org/age> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/Employee> <http://www.w3.org/2000/01/rdf-schema#comment> "A class representing an employee." .
+<http://example.org/hasCar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/Employee> .
+<http://example.org/Employee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/hasCar> <http://www.w3.org/2000/01/rdf-schema#label> "hasCar" .
+<http://example.org/age> <http://www.w3.org/2000/01/rdf-schema#label> "age" .
+<http://example.org/ishuman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://example.org/isAtHome> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/hasCar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://example.org/ishuman> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Employee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.org/hasCar> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking an employee to their car." .
+<http://example.org/hasProfilePic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/Employee> .
+<http://example.org/hasCar> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Car> .
+<http://example.org/hasProfilePic> <http://www.w3.org/2000/01/rdf-schema#label> "hasProfilePic" .
+<http://example.org/ishuman> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/Employee> .
+<http://example.org/hasProfilePic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://example.org/hasProfilePic> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Image> .
+<http://example.org/age> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/Employee> .
+<http://example.org/isAtHome> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/Employee> .
+
