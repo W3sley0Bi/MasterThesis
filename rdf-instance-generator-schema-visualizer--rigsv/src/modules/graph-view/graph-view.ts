@@ -1,8 +1,7 @@
 import * as vscode from "vscode";
+import {envConfig} from "../../utils/envConfig";
 
 import {getRDFContent} from "../rdf-rw/rdf-rw";
-
-
 
 export const sendRDFContent = async () => {
   let rdf  = await getRDFContent();
@@ -14,7 +13,8 @@ export const sendRDFContent = async () => {
   const formData = new FormData();
   formData.append("fileUpload", file);
 
-  const response = await fetch("http://localhost:8000/", {
+
+  const response = await fetch(`${envConfig.serviceEndpoint}`, {
       method: "POST",
       body: formData
   });
@@ -36,8 +36,8 @@ async function getWebviewContent(webview: vscode.Webview, url: string): Promise<
     let rawHtml = await sendRDFContent();
 
     // Define absolute URLs for the backend-served scripts.
-    const visualizerScriptUrl = "http://localhost:8000/visualizer/visualizer.js";
-    const uploaderScriptUrl = "http://localhost:8000/uploader/uploader.js";
+    const visualizerScriptUrl = `${envConfig.serviceEndpoint}/visualizer/visualizer.js`;
+    const uploaderScriptUrl = `${envConfig.serviceEndpoint}/uploader/uploader.js`;
 
     // Replace script src attributes for your backend files with the absolute URLs.
     rawHtml = rawHtml.replace(
@@ -53,13 +53,14 @@ async function getWebviewContent(webview: vscode.Webview, url: string): Promise<
     // - Your WebView’s own source
     // - The CDN (https://unpkg.com)
     // - Your backend (http://localhost:8000)
+    
     const csp = `
       default-src 'none';
       img-src ${webview.cspSource} http:;
-      script-src ${webview.cspSource} 'unsafe-inline' 'unsafe-eval' https://unpkg.com http://localhost:8000;
-      style-src ${webview.cspSource} 'unsafe-inline' https://unpkg.com http://localhost:8000;
-      font-src ${webview.cspSource} https://unpkg.com http://localhost:8000;
-      connect-src ${webview.cspSource} https://unpkg.com http://localhost:8000;
+      script-src ${webview.cspSource} 'unsafe-inline' 'unsafe-eval' https://unpkg.com ${envConfig.serviceEndpoint};
+      style-src ${webview.cspSource} 'unsafe-inline' ${envConfig.serviceEndpoint};
+      font-src ${webview.cspSource} https://unpkg.com ${envConfig.serviceEndpoint};
+      connect-src ${webview.cspSource} https://unpkg.com ${envConfig.serviceEndpoint};
     `.replace(/\n/g, ''); // Remove newlines to ensure a valid meta tag.
 
     return `
@@ -94,9 +95,12 @@ export function openWebView(context: vscode.ExtensionContext) {
         retainContextWhenHidden: true,
       }
     );
-    const endpointUrl = "http://localhost:8000/";
-    const htmlContent = await getWebviewContent(panel.webview, endpointUrl);
-    panel.webview.html = htmlContent;
+
+    if(envConfig.serviceEndpoint) {
+      const htmlContent = await getWebviewContent(panel.webview, envConfig.serviceEndpoint);
+      panel.webview.html = htmlContent;
+    }
+
   });
 
   context.subscriptions.push(runGraph);

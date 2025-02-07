@@ -8,8 +8,11 @@
 <body>
   <h2>Static RDF Graph from with Dynamic Legend, Highlighting & Blurred Text</h2>
 
-  <iframe src="https://localhost:8000/" width="100%" height="600px" frameborder="0"></iframe>
-
+  <iframe src="" width="100%" height="600px" frameborder="0"></iframe>
+  <script type="module">
+    import envConfig from './envConfig.js';
+    document.getElementsByTagName('iframe')[0].src = envConfig.serviceEndpoint;
+  </script>
   <!-- Load vis-network JavaScript library from CDN -->
    <p>hello hello</p>
 </body>

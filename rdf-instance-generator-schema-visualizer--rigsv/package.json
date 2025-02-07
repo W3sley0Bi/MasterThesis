@@ -68,6 +68,7 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "graphology": "^0.25.4",
     "graphology-layout-forceatlas2": "^0.10.1",
     "mime-types": "^2.1.35",

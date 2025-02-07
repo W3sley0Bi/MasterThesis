@@ -31,11 +31,11 @@ class TurtleFileUploader extends HTMLElement {
                 }
             </style>`;
     
-        const webviewContent = `<h2>Visualize a Turtle File (.ttl)</h2>`;
+        const webviewContent = `<h2>Visualize a RDF file</h2>`;
     
         const standardContent = `
-            <h2>Upload & Visualize a Turtle File (.ttl)</h2>
-            <input type="file" id="fileInput">
+            <h2>Upload & Visualize a RDF File </h2>
+            <input type="file" id="fileInput" accept=".ttl, .rdf, .xml, .n3, .jsonld, .nt">
             <br>
             <button id="uploadBtn">Upload & Visualize</button>
             <h3>Raw Turtle RDF:</h3>
@@ -57,7 +57,7 @@ class TurtleFileUploader extends HTMLElement {
         const rdfVisualizer = document.getElementById("rdfVisualizer");
         
         if (fileInput.files.length === 0) {
-            responseDiv.innerHTML = "Please select a .ttl file.";
+            responseDiv.innerHTML = "Please select RDF file.";
             return;
         }
 
@@ -68,7 +68,7 @@ class TurtleFileUploader extends HTMLElement {
         try {
 
             // fire and forget
-            const response = await fetch("http://localhost:8000/generate?n=1", {
+            const response = await fetch("/generate?n=1", {
                 method: "POST",
                 body: formData
             });

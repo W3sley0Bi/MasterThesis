@@ -8,10 +8,10 @@ app.include_router(router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow requests from any origin (use ["http://localhost:5500"] for security)
+    allow_origins=["*"],  
     allow_credentials=True,
-    allow_methods=["*"],  # Allow all HTTP methods
-    allow_headers=["*"],  # Allow all headers
+    allow_methods=["*"], 
+    allow_headers=["*"],  
 )
 
 app.mount("/visualizer", StaticFiles(directory="src/ui/components/visualizer"), name="visualizer")
