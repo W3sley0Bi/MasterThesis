@@ -33,12 +33,7 @@
       {
         "command": "extension.viewGraph",
         "title": "RIGSV view graph"
-      },
-      {
-        "command": "extension.exportGraph",
-        "title": "RIGSV export graph"
       }
-
     ],
     "configuration": {
       "title": "RIGSV - RDF Instance Generator Schema Visualizer",
