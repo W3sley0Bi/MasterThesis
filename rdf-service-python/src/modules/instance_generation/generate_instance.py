@@ -77,13 +77,10 @@ def generate_instance(
             instances.append(instance_uri)
             continue
 
-        # Mark the instance as processed
         processed_instances[instance_uri] = True
 
-        # Add the triple (instance, rdf:type, class)
         graph.add((instance_uri, RDF.type, class_uri))
 
-        # Initialize properties for the class
         
         if property_definitions and class_uri in property_definitions:
             
@@ -94,13 +91,13 @@ def generate_instance(
                         graph.add((instance_uri, prop, Literal(xsd[str(value)], datatype=value)))
                     else:
                         sub_instances = generate_instance(
-                            value, graph, num_instances=1, property_definitions=property_definitions,
+                            value, graph, num_instances=i+1, property_definitions=property_definitions,
                             processed_instances=processed_instances,
                             initialized_instances=initialized_instances
                         )
                         # Ensure at least one instance exists for the referenced class
                         if sub_instances:
-                            value = sub_instances[0]
+                            value = sub_instances[i]
                             graph.add((instance_uri, prop, value))
                 elif str(value) in xsd:
                     # Add default literal values based on XSD type

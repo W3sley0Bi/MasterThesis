@@ -16,9 +16,19 @@ import * as vscode from "vscode";
       const selection = await vscode.window.showQuickPick(
         [
           {
-            label: "$(graph-scatter) Run RDF Graph",
+            label: "$(graph-scatter) Generate RDF Graph",
             description: "Compile RDF and open Graph",
+            command: "extension.viewGraph",
+          },
+          {
+            label: "$(terminal-new) Generate RDF Graph & instances",
+            description: "Compile RDF and open Graph with new instances",
             command: "extension.runGraph",
+          },
+          {
+            label: "$(search-editor-label-icon) Generate RDF Graph & instances with props",
+            description: "Compile RDF and open Graph with new instances and property search",
+            command: "extension.searchProperty",
           },
           {
             label: "$(gear) Extension Settings",

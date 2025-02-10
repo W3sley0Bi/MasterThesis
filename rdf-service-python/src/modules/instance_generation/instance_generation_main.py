@@ -117,3 +117,10 @@ def rdf_format_json(data, fileFormatName):
     
     
     return json_ld_output
+
+
+async def just_view_graph(file):
+    or_graph, format, fileFormatName = await getGraph(file)
+    data = or_graph.serialize(format=fileFormatName)
+    json_dl = rdf_format_json(data, fileFormatName)
+    return {"data": data, "fileName": f"new_rdf{format}", "json_dl": json_dl}

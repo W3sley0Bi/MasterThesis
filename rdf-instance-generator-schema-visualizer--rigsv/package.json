@@ -16,7 +16,11 @@
     "commands": [
       {
         "command": "extension.runGraph",
-        "title": "RIGSV run graph"
+        "title": "RIGSV generate instance & view graph"
+      },
+      {
+        "command": "extension.searchProperty",
+        "title": "RIGSV generate instance with properties"
       },
       {
         "command": "extension.openMenu",
@@ -25,7 +29,16 @@
       {
         "command": "extension.settings",
         "title": "RIGSV settings"
+      },
+      {
+        "command": "extension.viewGraph",
+        "title": "RIGSV view graph"
+      },
+      {
+        "command": "extension.exportGraph",
+        "title": "RIGSV export graph"
       }
+
     ],
     "configuration": {
       "title": "RIGSV - RDF Instance Generator Schema Visualizer",

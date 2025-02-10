@@ -19,7 +19,6 @@ ex:hasCar a rdf:Property ;
     rdfs:label "hasCar" ;
     rdfs:comment "A property linking an employee to their car." .
 
-
 ex:hasProfilePic a rdf:Property ;
     rdfs:domain ex:Employee ;
     rdfs:range foaf:Image .

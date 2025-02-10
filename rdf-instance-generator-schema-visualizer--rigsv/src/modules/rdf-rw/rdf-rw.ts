@@ -17,21 +17,15 @@ const getRDFFromFilePicker = async () => {
 };
 
 //this is type vscode.Uri
-const debugRDF = async (filePath: any) => {
-    const config = vscode.workspace.getConfiguration("debugMode");
-    const defaultDebugMode = config.get("defaultDebugMode");
-    if (!defaultDebugMode) {return;};
-
-    const document = await vscode.workspace.openTextDocument(filePath);
-    const content = document.getText();
+export const editRDF = async (data: string) => {
 
     const newDocument = await vscode.workspace.openTextDocument({
-        language: "tll", // Set language (e.g., "javascript", "json")
-        content: content,
+        content: data,
     });
 
     await vscode.window.showTextDocument(newDocument, {
         viewColumn: vscode.ViewColumn.One,
+        preview: false,
     });
 };
 
@@ -40,13 +34,11 @@ const debugRDF = async (filePath: any) => {
 
 
 function getFileName(filePath:any) {
-    // Use Node.js path module if running in a Node environment
     if (typeof require !== 'undefined') {
         const path = require('path');
         return path.basename(filePath);
     }
     
-    // Browser-friendly approach
     return filePath.split('/').pop().split('\\').pop();
 }
 
