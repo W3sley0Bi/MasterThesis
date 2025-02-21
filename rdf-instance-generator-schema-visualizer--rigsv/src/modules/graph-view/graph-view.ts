@@ -165,6 +165,11 @@ const csp = `
           <script>
             const vscode = acquireVsCodeApi();
             document.addEventListener("DOMContentLoaded", function () {
+
+              document.getElementById("editButton").addEventListener("click", async () => {
+                vscode.postMessage({ command: "editRDF" });
+              });
+
               document.getElementById("exportGraph").addEventListener("click", async () => {
                 function findCanvasElement() {
                   const elements = document.querySelectorAll("*");

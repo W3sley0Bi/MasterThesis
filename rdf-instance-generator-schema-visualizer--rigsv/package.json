@@ -33,6 +33,10 @@
       {
         "command": "extension.viewGraph",
         "title": "RIGSV view graph"
+      },
+      {
+        "command": "extension.editRDF",
+        "title": "RIGSV edit RDF"
       }
     ],
     "configuration": {
