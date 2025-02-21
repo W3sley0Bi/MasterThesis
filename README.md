@@ -19,3 +19,60 @@ a UI that can dynamically adapt to different schemas and data types while remain
 significant challenge. The UI should handle many types of vocabularies and ontologies.
 Addressing this challenge will require regular software/web development knowledge but also a
 deep understanding of the Semantic web and its technologies, like RDFs and SPARQL.
+
+The project has three folders: 
+1. the Master Thesis   
+2. the VSCode extension
+3. the Web Service
+
+## Installation Devs
+To run the app in a development environment, follow these steps:
+
+### Web Service
+
+#### Prerequisites
+- Python 3.11
+- pip 
+- pipenv
+- fastapi
+
+#### Run
+- cd in "rdf-service-python" folder
+- run `fastapi dev src/main.py --host 0.0.0.0 --port 8000`
+
+
+### VSCode Extension
+
+#### Prerequisites
+- VSCode installed
+- Node.js LTS
+- npm
+
+#### Run
+- open and focus the `extension.ts` file
+- press `command + shift + P` and execute `Start Debugging`
+- go the new vscode dev window, press `command + shift + P` and execute `RIGSV view graph`
+- you can also open the menu setting by clicking on `RIGSV options` in the bottom right corner of the vscode dev window
+
+## Installation Users
+
+### Web Service
+
+#### Prerequisites
+- Docker
+
+#### Run
+- cd in "rdf-service-python" folder
+    - run `docker compose up`
+    <!-- - to re build the image and container run `docker-compose up --build -d` -->
+    <!-- - to shut down run `docker compose down`
+    - to log  run `docker-compose logs -f` -->
+
+### VSCode Extension
+
+#### Prerequisites
+- VSCode installed
+
+#### installation in VSCode
+- install the `rdf-instance-generator-schema-visualizer--rigsv-0.0.1.vsix` file like a normal vscode extension (drag and drop in vscode)
+
