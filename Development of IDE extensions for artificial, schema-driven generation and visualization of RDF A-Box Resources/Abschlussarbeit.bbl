@@ -1,0 +1,27 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{RSC{\etalchar{+}}02}
+
+\bibitem[BL]{timwww}
+{\sc Berners-Lee, Tim}: {\em WWW Book (no real book, just an example)}.
+
+\bibitem[Gat]{billgates}
+{\sc Gates, Bill}: {\em no real citate}.
+
+\bibitem[Job]{stevejobs}
+{\sc Jobs, Steve}: {\em no real citate}.
+
+\bibitem[Joh03]{SIPBook}
+{\sc Johnston, Alan~B.}: {\em SIP, understanding the Session Initiation Protocol, Second Edition}.
+\newblock Artech House Publishers, 2003.
+\newblock ISBN: 1580536557.
+
+\bibitem[Pro23]{protege}
+{\sc Protégé}: {\em Protégé: A tool for ontology development and knowledge acquisition}, 2023.
+\newblock \url{https://protege.stanford.edu/}.
+
+\bibitem[RSC{\etalchar{+}}02]{rfcsip}
+{\sc Rosenberg, J.}, {\sc H.~Schulzrinne}, {\sc G.~Camarillo}, {\sc A.~Johnston}, {\sc J.~Peterson}, {\sc R.~Sparks}, {\sc M.~Handley} \btxandlong{}\ {\sc E.~Schooler}: {\em SIP: Session Initiation Protocol}.
+\newblock RFC 3261 (Proposed Standard), \btxmonjunlong{} 2002.
+\newblock Updated by RFCs 3265, 3853, 4320, 4916, 5393.
+
+\end{thebibliography}
