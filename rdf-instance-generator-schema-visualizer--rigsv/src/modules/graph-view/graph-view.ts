@@ -213,21 +213,21 @@ const csp = `
 
 async function inputBox(n: number) {
   // TODO: continue from here
-  let numbeOfInstances = await vscode.window.showInputBox({
+  let numberOfInstances = await vscode.window.showInputBox({
     placeHolder: `${n}`,
     prompt: "Enter the number of instances you want to generate",
   });
-  if (numbeOfInstances === undefined) {
+  if (numberOfInstances === undefined) {
     vscode.window.showErrorMessage("No number of instances provided");
     return;
-  } else if (parseInt(numbeOfInstances) > n) {
+  } else if (parseInt(numberOfInstances) > n) {
     vscode.window.showErrorMessage(
       `number is too big. select a value between 1 and ${n}`
     );
     return inputBox(n);
   }
 
-  return parseInt(numbeOfInstances);
+  return parseInt(numberOfInstances);
 }
 
 

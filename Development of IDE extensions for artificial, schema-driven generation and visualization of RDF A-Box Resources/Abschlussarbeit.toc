@@ -37,32 +37,32 @@
 \contentsline {subsection}{\numberline {3.5.1}Security}{9}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Confidentiality}{9}{subsection.3.5.2}%
 \contentsline {section}{\numberline {3.6}Solution strategy}{9}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Client}{9}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.1}Client}{10}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Server}{12}{subsection.3.6.2}%
-\contentsline {chapter}{\numberline {4}Concept}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Sub-component A}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Sub-component B}{13}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Proposed API}{13}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Layer X}{13}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Interworking of X and Y}{14}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Interface Specification}{14}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Implementation}{15}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Environment}{15}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Project Structure}{15}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Important Implementation Aspects}{16}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Graphical User Interface}{16}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Documentation}{16}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Evaluation}{17}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Test Environment}{17}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Scalability}{17}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Usability}{17}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Performance Measurements}{17}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Conclusion}{19}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Summary}{19}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Dissemination}{19}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Problems Encountered}{19}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Outlook}{19}{section.7.4}%
-\contentsline {chapter}{\nonumberline List of Acronyms}{23}{chapter*.16}%
-\contentsline {chapter}{\nonumberline Bibliography}{25}{chapter*.17}%
-\contentsline {chapter}{\nonumberline Annex}{27}{chapter*.18}%
+\contentsline {chapter}{\numberline {4}Concept}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Sub-component A}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Sub-component B}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Proposed API}{15}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Layer X}{15}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Interworking of X and Y}{16}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Interface Specification}{16}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Implementation}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Environment}{17}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Project Structure}{17}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Important Implementation Aspects}{18}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Graphical User Interface}{18}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Documentation}{18}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Evaluation}{19}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Test Environment}{19}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Scalability}{19}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Usability}{19}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Performance Measurements}{19}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Conclusion}{21}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Summary}{21}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Dissemination}{21}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Problems Encountered}{21}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Outlook}{21}{section.7.4}%
+\contentsline {chapter}{\nonumberline List of Acronyms}{25}{chapter*.17}%
+\contentsline {chapter}{\nonumberline Bibliography}{27}{chapter*.18}%
+\contentsline {chapter}{\nonumberline Annex}{29}{chapter*.19}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

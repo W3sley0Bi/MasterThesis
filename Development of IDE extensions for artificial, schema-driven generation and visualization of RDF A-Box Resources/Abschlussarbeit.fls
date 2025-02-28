@@ -399,6 +399,10 @@ INPUT ./chapters/chapter3.tex
 INPUT ./chapters/chapter3.tex
 INPUT ./chapters/chapter3.tex
 INPUT ./chapters/chapter3.tex
+INPUT ./img/client_server.png
+INPUT ./img/client_server.png
+INPUT ./img/client_server.png
+INPUT ./img/client_server.png
 INPUT ./img/mock dropzone.png
 INPUT ./img/mock dropzone.png
 INPUT ./img/mock dropzone.png

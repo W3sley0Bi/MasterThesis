@@ -77,7 +77,13 @@ All data processing occurs in-memory, either on the client-side or server-side, 
 
 
 \section{Solution strategy\label{sec:techreq}}
-As stated previously in the requirements section, The system is designed with a client-server architecture, where the client and server play distinct roles in the overall functionality.
+As stated previously in the requirements section, the system is designed with a client-server architecture, where the client and server play distinct roles in the overall functionality.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{client_server.png}\\
+    \caption{Client / Server}\label{fig:client_server}
+  \end{figure}
 
 \subsection{Client\label{sec:reqsuba}}
 To ensure a broad availability of the system, the system is designed to support two type of user-agents:
@@ -120,9 +126,16 @@ Within the IDE, the user experience UX will be slight different from the Browser
     \end{figure}
 
   \subsection{Server\label{sec:server}}
-  To ensure a broad availability of the system, the system is designed to support two type of user-agents:
-  \begin{itemize}
-      \item Browsers
-      \item Integrated Development Environments 
-  \end{itemize}
-talk about the server part data processing and all this stuff in here.  modular choices thing that had to be taken into account.
+  To assure system intercompatibility across various device, Operative Systems, and User-Agents, the server is responsible for all computational tasks and data processing. By centralizing calculations and graph data manipulation on the server side, the server minimizes client-side resource consumption and enhances performance consistency. 
+  \\
+  \\
+  The server place a crucial role in managing RDF data ensuring  schema validation, instance generation, SPARQL query processing, and graph construction.
+  \\
+  When the server receives an RDF file, it must scan the file to see potential floss, syntactic or semantic errors. It should be able to handle multiple RDF serialization formats such as Turtle, N3, XML, and JSON-LD. 
+  \\
+  \\
+  The service must be able to generate synthetic RDF instances based on a given schema. It must ensure logical consistency between the generated schema and the original one.
+  The system should be able to identify classes and properties within an RDF schema and generate additional instances where necessary to maintain semantic correctness. This is particularly important in cases where a property references an instance of a specific class that has not been explicitly defined in the dataset.
+  For example, if a schema includes a hasCar property that requires an instance of the Car class, but no such instance exists, the system should automatically create one. This ensures that the schema remains logically consistent and that all property constraints are met. By dynamically generating required instances, the system helps maintain data integrity, prevents incomplete assertions, and improves the reliability of reasoning processes within RDF applications.
+  \\ 
+  The additional instance generated should have properties and values in order to be consistent
