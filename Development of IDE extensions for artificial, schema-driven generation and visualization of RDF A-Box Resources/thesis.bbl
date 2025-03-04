@@ -1,0 +1,103 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{rfcsip}{misc}{}{}
+      \name{author}{8}{}{%
+        {{hash=54a9b22f20af354dc27ac5eabf6bc719}{%
+           family={Rosenberg},
+           familyi={R\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d1a88d51d716baffb544899f6833bbcf}{%
+           family={Schulzrinne},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3520c2230558731191ef94380651e29d}{%
+           family={Camarillo},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=fa4ac7fb04512d8e68501da2a8d343c3}{%
+           family={Johnston},
+           familyi={J\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=10ba489672482c6432c0b0e864d2f638}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0b56294d19e5d1be2148e91259b0f17a}{%
+           family={Sparks},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4823de8c8e55f4d46c21785b235d7261}{%
+           family={Handley},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4eeeca0479b15bdeecbf9a5345768ea6}{%
+           family={Schooler},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{ed01de86ac940b8221ebf0f6a8a94536}
+      \strng{fullhash}{7a3a4a29fc645b3d5feb353d9e5902ed}
+      \strng{fullhashraw}{7a3a4a29fc645b3d5feb353d9e5902ed}
+      \strng{bibnamehash}{ed01de86ac940b8221ebf0f6a8a94536}
+      \strng{authorbibnamehash}{ed01de86ac940b8221ebf0f6a8a94536}
+      \strng{authornamehash}{ed01de86ac940b8221ebf0f6a8a94536}
+      \strng{authorfullhash}{7a3a4a29fc645b3d5feb353d9e5902ed}
+      \strng{authorfullhashraw}{7a3a4a29fc645b3d5feb353d9e5902ed}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 3261 (Proposed Standard)}
+      \field{month}{6}
+      \field{note}{Updated by RFCs 3265, 3853, 4320, 4916, 5393}
+      \field{number}{3261}
+      \field{series}{Request for Comments}
+      \field{title}{SIP: Session Initiation Protocol}
+      \field{year}{2002}
+      \verb{urlraw}
+      \verb http://www.ietf.org/rfc/rfc3261.txt
+      \endverb
+      \verb{url}
+      \verb http://www.ietf.org/rfc/rfc3261.txt
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{billgates}
+  \missing{protege}
+  \missing{sematicWeb}
+  \missing{stevejobs}
+  \missing{timwww}
+  \missing{www}
+\endrefsection
+\endinput
+

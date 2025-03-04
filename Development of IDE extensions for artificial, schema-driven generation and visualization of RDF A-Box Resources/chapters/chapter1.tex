@@ -1,9 +1,45 @@
 \chapter{Introduction\label{cha:chapter1}}
 
-With the rising of the semantic web, the need for a standard for describing resources on the web has become more and more important. 
+The World Wide Web (W3) is a wide-area hypermedia information retrieval initiative aiming to give universal access to a large universe of documents \cite{www}.
+\\
+The Web works thanks to a set of standards and protocols that guarantees interoperability at various levels. 
+It is designed for human interaction and not for machines, but the next generation web aims to make the Web understandable by computers: The Semantic Web \cite{sematicWeb}.
+\\
+\\
+The Hyper Text Markup Language (HTML) is the standard markup language use for structuring and displaying documents on the Web. 
+While this language is great for human-users, it is not optimized for structure data processing. 
+\\
+Consider the following Airline Scraper example:
+\begin{lstlisting}[language=HTML, caption={Example of HTML flight data from a Airline company}, label={lst:html-example}]
+  <div class="flight-result">
+      <h2>Berlin to New York</h2>
+      <p>Airline: Lufthansa</p>
+      <p>Price: $450</p>
+      <p>Departure: 10:00 AM</p>
+  </div>
+  \end{lstlisting}
+In this scenario, the labels of fields like "Price", "Departure", etc., are not standardized. If the Airline changes any of those label, the scraping algorithm will break. 
+Developers would need to monitor every single Airline website and update the scraping algorithm as soon as possible in order to guarantee the availability of their scraping service.
+\\
+\\
+It is now clear why the Semantic Web needs its own standard to describe the web resources that need to process by machines.
 The Resource Description Framework (RDF) extends the Web’s linking structure by using URIs to name the relationships between resources and the two ends of the link. 
-Different kind of scientist and engineers have been working with RDF:
-
+Consider the following Airline Scraper example:
+\begin{lstlisting}[language=XML, caption={RDF representation of the flight data}, label={lst:rdf-example}]
+  @prefix schema: <https://schema.org/> .
+  
+  <https://example.com/flights/12345> a schema:Flight;
+      schema:departureAirport "Berlin" ;
+      schema:arrivalAirport "New York" ;
+      schema:airline "Lufthansa" ;
+      schema:price "450"^^xsd:decimal ;
+      schema:departureTime "10:00 AM"^^xsd:time .
+  \end{lstlisting}
+  In this scenario scenario, the Airline company has decided to adopt the RDF standard to describe their data.
+  Developers can now query the Airline web service without worrying about breaks due to changes from the Airline componay. 
+\\ 
+\\
+The RDF standard is not exclusively used by web developers. It is also widely utilized by scientists, engineers, and researchers across various disciplines:
 \begin{itemize}
   \item \textbf{Data Scientists}:
   \begin{itemize}
@@ -23,6 +59,20 @@ Different kind of scientist and engineers have been working with RDF:
   \end{itemize}
 \end{itemize}
 
+To support scientists in their work, the Semantic Web supports a set of tools and technologies that enable the creation, sharing, and analysis of structured data.
+Platforms like Protégé, Apollo, and NeOn are well-known in the ontology engineering community. This ontology editors offer comprehensive support for creating and editing ontologies and RDF datasets through their graphical user interfaces (GUIs), which enhance visualization and make RDF development easier.
+
+\section{Motivation Scenario\label{sec:moti}}
+
+The following hypothetical scenario illustrates the current situation.
+John Doe is a Junior Software Developer and conducts research on the Semantic Web.
+Recently, John 
+
+\section{Theses and Scientific Contribution  \label{sec:objective}}
+
+Objective - What kind of problem do you adress? Which issues do you try to solve? What solution do you propose? What is your goal?
+'This thesis describes an approach to combining X and Y... The aim of this work is to...'
+
 Despite all its capabilities, two main challenges must be faced when we work with RDF: Instance Generation and Data Visualization.
 \\
 \\
@@ -38,15 +88,7 @@ Several web-based tools and services are available for graph visualization, such
 These services provide an efficient and intuitive approach for visualizing RDF graph data, enabling users to assess the structural correctness of their graphs and verify the validity of relationships between nodes.
 \\
 Regardless of their extensive feature set, these services often struggle to find their place in an RDF developer’s workflow due to their lack of integration with commonly used IDEs and development toolchains.
-\section{Motivation\label{sec:moti}}
 
-
-This motivated me towards ...
-
-\section{Theses and Scientific Contribution  \label{sec:objective}}
-
-Objective - What kind of problem do you adress? Which issues do you try to solve? What solution do you propose? What is your goal?
-'This thesis describes an approach to combining X and Y... The aim of this work is to...'
 
 \section{Positioning within the Scientific Context \label{sec:scope}}
 
