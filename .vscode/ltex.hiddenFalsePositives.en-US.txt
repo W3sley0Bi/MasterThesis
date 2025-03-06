@@ -1,0 +1,1 @@
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QThis graph view provides an accessible mental model for understanding RDF, and it's often used with its visual explanations Consider the following Airline Scraper RDF example: In this scenario scenario, the Airline company has decided to adopt the RDF standard to describe their data.\\E$"}

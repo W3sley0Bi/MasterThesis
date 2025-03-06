@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber thesis"] 1741281212.41463 "thesis.bcf" "thesis.bbl" "thesis" 1741284834.39619 0
+["biber thesis"] 1741277980.31593 "thesis.bcf" "thesis.bbl" "thesis" 1741281186.29043 0
   "bibliography.bib" 1741271710.96973 3920 5cc802d161d43d9c90ce82f23a6f5ec3 ""
-  "thesis.bcf" 1741284834.09965 109717 2710240ee67e74e231580263a7211b7b "pdflatex"
+  "thesis.bcf" 1741281186.01452 109717 2710240ee67e74e231580263a7211b7b "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1741284830.64411 "/Users/wesleyobi/Desktop/MasterThesis/Development of IDE extensions for artificial, schema-driven generation and visualization of RDF A-Box Resources/thesis.tex" "thesis.pdf" "thesis" 1741284834.39661 0
+["pdflatex"] 1741281183.21651 "/Users/wesleyobi/Desktop/MasterThesis/Development of IDE extensions for artificial, schema-driven generation and visualization of RDF A-Box Resources/thesis.tex" "thesis.pdf" "thesis" 1741281186.29085 2
   "/Users/wesleyobi/Desktop/MasterThesis/Development of IDE extensions for artificial, schema-driven generation and visualization of RDF A-Box Resources/thesis.tex" 1741188267.23408 3888 284e19e9296310a7f55d498cd6786d3c ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1710106625 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/newpx/zpl_TOsF.enc" 1710106625 2688 c4453cc5ea1d5eadb4ed2ca5fa23d7e7 ""
@@ -142,8 +142,6 @@
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/biblatex/blx-dm.def" 1710106625 32761 18d14e3b502c120f79b2184de4e21d14 ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx" 1710106625 4629 cda468e8a0b1cfa0f61872e171037a4b ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx" 1710106625 40021 daa5a82ed0967f3ac4b77cb8384cac55 ""
-  "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/biblatex/lbx/german.lbx" 1710106625 34038 becdb53ec3bba7d52240eb831ab15506 ""
-  "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx" 1710106625 520 79db3ad588d8a32d9a5aa90a48bd8364 ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/caption/caption.sty" 1710106625 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/caption/caption3.sty" 1710106625 72619 ee90b6612147680fd73c3b1406a74245 ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/caption/subcaption.sty" 1710106625 12494 0c0cdb824278a4d51cefeb2e79901315 ""
@@ -238,7 +236,7 @@
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/xpatch/xpatch.sty" 1710106625 8314 7803f78066c4f9d008405191a4b43073 ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/web2c/texmf.cnf" 1739371142.3659 41652 e14926ab86fde7902cad99d9eeaa5ca5 ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1710106625 8221738 0fe25a98ec26b76f48bc3534ec24a62e ""
-  "chapters/chapter1.tex" 1741284830.31816 14053 dbf2e4241c053f16650967e263ff54e4 ""
+  "chapters/chapter1.tex" 1741281176.74388 13426 8737e6526c0c4c50d7778f4fde2542a0 ""
   "chapters/chapter2.tex" 1741092879.43082 2709 abca2808442ee466d298ed77c1802bb9 ""
   "chapters/chapter3.tex" 1741092879.43124 10702 932df19f350aa1c1e68098f4f90756a8 ""
   "chapters/chapter4.tex" 1741092879.43175 1130 c0cfcf2695009885055b536a44f7c6c1 ""
@@ -250,7 +248,6 @@
   "content/declaration.tex" 1741092344.65364 1480 34e88720d0d8aa4562426c111497a0df ""
   "content/titlepage.tex" 1741190414.25531 726 f1374421b4ce686c75d7ed60423df2a8 ""
   "content/topic.tex" 1741092344.65866 232 73b98bb9638897a5500be4340fe8a6f8 ""
-  "figures/RDF-term-in-vscode-marketplace.png" 1741284521.45894 523727 4b234622cbf368b1385b02c7049c9efa ""
   "figures/client_server.png" 1741093064.79042 53796 f9062c556bfd7aa5764a085a79ed63cf ""
   "figures/mock dropzone.png" 1741093064.81454 16168 40376bb8bb30f49e05a3c8c81fc12001 ""
   "figures/mock_browser_new_RDF_instance.png" 1741093064.90728 36235 a963adc0e58fdd6415a4347de96ef7b5 ""
@@ -265,12 +262,11 @@
   "latex/float.tex" 1741092344.67864 57 7ae4762681f158954d49897d736cd0b0 ""
   "latex/simplesection.tex" 1741092344.68199 117 6d1866191a62331a43ab1ba2b6e0608a ""
   "latex/titlepage.tex" 1741092344.68318 2439 a13cc6c9c464172857bef19b8e35b222 ""
-  "thesis.aux" 1741284834.08907 20806 d63b004c4467de232a286d112b170db1 "pdflatex"
-  "thesis.bbl" 1741281213.99464 13006 0e143c80a04d4e4808daec6032b9b092 "biber thesis"
-  "thesis.out" 1741284834.09551 8719 91cdbde9fdab6d862aa4bb2429800eca "pdflatex"
-  "thesis.run.xml" 1741284834.10079 2382 da3b89491652396ed0ec760993436a9b "pdflatex"
+  "thesis.aux" 1741281186.00301 20261 4d381d85a0962500e3d4e3648273021b "pdflatex"
+  "thesis.bbl" 1741277981.7225 13006 0e143c80a04d4e4808daec6032b9b092 "biber thesis"
+  "thesis.out" 1741281186.00994 8719 91cdbde9fdab6d862aa4bb2429800eca "pdflatex"
   "thesis.tex" 1741188267.23408 3888 284e19e9296310a7f55d498cd6786d3c ""
-  "thesis.toc" 1741284834.1009 4956 217cdd93047011ad3b84a2431263ff50 "pdflatex"
+  "thesis.toc" 1741281186.01629 4956 217cdd93047011ad3b84a2431263ff50 "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.bcf"

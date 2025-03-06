@@ -1,0 +1,20 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'thesis.blg'
+[99] biber:340> INFO - === Wed Mar  5, 2025, 14:11:21
+[117] Biber.pm:420> INFO - Reading 'thesis.bcf'
+[255] Biber.pm:994> INFO - Found 8 citekeys in bib section 0
+[277] Biber.pm:4463> INFO - Processing section 0
+[291] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[292] bibtex.pm:1713> INFO - LaTeX decoding ...
+[300] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[369] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[369] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[369] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[369] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[383] bbl.pm:676> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[385] bbl.pm:779> INFO - Output to thesis.bbl
+[386] Biber.pm:131> WARN - I didn't find a database entry for 'protege' (section 0)
+[386] Biber.pm:131> WARN - I didn't find a database entry for 'timwww' (section 0)
+[386] Biber.pm:131> WARN - I didn't find a database entry for 'billgates' (section 0)
+[386] Biber.pm:131> WARN - I didn't find a database entry for 'stevejobs' (section 0)
+[386] Biber.pm:133> INFO - WARNINGS: 4

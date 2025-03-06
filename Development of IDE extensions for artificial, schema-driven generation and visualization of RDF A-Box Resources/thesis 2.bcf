@@ -2379,17 +2379,11 @@
     <bcf:citekey order="5" intorder="1">herman2003semanticweb</bcf:citekey>
     <bcf:citekey order="6" intorder="1">rdf</bcf:citekey>
     <bcf:citekey order="7" intorder="1">herman2003semanticweb</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">ontology</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">issemantic</bcf:citekey>
-    <bcf:citekey order="9" intorder="2">rdfGrapher</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">vscode_rdf_plugin</bcf:citekey>
-    <bcf:citekey order="10" intorder="2">jetbrains_rdf_plugin</bcf:citekey>
-    <bcf:citekey order="10" intorder="3">stackoverflow_survey_2024</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">timwww</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">billgates</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">stevejobs</bcf:citekey>
     <bcf:citekey order="11" intorder="1">timwww</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">billgates</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">stevejobs</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">timwww</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">rfcsip</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">rfcsip</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

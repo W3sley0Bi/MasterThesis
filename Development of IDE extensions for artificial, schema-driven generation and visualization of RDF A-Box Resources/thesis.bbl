@@ -19,6 +19,124 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{bernerslee2001semantic}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=d469e0df304c98f67b55d087ea6187a1}{%
+           family={Berners-Lee},
+           familyi={B\bibinithyphendelim L\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b03c1c11511fa3c1c6224a741f227be4}{%
+           family={Hendler},
+           familyi={H\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fb144ce9931b409b1bdccdff7d3a4ecd}{%
+           family={Lassila},
+           familyi={L\bibinitperiod},
+           given={Ora},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4ea8e196bdf65a991bf6b05075d7d62}
+      \strng{fullhash}{f4ea8e196bdf65a991bf6b05075d7d62}
+      \strng{fullhashraw}{f4ea8e196bdf65a991bf6b05075d7d62}
+      \strng{bibnamehash}{f4ea8e196bdf65a991bf6b05075d7d62}
+      \strng{authorbibnamehash}{f4ea8e196bdf65a991bf6b05075d7d62}
+      \strng{authornamehash}{f4ea8e196bdf65a991bf6b05075d7d62}
+      \strng{authorfullhash}{f4ea8e196bdf65a991bf6b05075d7d62}
+      \strng{authorfullhashraw}{f4ea8e196bdf65a991bf6b05075d7d62}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific American}
+      \field{note}{\url{https://www.w3.org/RDF/Metalog/docs/sw-easy},{Accessed: 2025-03-05}}
+      \field{title}{The Semantic Web}
+      \field{year}{2001}
+      \verb{urlraw}
+      \verb https://www.scientificamerican.com/article/the-semantic-web/
+      \endverb
+      \verb{url}
+      \verb https://www.scientificamerican.com/article/the-semantic-web/
+      \endverb
+    \endentry
+    \entry{herman2003semanticweb}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=020f7644e052d8065c2eb8f9d5dbe47b}{%
+           family={Herman},
+           familyi={H\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{020f7644e052d8065c2eb8f9d5dbe47b}
+      \strng{fullhash}{020f7644e052d8065c2eb8f9d5dbe47b}
+      \strng{fullhashraw}{020f7644e052d8065c2eb8f9d5dbe47b}
+      \strng{bibnamehash}{020f7644e052d8065c2eb8f9d5dbe47b}
+      \strng{authorbibnamehash}{020f7644e052d8065c2eb8f9d5dbe47b}
+      \strng{authornamehash}{020f7644e052d8065c2eb8f9d5dbe47b}
+      \strng{authorfullhash}{020f7644e052d8065c2eb8f9d5dbe47b}
+      \strng{authorfullhashraw}{020f7644e052d8065c2eb8f9d5dbe47b}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.w3.org/People/Ivan/CorePresentations/RDFTutorial/Slides.html}}
+      \field{note}{Accessed: 2025-03-05}
+      \field{title}{Tutorial on Semantic Web Technologies}
+      \field{year}{2003}
+    \endentry
+    \entry{issemantic}{manual}{}{}
+      \field{sortinit}{i}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.sciencedirect.com/topics/computer-science/semantic-web-ontology/}}
+      \field{title}{issemantic.net}
+    \endentry
+    \entry{jetbrains_rdf_plugin}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=66cf439ba680925680054f766986d3a2}{%
+           family={{JetBrains Marketplace}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{66cf439ba680925680054f766986d3a2}
+      \strng{fullhash}{66cf439ba680925680054f766986d3a2}
+      \strng{fullhashraw}{66cf439ba680925680054f766986d3a2}
+      \strng{bibnamehash}{66cf439ba680925680054f766986d3a2}
+      \strng{authorbibnamehash}{66cf439ba680925680054f766986d3a2}
+      \strng{authornamehash}{66cf439ba680925680054f766986d3a2}
+      \strng{authorfullhash}{66cf439ba680925680054f766986d3a2}
+      \strng{authorfullhashraw}{66cf439ba680925680054f766986d3a2}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-03-05}
+      \field{title}{RDF Plugins for JetBrains IDEs}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://plugins.jetbrains.com/search?excludeTags=internal&products=androidstudio&products=appcode&products=aqua&products=clion&products=dataspell&products=dbe&products=fleet&products=go&products=idea&products=idea_ce&products=mps&products=phpstorm&products=pycharm&products=pycharm_ce&products=rider&products=ruby&products=rust&products=webstorm&products=writerside&search=RDF
+      \endverb
+      \verb{url}
+      \verb https://plugins.jetbrains.com/search?excludeTags=internal&products=androidstudio&products=appcode&products=aqua&products=clion&products=dataspell&products=dbe&products=fleet&products=go&products=idea&products=idea_ce&products=mps&products=phpstorm&products=pycharm&products=pycharm_ce&products=rider&products=ruby&products=rust&products=webstorm&products=writerside&search=RDF
+      \endverb
+    \endentry
+    \entry{rdfGrapher}{manual}{}{}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.sciencedirect.com/topics/computer-science/semantic-web-ontology/}}
+      \field{title}{ldf.fi/}
+    \endentry
+    \entry{rdf}{manual}{}{}
+      \list{organization}{1}{%
+        {W3C}%
+      }
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.w3.org/RDF/}}
+      \field{title}{Resource Description Framework}
+    \endentry
     \entry{rfcsip}{misc}{}{}
       \name{author}{8}{}{%
         {{hash=54a9b22f20af354dc27ac5eabf6bc719}{%
@@ -91,13 +209,96 @@
       \verb http://www.ietf.org/rfc/rfc3261.txt
       \endverb
     \endentry
+    \entry{ontology}{manual}{}{}
+      \list{organization}{1}{%
+        {Science Direct}%
+      }
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.sciencedirect.com/topics/computer-science/semantic-web-ontology/}}
+      \field{title}{Semantic Web Ontology}
+    \endentry
+    \entry{stackoverflow_survey_2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=84d7dc19766c446f5e4084e8fce87f82}{%
+           family={{Stack Overflow}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{fullhash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{fullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{bibnamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorbibnamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authornamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorfullhash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorfullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-03-05}
+      \field{title}{Stack Overflow Developer Survey 2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://survey.stackoverflow.co/2024/technology/
+      \endverb
+      \verb{url}
+      \verb https://survey.stackoverflow.co/2024/technology/
+      \endverb
+    \endentry
+    \entry{sematicWeb}{manual}{}{}
+      \list{organization}{1}{%
+        {INTERNET COMPUTI}%
+      }
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.researchgate.net/profile/Michel-Klein/publication/2809069_The_semantic_web_the_roles_of_XML_and_RDF/links/0912f50ba15cd91ff5000000/The-semantic-web-the-roles-of-XML-and-RDF.pdf?origin=publication_detail&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uRG93bmxvYWQiLCJwcmV2aW91c1BhZ2UiOiJwdWJsaWNhdGlvbiJ9fQ&__cf_chl_tk=5MWh4tG1PQ1AeHjb.jhHi7j2wcKMsMturHDH14EGG80-1740929090-1.0.1.1-paRQqVpRTjoS9JAcvW33aSA_RLAce6qf9gO7K_sJWzc}}
+      \field{title}{The Semantic Web}
+    \endentry
+    \entry{vscode_rdf_plugin}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=5cb4179b77b480e48d35270c24f063cb}{%
+           family={{Visual Studio Code Marketplace}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cb4179b77b480e48d35270c24f063cb}
+      \strng{fullhash}{5cb4179b77b480e48d35270c24f063cb}
+      \strng{fullhashraw}{5cb4179b77b480e48d35270c24f063cb}
+      \strng{bibnamehash}{5cb4179b77b480e48d35270c24f063cb}
+      \strng{authorbibnamehash}{5cb4179b77b480e48d35270c24f063cb}
+      \strng{authornamehash}{5cb4179b77b480e48d35270c24f063cb}
+      \strng{authorfullhash}{5cb4179b77b480e48d35270c24f063cb}
+      \strng{authorfullhashraw}{5cb4179b77b480e48d35270c24f063cb}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-03-05}
+      \field{title}{RDF Plugins for VS Code}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://marketplace.visualstudio.com/search?term=RDF&target=VSCode&category=All%20categories&sortBy=Relevance
+      \endverb
+      \verb{url}
+      \verb https://marketplace.visualstudio.com/search?term=RDF&target=VSCode&category=All%20categories&sortBy=Relevance
+      \endverb
+    \endentry
+    \entry{www}{manual}{}{}
+      \list{organization}{1}{%
+        {CERN}%
+      }
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{hhttps://info.cern.ch/hypertext/WWW/TheProject.html}}
+      \field{title}{World Wide Web}
+    \endentry
   \enddatalist
   \missing{billgates}
-  \missing{protege}
-  \missing{sematicWeb}
   \missing{stevejobs}
   \missing{timwww}
-  \missing{www}
 \endrefsection
 \endinput
 
