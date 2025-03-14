@@ -6,14 +6,15 @@ The Web works thanks to a set of standards and protocols that guarantee interope
 It is designed for human interaction, but the next generation web aims to make the Web understandable by machines: The Semantic Web \cite{sematicWeb}.
 \\
 \\
-As described by in *Scientific American*, "The Semantic Web is an extension of the current web in which information is given well-defined meaning, better enabling computers and people to work in cooperation" \cite{bernerslee2001semantic}.
+As described in *Scientific American*, 
+\textit{'The Semantic Web is an extension of the current web in which information is given well-defined meaning, better enabling computers and people to work in cooperation''} \cite{bernerslee2001semantic}.
 \\
 \\
-The Hyper Text Markup Language (HTML) is the standard markup language use for structuring and displaying documents on the Web.
-While this language is great for human-users, it is not optimized for structure data processing \cite{herman2003semanticweb}. 
+The Hyper Text Markup Language (HTML) is the standard markup language used for structuring and displaying documents on the Web.
+While this language is great for human users, it is not optimized for structure data processing \cite{herman2003semanticweb}. 
 \\
 Consider the following Airline Scraper example:
-\begin{lstlisting}[language=HTML, caption={Example of HTML flight data from a Airline company}, label={lst:html-example}]
+\begin{lstlisting}[language=HTML, caption={Example of HTML flight data from an Airline company}, label={lst:html-example}]
   <div class="flight-result">
       <h2>Berlin to New York</h2>
       <p>Airline: Lufthansa</p>
@@ -21,21 +22,21 @@ Consider the following Airline Scraper example:
       <p>Departure: 10:00 AM</p>
   </div>
   \end{lstlisting}
-In this scenario, the labels of fields like "Price", "Departure", etc., are not standardized. If the Airline changes any of those label, the data extractor algorithm breaks. 
+In this scenario, the labels of fields like "Price", "Departure", etc., are not standardized. If the Airline changes any of those labels, the data extractor algorithm breaks. 
 Developers would need to monitor every single Airline website and update the data extractor algorithm as soon as possible in order to guarantee the availability of their scraping service \cite{herman2003semanticweb}.
 \\
 \\
-It is now clear why the Semantic Web needs its own standard to describe web resources that need to process by machines.
+It is now clear why the Semantic Web needs its own standard to describe web resources that need to be process by machines.
 \\
 \\
 The Resource Description Framework (RDF) is a standard model for data exchange on the Web. It has features that facilitate the merging of data with different schemas, and it supports the evolution of schemas over time without requiring all the data consumers to be changed \cite{rdf}.
 \\
-RDF enhance the linking structure of the Web to use URIs to label both the relationships between entities and the entities themselves (aka “triple”). This model allows structured and semi-structured data to be mixed, exposed, and shared among different applications.
+RDF enhances the linking structure of the Web to use URIs to label both the relationships between entities and the entities themselves (aka “triple”). This model allows for structured and semi-structured data to be mixed, exposed, and shared among different applications.
 This linking structure forms a directed, labeled graph, where the edges represent the named link between two resources, represented by the graph nodes. This graph view provides an accessible mental model for understanding RDF and it's often used with its visual explanations
 \begin{figure}[htb]
   \centering
   \includegraphics[width=15cm]{rdf-visual-representation-example.jpg}\\
-  \caption{Example of RDF triple}\label{fig:RDFTriple}
+  \caption{Example of RDF Graph}\label{fig:RDFTriple}
 \end{figure}
 
 Consider the following Airline Scraper RDF example:
@@ -50,7 +51,7 @@ Consider the following Airline Scraper RDF example:
       schema:departureTime "10:00 AM"^^xsd:time .
   \end{lstlisting}
   In this scenario scenario, the Airline company has decided to adopt the RDF standard to describe their data.
-  Developers can now query the Airline web service without worrying about breaks due to changes from the Airline componay \cite{herman2003semanticweb}. 
+  Developers can now query the Airline web service without worrying about breaks due to changes in the Airline company \cite{herman2003semanticweb}. 
 \\
 \\
 The RDF standard is not exclusively used by web developers. It is also widely utilized by scientists, engineers, and researchers across various disciplines:
@@ -73,10 +74,10 @@ The RDF standard is not exclusively used by web developers. It is also widely ut
   \end{itemize}
 \end{itemize}
 
-To assist scientists in their work, the Semantic Web supports a set of tools and technologies that enable the creation, sharing, and analysis of structured data.
+To assist Scientists in their work, the Semantic Web supports a set of tools and technologies that enable the creation, sharing, and analysis of structured data.
 Platforms like Protégé, Apollo, and NeOn are well-known in the ontology engineering community. 
 
-"An Ontology is a knowledge structure used to formally represent and share domain knowledge through the modelling and creation of a framework of relevant concepts and the semantic relationships between the concepts" \cite{ontology}.
+"An Ontology is a knowledge structure used to formally represent and share domain knowledge through the modeling and creation of a framework of relevant concepts and the semantic relationships between the concepts" \cite{ontology}.
 
 These ontology editors offer comprehensive support for creating and editing ontologies and RDF datasets through their graphical user interfaces (GUIs), which enhance visualization and make RDF development easier.
 
@@ -85,20 +86,20 @@ These ontology editors offer comprehensive support for creating and editing onto
 The following hypothetical scenario illustrates the current situation.
 \\
 John Doe is a Junior Software Developer and just started working in his first company as Web Developer.
-He quickly immersed himself in his daily tasks, working with is favorite IDE, Visual Studio Code, to craft the backbone of their innovative web application—a platform with social media-like features. 
+He quickly immersed himself in his daily tasks, working with his favorite IDE, Visual Studio Code, to craft the backbone of their innovative web application—a platform with social media-like features. 
 \\
 \\
 While John primarily worked with VSCode due to its lightweight and customizable nature, he soon realized that his workflow differed significantly from that of his colleagues. Some teammates preferred IntelliJ IDEA for its extensive refactoring tools, while others relied on Protégé because its visual representation of ontologies helped them better understand and manage complex data relationships.
 \\
 \\
-A significant part of the project involved working with RDF files, mainly RDF/XML and Turtle formats, to define the application's semantic data structure and its RDF schema. Although the project repository already contained some instances examples, John found himself losing a lot of time creating a valuable amount of example instances to test the limitation his RDF schema. This extra step, required to ensure that every modification produced the intended results, often disrupted his coding flow.
+A significant part of the project involved working with RDF files, mainly RDF/XML and Turtle formats, to define the application's semantic data structure and its RDF schema. Although the project repository already contained some instances examples, John found himself losing a lot of time creating a valuable amount of example instances to test the limitation of his RDF schema. This extra step, required to ensure that every modification produced the intended results, often disrupted his coding flow.
 \\
 \\
-Although he is writing in Turtle language for the majority of his time and Turtle is the most readable among all the RDF's formats, John also struggles to read and understand many lines of code and often does mistake like every other human being. Just like his colleagues, he started using and RDF schema visualizer like "isSemantic.net" or RDF Grapher, to see a graphical representation of his RDF schema \cite{issemantic,rdfGrapher}. The representation helps him a lot to identify relations error, but importing his schema in another software every time contribute to the interruption of his workflow.
+Although he is writing in Turtle language for the majority of his time and Turtle is the most readable among all the RDF formats, John also struggles to read and understand many lines of code and often mistake like every other human being. Just like his colleagues, he started using an RDF schema visualizer like "isSemantic.net" or RDF Grapher, to see a graphical representation of his RDF schema \cite{issemantic,rdfGrapher}. The representation helps him a lot to identify relations errors, but importing his schema in another software every time contributes to the interruption of his workflow.
 
 
 \section{Theses and Scientific Contribution  \label{sec:objective}}
-The previous scenario highlights two big challenges. The first is the lack of seamless integration between specialized development environments and RDF visualization tools. 
+The previous scenario highlights two big challenges. The first is the lack of a seamless integration between specialized development environments and RDF visualization tools. 
 Developers should be free to choose the IDE that best suits them, but the disjointed process of visualizing semantic data remains a critical bottleneck.
 \\
 \\
@@ -106,7 +107,7 @@ The second challenge lies in the inefficiency of testing and validating RDF sche
 \\
 \\
 This Master's Thesis aims to address these challenges and tries to incorporate all developer tools into a single environment.
-By developing an IDE extension, developers will be able to handle RDF writing, data visualization and instances generation in one place.
+By developing an IDE extension, developers will be able to handle RDF writing, data visualization, and instance generation in one place.
 This IDE extension could support the direct editing of the generated instances, allowing for a more streamlined and efficient workflow.
 
 
@@ -114,10 +115,10 @@ This IDE extension could support the direct editing of the generated instances, 
 This Thesis is positioned in the domain of Semantic Web and RDFs. It tries to address in the integration of development environments, RDF visualization and RDF instances generation, to enhance both theoretical understanding and practical application in the field.
 \\
 \\
-As state in the previous sections, the Semantic Web and RDFs, are very important for the scientific community. Their goal is to simplify computers and computer scientists lives when extracting and processing a vast amount of information from the W3.
+As stated in the previous sections, the Semantic Web and RDFs, are very important for the scientific community. Their goal is to simplify machines' and computer scientists' lives when extracting and processing a vast amount of information from the W3.
 Despite all its advantages, the Semantic Web struggles to move beyond academic use and find widespread commercial applications. 
-There is indeed a lack of tools that can help engineers to work with RDFs and Semantic Web to facilitate the creation and management of RDF Data. 
-Among the most popular Integrated Development Environments, like Visual Studio Code, IntelliJ IDEA and others, we can mainly find extension that support syntax highlighting, with grammar checker and SHACL validators, and only one VSCode extension for the visualization of RDFs limited to the N3 and Turtle formats \cite{vscode_rdf_plugin,jetbrains_rdf_plugin,stackoverflow_survey_2024} (see Figure~\ref{fig:RDF-term-in-vscode-marketplace}).
+There is indeed a lack of tools that can help engineers to work with RDFs and the Semantic Web to facilitate the creation and management of RDF Data. 
+Among the most popular Integrated Development Environments, like Visual Studio Code, IntelliJ IDEA, and others, we can mainly find extensions that support syntax highlighting, with grammar checker and SHACL validators, and only one VSCode extension for the visualization of RDFs limited to the N3 and Turtle formats \cite{vscode_rdf_plugin,jetbrains_rdf_plugin,stackoverflow_survey_2024} (see Figure~\ref{fig:RDF-term-in-vscode-marketplace}).
 \begin{figure}[htb]
   \centering
   \includegraphics[width=13cm]{RDF-term-in-vscode-marketplace.png}\\
@@ -125,15 +126,15 @@ Among the most popular Integrated Development Environments, like Visual Studio C
 \end{figure}
 \\
 \\
-The Semantic Web community need a solution that could bridge this gap, something that is not limited to a specific software, architecture or environment. A solution that could potentially compatible with every IDE and Browser. An open source software with and MIT license that can be enhanced not just by the community, but also by companies and institutions.
+The Semantic Web community needs a solution that could bridge this gap, something that is not limited to a specific software, architecture, or environment. A solution that could potentially be compatible with every IDE and Browser. An open-source software with and MIT license can be enhanced not just by the community, but also by companies and institutions.
 A program with a core that allows an easy integration of modules and plugins. 
 \\
 \\
-For this Master's Thesis, I will develop a Web Service using python 3.11 and the Fastapi library, able to process the most common RDF formats, generate n amount of instances for a given RDF schema, and return the desired results. 
+For this Master's Thesis, I will develop a Web Service using Python 3.11 and the Fastapi library, able to process the most common RDF formats, generate n amount of instances for a given RDF Schema, and return the desired results. 
 The outcome will be provided in different formats, but mainly served as HTML pages, so that can be processed by a Visual Studio Code extension in a Web View. This approach will limit the service to be used only by the VSCode IDE, but by all the ones that support rendering of HTML content in their environment.
 \\
 \\
-To prove the validity of this approach, I will develop not just the Visual Studio Code extension suing TypeScript, but also a dedicated browser frontend view, and an IntelliJ IDEA plug-in, in Kotlin, with limited set of features. 
+To prove the validity of this approach, I will develop not just the Visual Studio Code extension using TypeScript, but also a dedicated browser frontend view, and an IntelliJ IDEA plug-in, in Kotlin, with a limited set of features. 
 These Client Side applications will communicate with the Web Service, and via REST calls. The user will be able to: 
 \begin{itemize}
       \item Send an RDF Schema to the Web Service
@@ -147,7 +148,7 @@ Due to the vastness of this project, some features will only be deepened in a th
 \\
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=15cm]{schema_architecture_1_white.png}\\
+  \includegraphics[width=13cm]{schema_architecture_1_white.png}\\
   \caption{System Architecture: Information Flow and Data Exchange between Users, Development Environments (VSCode, IntelliJ), Chrome Browser, and a Python Server.}\label{fig:intro}
 \end{figure}
 
@@ -158,17 +159,17 @@ This thesis is separated into 7 chapters.
 \\
 \textbf{Chapter \ref{cha:chapter2}: State of the Art} covers the related work in the RDF world, from the instance generation to the graph visualization. 
 \\
-A short view on existing tools and project in the same domain, like GAIA and Ontodia.
+A short view of existing tools and projects in the same domain, like GAIA and Ontodia.
 \\
 A comparison of the two different approaches in terms of instance creation (Manual vs Automatic).
 % in this actually you should talk a lot about A-BOX and T-Box
 A brief look at the current standards and technologies compatible with the semantic Web and RDFs.
 \\
 \\
-\textbf{Chapter \ref{cha:chapter3}: Concept} includes the requirements for the project, a view on the technologies and high-level architecture, and the constraint and goals of this work.
+\textbf{Chapter \ref{cha:chapter3}: Concept} includes the requirements for the project, a view of the technologies and high-level architecture, and the constraints and goals of this work.
 \\
 \\
-\textbf{Chapter \ref{cha:chapter4}: Implementation} features the implementation of the project with all its component. Describes in very details the design choices, building blocks and algorithms of this system.
+\textbf{Chapter \ref{cha:chapter4}: Implementation} features the implementation of the project with all its components. Describe in very detail the design choices, building blocks, and algorithms of this system.
 \\
 \\
 \textbf{Chapter \ref{cha:chapter5}: Evaluation} explains how the implementation is validated. Portrays benchmarks and measurements regarding the performance of the solution. Showcases some examples of RDF generation and graph visualization. Cite the experience of a group of Computer Scientists. 

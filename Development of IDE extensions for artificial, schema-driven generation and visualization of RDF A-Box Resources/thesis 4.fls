@@ -212,8 +212,6 @@ INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/units/unit
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/units/units.sty
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/units/nicefrac.sty
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/units/nicefrac.sty
-INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/booktabs/booktabs.sty
-INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/booktabs/booktabs.sty
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
@@ -514,7 +512,6 @@ INPUT ./chapters/chapter1.tex
 INPUT ./chapters/chapter1.tex
 INPUT ./chapters/chapter1.tex
 INPUT chapters/chapter1.tex
-INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-t1.tfm
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -525,10 +522,6 @@ INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/microtype/
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm
-INPUT ./figures/rdf-visual-representation-example.jpg
-INPUT ./figures/rdf-visual-representation-example.jpg
-INPUT ./figures/rdf-visual-representation-example.jpg
-INPUT ./figures/rdf-visual-representation-example.jpg
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -538,14 +531,10 @@ INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/newpx/ts1z
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/public/newpx/zplTLF-Regular-ts1.tfm
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/newpx/zpl_TOsF.enc
-INPUT ./figures/RDF-term-in-vscode-marketplace.png
-INPUT ./figures/RDF-term-in-vscode-marketplace.png
-INPUT ./figures/RDF-term-in-vscode-marketplace.png
-INPUT ./figures/RDF-term-in-vscode-marketplace.png
-INPUT ./figures/schema_architecture_1_white.png
-INPUT ./figures/schema_architecture_1_white.png
-INPUT ./figures/schema_architecture_1_white.png
-INPUT ./figures/schema_architecture_1_white.png
+INPUT ./figures/intro_example.pdf
+INPUT ./figures/intro_example.pdf
+INPUT ./figures/intro_example.pdf
+INPUT ./figures/intro_example.pdf
 INPUT ./chapters/chapter2.tex
 INPUT ./chapters/chapter2.tex
 INPUT ./chapters/chapter2.tex
@@ -553,63 +542,64 @@ INPUT ./chapters/chapter2.tex
 INPUT ./chapters/chapter2.tex
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
+INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-t1.tfm
+INPUT ./chapters/chapter3.tex
+INPUT ./chapters/chapter3.tex
+INPUT ./chapters/chapter3.tex
+INPUT ./chapters/chapter3.tex
+INPUT ./chapters/chapter3.tex
+INPUT ./figures/client_server.png
+INPUT ./figures/client_server.png
+INPUT ./figures/client_server.png
+INPUT ./figures/client_server.png
+INPUT ./figures/mock dropzone.png
+INPUT ./figures/mock dropzone.png
+INPUT ./figures/mock dropzone.png
+INPUT ./figures/mock dropzone.png
+INPUT ./figures/mock_browser_new_RDF_instance.png
+INPUT ./figures/mock_browser_new_RDF_instance.png
+INPUT ./figures/mock_browser_new_RDF_instance.png
+INPUT ./figures/mock_browser_new_RDF_instance.png
+INPUT ./figures/mockup side panel view.png
+INPUT ./figures/mockup side panel view.png
+INPUT ./figures/mockup side panel view.png
+INPUT ./figures/mockup side panel view.png
+INPUT ./figures/mock_ide_new_RDF_instance.png
+INPUT ./figures/mock_ide_new_RDF_instance.png
+INPUT ./figures/mock_ide_new_RDF_instance.png
+INPUT ./figures/mock_ide_new_RDF_instance.png
+INPUT ./chapters/chapter4.tex
+INPUT ./chapters/chapter4.tex
+INPUT ./chapters/chapter4.tex
+INPUT ./chapters/chapter4.tex
+INPUT ./chapters/chapter4.tex
+INPUT ./figures/uml_seq_example.png
+INPUT ./figures/uml_seq_example.png
+INPUT ./figures/uml_seq_example.png
+INPUT ./figures/uml_seq_example.png
+INPUT ./chapters/chapter5.tex
+INPUT ./chapters/chapter5.tex
+INPUT ./chapters/chapter5.tex
+INPUT ./chapters/chapter5.tex
+INPUT ./chapters/chapter5.tex
+INPUT ./figures/screenshot_2_projects.png
+INPUT ./figures/screenshot_2_projects.png
+INPUT ./figures/screenshot_2_projects.png
+INPUT ./figures/screenshot_2_projects.png
+INPUT ./chapters/chapter6.tex
+INPUT ./chapters/chapter6.tex
+INPUT ./chapters/chapter6.tex
+INPUT ./chapters/chapter6.tex
+INPUT ./chapters/chapter6.tex
+INPUT ./chapters/chapter7.tex
+INPUT ./chapters/chapter7.tex
+INPUT ./chapters/chapter7.tex
+INPUT ./chapters/chapter7.tex
+INPUT ./chapters/chapter7.tex
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/newpx/t1npxtt.fd
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/newpx/t1npxtt.fd
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/newpx/t1npxtt.fd
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/public/txfonts/t1xtt.tfm
-INPUT ./chapters/chapter3.tex
-INPUT ./chapters/chapter3.tex
-INPUT ./chapters/chapter3.tex
-INPUT ./chapters/chapter3.tex
-INPUT ./chapters/chapter3.tex
-INPUT ./figures/client_server.png
-INPUT ./figures/client_server.png
-INPUT ./figures/client_server.png
-INPUT ./figures/client_server.png
-INPUT ./figures/mock dropzone.png
-INPUT ./figures/mock dropzone.png
-INPUT ./figures/mock dropzone.png
-INPUT ./figures/mock dropzone.png
-INPUT ./figures/mock_browser_new_RDF_instance.png
-INPUT ./figures/mock_browser_new_RDF_instance.png
-INPUT ./figures/mock_browser_new_RDF_instance.png
-INPUT ./figures/mock_browser_new_RDF_instance.png
-INPUT ./figures/mockup side panel view.png
-INPUT ./figures/mockup side panel view.png
-INPUT ./figures/mockup side panel view.png
-INPUT ./figures/mockup side panel view.png
-INPUT ./figures/mock_ide_new_RDF_instance.png
-INPUT ./figures/mock_ide_new_RDF_instance.png
-INPUT ./figures/mock_ide_new_RDF_instance.png
-INPUT ./figures/mock_ide_new_RDF_instance.png
-INPUT ./chapters/chapter4.tex
-INPUT ./chapters/chapter4.tex
-INPUT ./chapters/chapter4.tex
-INPUT ./chapters/chapter4.tex
-INPUT ./chapters/chapter4.tex
-INPUT ./figures/uml_seq_example.png
-INPUT ./figures/uml_seq_example.png
-INPUT ./figures/uml_seq_example.png
-INPUT ./figures/uml_seq_example.png
-INPUT ./chapters/chapter5.tex
-INPUT ./chapters/chapter5.tex
-INPUT ./chapters/chapter5.tex
-INPUT ./chapters/chapter5.tex
-INPUT ./chapters/chapter5.tex
-INPUT ./figures/screenshot_2_projects.png
-INPUT ./figures/screenshot_2_projects.png
-INPUT ./figures/screenshot_2_projects.png
-INPUT ./figures/screenshot_2_projects.png
-INPUT ./chapters/chapter6.tex
-INPUT ./chapters/chapter6.tex
-INPUT ./chapters/chapter6.tex
-INPUT ./chapters/chapter6.tex
-INPUT ./chapters/chapter6.tex
-INPUT ./chapters/chapter7.tex
-INPUT ./chapters/chapter7.tex
-INPUT ./chapters/chapter7.tex
-INPUT ./chapters/chapter7.tex
-INPUT ./chapters/chapter7.tex
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-sc-t1.tfm
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc
 INPUT ./content/acknowledgment.tex

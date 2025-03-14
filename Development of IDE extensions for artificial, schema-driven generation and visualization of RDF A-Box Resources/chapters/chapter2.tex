@@ -1,40 +1,99 @@
-\chapter{Fundamentals and Related Work\label{cha:chapter2}}
+\chapter{State of the Art\label{cha:chapter2}}
 
-This section is intended to give an introduction about relevant terms, technologies and standards in the field of X. You do not have to explain common technologies such as HTML or XML. 
+This section is intended to give an introduction about relevant terms, technologies and standards in the field of Semantic Web. 
 
 \section{Technologies \label{sec:tech}}
 
-This section describes relevant technologies, starting with X followed by Y, concluding with Z.
+This section describes relevant technologies, like RDFs, SPARQL, and OWL.
 
-\subsection{Technology A\label{sec:aaa}}
+\subsection{RDF (Resource Description Framework)\label{sec:rdf_primer}}
 
-It's always a good idea to explain a technology or a system with a citation of a prominent source, such as a widely accepted technical book or a famous person or organization. 
-
-Exmple: Tim-Berners-Lee describes the ''WorldWideWeb'' as follows:
-\\
-\textit{''The WorldWideWeb (W3) is a wide-area hypermedia information retrieval initiative aiming to give universal access to a large universe of documents.''} \cite{timwww}
+The RDF is the foundation of the Semantic Web. It's a framework for describing resources on the Web thanks to URIs. A resource could be anything: a human being, a document, an object a concept \cite{rdf}. 
 \\
 \\
-You can also cite different claims about the same term.
+Specifically, RDF can be used to share and interlinked data. For example, if the following URI \space \textbf{http://www.example.org/bob\#me} is retrieved, it can provide information about Bob, such as his name, his age, and his friend.
+If his friends' International Resource Identifiers (IRIs) are retrieved, like Alice's, more information regarding them can be accessed (i.e. more friends, interests, etc.). This process of "link navigation" is called Linked Data \cite{rdf}.
 \\
-According to Bill Gates \textit{''Windows 7 is the best operating system that has ever been released''} \cite{billgates} (no real quote)
-In opposite Steve Jobs claims Leopard to be \textit{''the one and only operating system''} \cite{stevejobs}
+\\
+This RDF property can be useful for many use cases like: 
+\begin{itemize}
+	\item Creating distributed social networks by interlinking RDF descriptions of users.
+	\item Integrating API feeds to ensure seamless discovery of additional data and resources by clients.
+	\item Embedding machine-readable data into web pages.
+	\item Standardizing data exchange across databases.
+\end{itemize}
 
-If the topic you are talking about can be grouped into different categories you can start with a classification.
-Example: According to Tim Berners-Lee XYZ can be classified into three different groups, depending on foobar \cite{timwww}:
-	\begin{itemize}
-		\item Mobile X
-				\vspace{-0.1in} 
-		\item Fixed X
-				\vspace{-0.1in} 
-		\item Combined X
- 	\end{itemize}
+RDF interlinks resource with "statements". A statement is a triple containing a subject, a predicate, and an object.
+The subject and the object stand for the resources that need to be represented. The predicate is the type of relation between those resources, and it is always phrased in one directional way (from the subject to the object). 
+\\
+This relation between the two is called a Property \cite{rdf}.
+\\
+It is possible to visualize these Triples as Graphs (see Figure \ref{fig:RDFTriple}) and query them using SPARQL.
+\\
+\\
+In an RDF file, three type of data can  occur :IRIs, literals and blank nodes. 
+\begin{itemize}
+	\item IRIs are the identifiers of the resources. They are similar to the Uniform Resource Locators (URLs), but they don't provide information about where the resource is located or how to access it. They can only be used as mere identifiers. IRIs can appear in all three positions of a triple. 
+	\item Literals are all the values that are not IRIs. They can be strings, numbers, dates, etc. They can only appear in the object position of a triple.
+	\item Blank Nodes are all the nodes of a graph that are not identified by an IRI. They are like simple variables in algebra that represent something without saying what their value is. Blank nodes appear in the subject and object position of a triple. 
+\end{itemize}
+RDF allows grouping multiple RDF statements into multiple graphs and associate them with a single URI. 
 
-\subsection{Technology B\label{sec:bbb}}
+\begin{lstlisting}[language=XML, caption={RDF Grouped Data}, label={lst:xml-rdf-grouped-example}]
+	<Bob> <is a> <person>.
+	<Bob> <is a friend of> <Alice>.
+	<Bob> <is born on> <the 4th of July 1990>.
+	<Bob> <is interested in> <the Mona Lisa>.
+\end{lstlisting}
+One of the related problems with RDF is that the data model doesn't make assumptions about what resource URIs stand for.
+For example the statement \space \textbf{ex:Apple ex:isLocated ex:California}, without any additional information about Apple, could be misleading. Without additional context Apple could refer to a fruit in California or Apple incorporated in Cupertino.
+\\
+One solution to this problem is to use IRIs in combinations with Vocabularies and other conventions that add semantic information about the resources.
+\\
+\\
+In order to include Vocabularies in an RDF graph, RDF provides a Schema language.
+\\
+The RDF Schema allows the description of groups of related resources and the relations between them.
+The class and property system is close to an object-oriented programming language. The difference with this model is that the RDF schema defines the properties in terms of Class and not vice versa as in object-oriented programming.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Construct} & \textbf{Syntactic form} \\
+        \midrule
+        Class (a class) & C \texttt{rdf:type rdfs:Class}  \\
+        Property (a class) & P \texttt{rdf:type rdf:Property} \\
+        type (a property) & I \texttt{rdf:type C} \\
+        subClassOf (a property) & C1 \texttt{rdfs:subClassOf C2} \\
+        subPropertyOf (a property) & P1 \texttt{rdfs:subPropertyOf P2} \\
+        domain (a property) & P \texttt{rdfs:domain C} \\
+        range (a property) & P \texttt{rdfs:range C} \\
+        \bottomrule
+    \end{tabular}
+    \caption{RDF Schema Constructs}
+    \label{tab:rdf_schema_constructs}
+\end{table}
 
-For internal references use the 'ref' tag of LaTeX. Technology B is similar to Technology A as described in section \ref{sec:aaa}.
+An RDF Class is a group of resource with common characteristics. The resources in a class are referred to as instances of that class.
+\\
+\\
+As discussed in previously, properties are used to describe the relations between subject and object resources.
+The main properties for the construct of RDF schema are: 
+\begin{itemize}
+	\item \textbf{subClassOf} is used to state that all the instances of one class are instance of another.
+	\item \textbf{subPropertyOf} is used to define that all resources related by one property are also related by another.
+	\item \textbf{domain} is used to declare to which domain / class that property belong to.
+	\item \textbf{range} is used to indicate the type of the property value.
+\end{itemize}
 
-\newpage
+RDF supports 4 main types of formats: The "Turtle family of RDFs", JSON-LD, RDF/XML and RDFa \cite{rdf}.
+
+
+%  fix the citations.
+
+\subsection{SPARQL B\label{sec:bbb}}
+
+
 
 \subsection{Comparison of Technologies\label{sec:comp}}
 
