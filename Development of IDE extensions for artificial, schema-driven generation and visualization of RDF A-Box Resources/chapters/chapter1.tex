@@ -14,7 +14,7 @@ The Hyper Text Markup Language (HTML) is the standard markup language used for s
 While this language is great for human users, it is not optimized for structure data processing \cite{herman2003semanticweb}. 
 \\
 Consider the following Airline Scraper example:
-\begin{lstlisting}[language=HTML, caption={Example of HTML flight data from an Airline company}, label={lst:html-example}]
+\begin{lstlisting}[language=HTML, caption={Example of HTML flight data from an Airline company}, label={lst:html-example}, frame=single]
   <div class="flight-result">
       <h2>Berlin to New York</h2>
       <p>Airline: Lufthansa</p>
@@ -40,7 +40,7 @@ This linking structure forms a directed, labeled graph, where the edges represen
 \end{figure}
 
 Consider the following Airline Scraper RDF example:
-\begin{lstlisting}[language=XML, caption={RDF representation of the flight data}, label={lst:rdf-example}]
+\begin{lstlisting}[language=XML, caption={RDF representation of the flight data}, label={lst:rdf-example}, frame=single]
   @prefix schema: <https://schema.org/> .
   
   <https://example.com/flights/12345> a schema:Flight;

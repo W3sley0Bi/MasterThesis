@@ -219,6 +219,16 @@
       \field{note}{\url{https://www.sciencedirect.com/topics/computer-science/semantic-web-ontology/}}
       \field{title}{Semantic Web Ontology}
     \endentry
+    \entry{sparql}{manual}{}{}
+      \list{organization}{1}{%
+        {W3C}%
+      }
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.w3.org/TR/2013/REC-sparql11-overview-20130321/}}
+      \field{title}{SPARQL}
+    \endentry
     \entry{stackoverflow_survey_2024}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=84d7dc19766c446f5e4084e8fce87f82}{%

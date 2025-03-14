@@ -1,10 +1,10 @@
 \chapter{State of the Art\label{cha:chapter2}}
 
-This section is intended to give an introduction about relevant terms, technologies and standards in the field of Semantic Web. 
+This section is intended to give an introduction about relevant terms, technologies and standards in the field of Semantic Web. It also delves into similar and related implementations (i.e. GAIA) to provide a comprehensive understanding of the current state of the art.
 
 \section{Technologies \label{sec:tech}}
 
-This section describes relevant technologies, like RDFs, SPARQL, and OWL.
+This section covers the fundamental technologies, specifically RDF and SPARQL, which serve as the foundational building blocks for structuring and querying data.
 
 \subsection{RDF (Resource Description Framework)\label{sec:rdf_primer}}
 
@@ -39,7 +39,7 @@ In an RDF file, three type of data can  occur :IRIs, literals and blank nodes.
 \end{itemize}
 RDF allows grouping multiple RDF statements into multiple graphs and associate them with a single URI. 
 
-\begin{lstlisting}[language=XML, caption={RDF Grouped Data}, label={lst:xml-rdf-grouped-example}]
+\begin{lstlisting}[language=XML, caption={RDF Grouped Data}, label={lst:xml-rdf-grouped-example}, frame=single]
 	<Bob> <is a> <person>.
 	<Bob> <is a friend of> <Alice>.
 	<Bob> <is born on> <the 4th of July 1990>.
@@ -91,8 +91,32 @@ RDF supports 4 main types of formats: The "Turtle family of RDFs", JSON-LD, RDF/
 
 %  fix the citations.
 
-\subsection{SPARQL B\label{sec:bbb}}
+\subsection{SPARQL \label{sec:bbb}}
+In the RDF world, there are 2 main ways to retrieve data from an RDF store. The first one is to simple is to use a REST Endpoint and perform CRUD operations on the DB. This is in many cases the quickest solution, because it doesn't required new knowledge or new knowhow. 
+The main problem is when the RDF store doesn't allow HTTP CRUD or doesn't provide a REST Endpoint.
+In these cases the second solution is to use SPARQL.
+\\
+\\
+SPARQL is a set of specifications that provide tools to retrieve and manipulate RDF graph content on the W3 or in an RDF store.
+One of this tool is the SPARQL Query Language \cite{sparql}.
+\\
+\\
+The SPARQL Query Language it's a query language, not far from the most well known SQL, is used for query formulation and retrieval of on the web.
+\begin{lstlisting}[language=SPARQL, caption={Example of SPARQL Query}, basicstyle=\ttfamily, frame=single]
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    SELECT ?name (COUNT(?friend) AS ?count)
+    WHERE { 
+        ?person foaf:name ?name . 
+        ?person foaf:knows ?friend . 
+    } GROUP BY ?person ?name
+\end{lstlisting}
+    
 
+\section{Related Work \label{sec:tech}}
+
+This section provides a detailed overview and analysis of the related work. 
+
+% write about the current solutions like GAIA
 
 
 \subsection{Comparison of Technologies\label{sec:comp}}

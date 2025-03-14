@@ -101,5 +101,3 @@ def query(class_term, n, ontology):
     except Exception as e:
         print(f"An error occurred: {e}")
         return []
-
-# TODO: tomorrow continuue form here. you want to append the property to the classes that are generated. only to the one that the user didn't declare.
