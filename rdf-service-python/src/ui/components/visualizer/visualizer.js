@@ -215,9 +215,7 @@ class RDFVisualizer extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="/visualizer/style.css">
       <div id="network-container">
-        <div id="mynetwork"></div>
-        <div id="legend"></div>
-        <button id="toggleLegend">Show Legend</button>
+        <div id="mynetwork"   style="height: 100vh;"></div>
       </div>
     `;
 
@@ -299,8 +297,8 @@ class RDFVisualizer extends HTMLElement {
     // Generate dynamic prefixes.
     const dynamicPrefixesLocal = generatePrefixMapping(jsonDataLocal);
     // Set legend HTML.
-    const legendEl = this.shadowRoot.querySelector("#legend");
-    legendEl.innerHTML = generateLegendHTML(dynamicPrefixesLocal);
+    // const legendEl = this.shadowRoot.querySelector("#legend");
+    // legendEl.innerHTML = generateLegendHTML(dynamicPrefixesLocal);
 
     // Process JSON-LD into graph data.
     const graphData = processJsonLd(jsonDataLocal, dynamicPrefixesLocal);
@@ -408,16 +406,16 @@ class RDFVisualizer extends HTMLElement {
     });
 
     // Toggle legend functionality.
-    this.shadowRoot.querySelector("#toggleLegend").addEventListener("click", () => {
-      const legend = this.shadowRoot.querySelector("#legend");
-      if (legend.style.display === "none" || legend.style.display === "") {
-        legend.style.display = "block";
-        this.shadowRoot.querySelector("#toggleLegend").textContent = "Hide Legend";
-      } else {
-        legend.style.display = "none";
-        this.shadowRoot.querySelector("#toggleLegend").textContent = "Show Legend";
-      }
-    });
+    // this.shadowRoot.querySelector("#toggleLegend").addEventListener("click", () => {
+    //   const legend = this.shadowRoot.querySelector("#legend");
+    //   if (legend.style.display === "none" || legend.style.display === "") {
+    //     legend.style.display = "block";
+    //     this.shadowRoot.querySelector("#toggleLegend").textContent = "Hide Legend";
+    //   } else {
+    //     legend.style.display = "none";
+    //     this.shadowRoot.querySelector("#toggleLegend").textContent = "Show Legend";
+    //   }
+    // });
   }
 }
 

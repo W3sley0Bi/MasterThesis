@@ -271,7 +271,7 @@ export function openWebView(context: vscode.ExtensionContext) {
         vscode.ViewColumn.Beside,
         {
           enableScripts: true,
-          retainContextWhenHidden: true,
+          retainContextWhenHidden: false,
         }
       );
 
@@ -309,7 +309,7 @@ export function openWebView(context: vscode.ExtensionContext) {
         vscode.ViewColumn.Beside,
         {
           enableScripts: true,
-          retainContextWhenHidden: true,
+          retainContextWhenHidden: false,
         }
       );
 
@@ -351,7 +351,7 @@ export function openWebView(context: vscode.ExtensionContext) {
         vscode.ViewColumn.Beside,
         {
           enableScripts: true,
-          retainContextWhenHidden: true,
+          retainContextWhenHidden: false,
         }
       );
 
