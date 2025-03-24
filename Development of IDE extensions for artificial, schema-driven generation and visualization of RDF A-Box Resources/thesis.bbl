@@ -60,6 +60,16 @@
       \verb https://www.scientificamerican.com/article/the-semantic-web/
       \endverb
     \endentry
+    \entry{fastapi}{manual}{}{}
+      \list{organization}{1}{%
+        {fastapi}%
+      }
+      \field{sortinit}{f}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://fastapi.tiangolo.com/}}
+      \field{title}{fastapi}
+    \endentry
     \entry{herman2003semanticweb}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=020f7644e052d8065c2eb8f9d5dbe47b}{%
@@ -126,6 +136,16 @@
       \field{labeltitlesource}{title}
       \field{note}{\url{https://www.sciencedirect.com/topics/computer-science/semantic-web-ontology/}}
       \field{title}{ldf.fi/}
+    \endentry
+    \entry{rdflib}{manual}{}{}
+      \list{organization}{1}{%
+        {rdflib}%
+      }
+      \field{sortinit}{r}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://rdflib.readthedocs.io/en/stable/}}
+      \field{title}{rdflib}
     \endentry
     \entry{rdf}{manual}{}{}
       \list{organization}{1}{%

@@ -17,10 +17,12 @@ The Web Service is designed to be compatible with various Browsers and IDEs.
 \\
 The IDE extension will support users and will seamlessly integrate in their workflow.
 \section{Functional requirements\label{sec:techreq}}
+In this section covers the functional requirements for the entire system.
+
 \subsection{Instance Generation\label{sec:reqsuba}}
 The very first requirement for this project is the generation of synthetic RDF instances.
 \\
-When the user is writing an RDF file, in turtle, N3, xml or other RDF formats, it will generate some synthetic RDF instances that could save him a lot of time avoiding the insertion of testing data.
+When the user is writing an RDF file, in turtle, N3, XML or other RDF formats, it will generate some synthetic RDF instances that could save him a lot of time avoiding the insertion of testing data.
 \\
 The application will not just generate compatible triples instances, but also allow the user to modify the automatically generated instances.
 
@@ -46,6 +48,8 @@ The graphical representation should adapt based on the schema complexity and hie
 In the IDE  extension, the user should be able to visualize the graph in a side panel window next to the RDF file their working on. 
 
 \section{Non-functional requirements\label{sec:techreq}}
+This section determines the non-functional requirements of the system.
+
 \subsection{Performance\label{sec:reqsuba}}
 The system should ensure high performance rendering of large RDF graphs to facilitate seamless visualization and interaction. Additionally, operations such as node selection and zooming should be executed with minimal latency to maintain a responsive user experience. The system should optimize rendering pipelines to support real-time exploration of complex RDF schemas without compromising efficiency.
 
@@ -81,7 +85,7 @@ As stated previously in the requirements section, the system is designed with a 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{client_server.png}\\
+    \includegraphics[width=14cm]{client_server.png}\\
     \caption{Client / Server}\label{fig:client_server}
   \end{figure}
 
@@ -93,35 +97,35 @@ To ensure a broad availability of the system, the system is designed to support 
 \end{itemize}
 The Browser chosen by the user, should be able to access the web application via HTTP requests protocol.
 The user will then upload their RDF file and send it to the server.
-The Client will then receive the processed information and display the resulting graph.
+The Client will then receive the processed information and display the resulting graph (see Figure \ref{fig:BrowserGraphView}).
 
-\begin{figure}[H]
+\begin{figure}[htb]
     \centering
-    \includegraphics[width=10cm]{mock dropzone.png}\\
+    \includegraphics[width=14cm]{mock dropzone.png}\\
     \caption{Browser file drop zone and graph view }\label{fig:BrowserGraphView}
   \end{figure}
 
-In addition to this, the user should be able to read the RDF file with the generated instances next to its graphical representation.
+In addition to this, the user should be able to read the RDF file with the generated instances next to its graphical representation (see Figure \ref{fig:BrowserRDFReader}).
 
-\begin{figure}[H]
+\begin{figure}[htb]
     \centering
-    \includegraphics[width=10cm]{mock_browser_new_RDF_instance.png}\\
+    \includegraphics[width=14cm]{mock_browser_new_RDF_instance.png}\\
     \caption{Browser new RDF side panel view }\label{fig:BrowserRDFReader}
   \end{figure}
 
-Within the IDE, the user experience UX will be slight different from the Browser one. Instead of manually uploading an RDF file, users will interact with the system directly within the IDE. By working on an RDF file and executing a predefined command, a web-based visualization panel of the file on focus will be dynamically launched as a side panel within the IDE. This panel will render an interactive graphical representation of the RDF schema in real time, allowing users to analyze relationships, structures, and dependencies without disrupting their coding environment. 
+Within the IDE, the user experience UX will be slight different from the Browser one. Instead of manually uploading an RDF file, users will interact with the system directly within the IDE. By working on an RDF file and executing a predefined command, a web-based visualization panel of the file on focus will be dynamically launched as a side panel within the IDE. This panel will render an interactive graphical representation of the RDF schema in real time, allowing users to analyze relationships, structures, and dependencies without disrupting their coding environment (see Figure \ref{fig:IDEGraphView}). 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{mockup side panel view.png}\\
+    \includegraphics[width=14cm]{mockup side panel view.png}\\
     \caption{IDE Graph side panel view}\label{fig:IDEGraphView}
   \end{figure}
 
-  The extension will not only support the visualization of RDF files in the format requested by the user, similar to its browser counterpart, but it will also enable real-time modification of the file.
+  The extension will not only support the visualization of RDF files in the format requested by the user, similar to its browser counterpart, but it will also enable real-time modification of the file (see Figure \ref{fig:IDERDFReader}).
 
-  \begin{figure}[H]
+  \begin{figure}[htb]
       \centering
-      \includegraphics[width=10cm]{mock_ide_new_RDF_instance.png}\\
+      \includegraphics[width=14cm]{mock_ide_new_RDF_instance.png}\\
       \caption{IDE new RDF side panel view}\label{fig:IDERDFReader}
     \end{figure}
 
@@ -134,8 +138,14 @@ Within the IDE, the user experience UX will be slight different from the Browser
   When the server receives an RDF file, it must scan the file to see potential floss, syntactic or semantic errors. It should be able to handle multiple RDF serialization formats such as Turtle, N3, XML, and JSON-LD. 
   \\
   \\
-  The service must be able to generate synthetic RDF instances based on a given schema. It must ensure logical consistency between the generated schema and the original one.
-  The system should be able to identify classes and properties within an RDF schema and generate additional instances where necessary to maintain semantic correctness. This is particularly important in cases where a property references an instance of a specific class that has not been explicitly defined in the dataset.
+  The service generates synthetic RDF instances based on a given schema. It ensures logical consistency between the generated schema and the original one.
+  \\
+  The system identifies classes and properties within an RDF schema and generates additional instances, where necessary, to maintain semantic correctness. 
+  \\
+  This is particularly important in cases where a property references an instance of a specific class that has not been explicitly defined in the dataset.
   For example, if a schema includes a hasCar property that requires an instance of the Car class, but no such instance exists, the system should automatically create one. This ensures that the schema remains logically consistent and that all property constraints are met. By dynamically generating required instances, the system helps maintain data integrity, prevents incomplete assertions, and improves the reliability of reasoning processes within RDF applications.
   \\ 
-  The additional instance generated should have properties and values in order to be consistent
+  The additional generated instances have realistic properties and values in order to fulfill the graph constraints.
+  \\
+  \\
+  The service serves the new RDF file in the requested format with its graphical representation.

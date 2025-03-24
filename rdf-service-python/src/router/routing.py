@@ -8,19 +8,13 @@ from ..modules.instance_generation.instance_generation_main import instance_gene
 
 router = APIRouter()
 
-
+# -------------------------- FOR BROWSER ------------------------------------
 
 @router.get("/", response_class=HTMLResponse)
 async def upload_file():
     with open("src/ui/index.html", "r", encoding="utf-8") as file:
         content = file.read()
-        
-    #     # TODO: use the commended code fore vs code since you are not doing a file upload in a normal way but in the IDE
-    # rdfs = await instance_generation_main("test.ttl") # leave test.tll  so that the user cna se some default values
-    # jsondl_string = rdfs["json_dl"].replace('"', '&quot;')
-    # content = content.replace('jsonData=""', f'jsonData="{jsondl_string}"')
     return HTMLResponse(content)
-
 
 
 @router.post("/generate", tags=["users"])
@@ -61,6 +55,3 @@ async def upload_file(fileUpload: UploadFile = File(...), n: int = 2, property_s
             },
             status_code=400
     )
-#         # 
-# TESTING #         
-#         # 
