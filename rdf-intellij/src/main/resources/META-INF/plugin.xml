@@ -2,16 +2,16 @@
 <idea-plugin>
     <id>com.example.rdf</id>
     <name>RDF Visualizer</name>
-    <vendor>Your Name</vendor>
-    <description>Visualizza graficamente file RDF utilizzando un servizio Python esterno</description>
+    <vendor>Wesley G. Obi</vendor>
+    <description>Visualizing RDF Files Graphically Using an External Python Service</description>
 
     <depends>com.intellij.modules.platform</depends>
 
     <actions>
         <action id="RDFVisualizer.Convert"
                 class="com.example.rdf.RDFVisualizerAction"
-                text="Visualizza RDF"
-                description="Converte il file RDF corrente in una visualizzazione grafica">
+                text="Visualize RDF"
+                description="Converts the current RDF file into a graphical visualization">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
     </actions>

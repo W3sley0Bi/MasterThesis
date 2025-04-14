@@ -231,7 +231,7 @@ async function inputBox(n: number) {
 }
 
 
-function exportGraph(panel :any ){
+function exportGraph(panel :any){
   panel.webview.onDidReceiveMessage(async (message: any) => {
     if (message.command === "exportGraph" && message.imgData) {
       // Show a Save dialog.

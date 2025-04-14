@@ -42,26 +42,32 @@
 \contentsline {subsection}{\numberline {4.1.1}Software and development tools}{23}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Programming languages, SDKs, and libraries}{23}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Project Structure}{24}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Implementation Web Service}{24}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Implementation of the Web Service}{24}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Server}{25}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}RDF Validation}{26}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Graph generator}{26}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Instance and Graph generator}{26}{subsection.4.3.4}%
-\contentsline {chapter}{\numberline {5}Implementation}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Environment}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Project Structure}{31}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Important Implementation Aspects}{32}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Graphical User Interface}{33}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Documentation}{33}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Evaluation}{35}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Test Environment}{35}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Scalability}{35}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Usability}{35}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Performance Measurements}{35}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Conclusion}{37}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Summary}{37}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Dissemination}{37}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Problems Encountered}{37}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Outlook}{38}{section.7.4}%
+\contentsline {section}{\numberline {4.4}Implementation of the Browser Application}{31}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}The Fetch}{31}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Graph Rendering}{32}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Implementation of the Visual Studio Code Extension}{36}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Commands Architecture}{36}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Implementation of the IntelliJ IDEA plugin}{39}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Implementation}{43}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Environment}{43}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Project Structure}{43}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Important Implementation Aspects}{44}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Graphical User Interface}{45}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Documentation}{45}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Evaluation}{47}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Test Environment}{47}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Scalability}{47}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Usability}{47}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Performance Measurements}{47}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Conclusion}{49}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Summary}{49}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Dissemination}{49}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Problems Encountered}{49}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Outlook}{50}{section.7.4}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 

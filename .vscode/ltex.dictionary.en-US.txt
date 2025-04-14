@@ -1,1 +1,3 @@
 intercompatibility
+explorability
+non-neighbours

@@ -62,6 +62,30 @@
 }
 
 \lstset{style=pythoncustom}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, let, const, void, while, with, yield, await, import, export, from, as},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=true,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+}
+
+\lstset{
+  language=JavaScript,
+  backgroundcolor=\color{white},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{gray}\ttfamily,
+  stringstyle=\color{teal},
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  captionpos=b
+}
+
 %
 % The hyperref package enables links within a document. For technical reasons 
 % it must be loaded as one of the last packages. 

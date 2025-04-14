@@ -86,7 +86,6 @@ class TurtleFileUploader extends HTMLElement {
         this.shadowRoot.innerHTML = sharedStyles + (isVSCodeWebView ? webviewContent : standardContent);
     }
     
-
     
     connectedCallback() {
         let visualizeBtn = this.shadowRoot.getElementById('VisualizeBtn');
