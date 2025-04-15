@@ -1,4 +1,4 @@
-\chapter{Implementation\label{cha:chapter5}}
+\chapter{Implementation\label{cha:chapter4}}
 
 This chapter describes the implementation of the RDF instances generator and visualizer. 
 Three systems were chosen as reference implementations: a VSCode version, a IntelliJ IDEA version and a Browser version. 
@@ -627,3 +627,18 @@ override fun actionPerformed(e: AnActionEvent) {
 	}
 }
 \end{lstlisting}
+
+\section{Documentation and Deployment Architecture\label{sec:docu}}
+The documentation of the project is available in the GitHub repository in the $README.md$ file. 
+In there are listed two type if installation: the Developer installation and the User installation. 
+\\
+\\
+For the first one, developers need to install all the relevant programming languages, runtimes and dependencies (Python, Node.js, pip, npm, etc.). 
+They need also to start the python server and the extension inside the VSCode development environment.
+\\ 
+\\
+For the end user it actually much simpler. The repository already includes a build version of the VSCode extension that can be installed like any other extension. 
+\\
+To make the web service compatible with every machine in the world, it has been dockerized so that also the end user doesn't need to manually download additional tools other than Docker desktop.
+
+

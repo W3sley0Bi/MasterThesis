@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber thesis"] 1744650494.43098 "thesis.bcf" "thesis.bbl" "thesis" 1744651886.09548 0
+["biber thesis"] 1744733600.64933 "thesis.bcf" "thesis.bbl" "thesis" 1744733625.27962 0
   "bibliography.bib" 1744637616.41534 4944 2421f6aa2b3e6cdbc3d049cd93e0de9b ""
-  "thesis.bcf" 1744651885.71468 109886 d4e55bc93a9a03c37000bb4565120e6c "pdflatex"
+  "thesis.bcf" 1744733624.80767 109886 d4e55bc93a9a03c37000bb4565120e6c "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1744651880.18634 "/Users/wesleyobi/Desktop/MasterThesis/Development of IDE extensions for artificial, schema-driven generation and visualization of RDF A-Box Resources/thesis.tex" "thesis.pdf" "thesis" 1744651886.09606 0
+["pdflatex"] 1744733619.27044 "/Users/wesleyobi/Desktop/MasterThesis/Development of IDE extensions for artificial, schema-driven generation and visualization of RDF A-Box Resources/thesis.tex" "thesis.pdf" "thesis" 1744733625.2802 0
   "/Users/wesleyobi/Desktop/MasterThesis/Development of IDE extensions for artificial, schema-driven generation and visualization of RDF A-Box Resources/thesis.tex" 1744104586.34471 5091 542bc60062d2fe76fe234c8fc94cdb21 ""
   "/usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/newpx/px-lms.enc" 1741388039 3877 2ca811886181a05a861d20a35de75e06 ""
   "/usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/newpx/zpl_TOsF.enc" 1741388039 2688 c4453cc5ea1d5eadb4ed2ca5fa23d7e7 ""
@@ -253,11 +253,11 @@
   "/usr/local/Cellar/texlive/20250308_1/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1741388039 3346056 98361fcfb0fa8e58b0f49f951079fd02 ""
   "chapters/chapter1.tex" 1741963576.77215 14107 c5511aa248d9f7bcfe64b01d8d2c3c9f ""
   "chapters/chapter2.tex" 1741965200.54186 8231 66b89e6f4e2a72889bb4d3fd8455112b ""
-  "chapters/chapter3.tex" 1742398860.75472 11098 ffa8165e892b3ebd3598f78b879edbaf ""
-  "chapters/chapter4.tex" 1744651879.73494 31429 68aff73b26ead2993d0f60327dcfa87a ""
-  "chapters/chapter5.tex" 1741092879.43244 2253 b3ce3569814ea98b34a6156405c52477 ""
-  "chapters/chapter6.tex" 1741092879.43405 832 a1706caa49ec99ee8f18767c54b3bb8d ""
-  "chapters/chapter7.tex" 1741092879.43455 1392 6a0fd6e03526c58c3327b84a863c64ab ""
+  "chapters/chapter3.tex" 1744733606.25308 11174 9500761a653f1a5dc129723d010ca7f1 ""
+  "chapters/chapter4.tex" 1744733593.93785 32325 fab97e891fe25814b074d894ebfb7452 ""
+  "chapters/chapter5.tex" 1744704878.63448 832 bc0e129b0ced1a87731b21caf031ad03 ""
+  "chapters/chapter6.tex" 1744704883.36571 1392 c72e31af59231e5678efcf9f4ed0afec ""
+  "chapters/chapter7.tex" 1744704892.74355 1389 4aaa1847d169928c17b7c92f62b4be5c ""
   "content/abstract.tex" 1741093748.09318 1782 7db9290c6e424b99c6b3d662cd32d116 ""
   "content/acknowledgment.tex" 1741092344.65284 320 6cac606e19f60afcd43b1b5ae4c9cf85 ""
   "content/declaration.tex" 1741092344.65364 1480 34e88720d0d8aa4562426c111497a0df ""
@@ -276,19 +276,18 @@
   "figures/mockup side panel view.png" 1741093064.96271 11837 843c5867c8022408f12923ff4a7c9336 ""
   "figures/rdf-visual-representation-example.jpg" 1741196312.85305 218501 dc5c47a72d2e200fb653fa85cd504fbc ""
   "figures/schema_architecture_1_white.png" 1741278088.93436 188593 a146801c3ce3f1dee8967572171e3862 ""
-  "figures/screenshot_2_projects.png" 1741093064.98422 7929 423ffef3eb61d417efd83dfc7ca20668 ""
   "figures/server_schema.png" 1742633735.58099 231059 be45b8a810c08cde61c979d8fdf655bf ""
   "figures/tuc_green_margin.pdf" 1741092344.67414 11565 2903edf7d3f368f08cd8c9162f57a1d4 ""
   "latex/declaration.tex" 1741092344.67648 423 ece7d3a372b59b6c7a8be843a883e013 ""
   "latex/float.tex" 1741092344.67864 57 7ae4762681f158954d49897d736cd0b0 ""
   "latex/simplesection.tex" 1741092344.68199 117 6d1866191a62331a43ab1ba2b6e0608a ""
   "latex/titlepage.tex" 1741092344.68318 2439 a13cc6c9c464172857bef19b8e35b222 ""
-  "thesis.aux" 1744651885.70191 26404 851259a850537b3f1c2278279d7aed06 "pdflatex"
-  "thesis.bbl" 1744650496.17595 13916 ee67dbdef16e1b866c70ef2bb9724421 "biber thesis"
-  "thesis.out" 1744651885.71006 10862 61790f094dd591a35a3234e7a08bafd1 "pdflatex"
-  "thesis.run.xml" 1744651885.71604 2382 da3b89491652396ed0ec760993436a9b "pdflatex"
+  "thesis.aux" 1744733624.79073 25934 5f4ede0d438e8125a8ff89d6a3b1fb5d "pdflatex"
+  "thesis.bbl" 1744733602.24015 13916 ee67dbdef16e1b866c70ef2bb9724421 "biber thesis"
+  "thesis.out" 1744733624.80053 10779 fc1ce782a9c76b1c9ba48232821a4c37 "pdflatex"
+  "thesis.run.xml" 1744733624.80929 2382 da3b89491652396ed0ec760993436a9b "pdflatex"
   "thesis.tex" 1744104586.34471 5091 542bc60062d2fe76fe234c8fc94cdb21 ""
-  "thesis.toc" 1744651885.7162 5944 986731f28e75e1de09da03cbbafb7f89 "pdflatex"
+  "thesis.toc" 1744733624.80945 5928 4f265dcdfd4f818ac0e353562a865091 "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.bcf"
