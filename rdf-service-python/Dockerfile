@@ -1,37 +1,32 @@
-# Use the official Python 3.11 slim image (Python 3.11 has built-in ExceptionGroup support)
+# Use the official Python 3.11 slim image
 FROM python:3.11-slim
 
-# Set the working directory to the container's root.
+# Set working directory
 WORKDIR /
 
-# (Optional) Install system build dependencies (needed by some packages).
+# Install build dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Upgrade pip and install Pipenv globally.
+# Upgrade pip and install Pipenv
 RUN pip install --upgrade pip && pip install --no-cache-dir pipenv
 
-# Copy Pipfile and Pipfile.lock from the project root into the container.
+# Copy Pipenv files and install dependencies
 COPY Pipfile Pipfile.lock ./
-
-# Install dependencies from Pipfile.lock system-wide using Pipenv.
 RUN pipenv install --deploy --system
 
-# Explicitly install FastAPI with its "standard" extras (this ensures the CLI is available)
+# Install FastAPI with extras
 RUN pip install "fastapi[standard]"
 
-# (Optional) Install any other missing dependencies (e.g. if you need "isodate" or others)
-# RUN pip install isodate
-
-# Copy the entire project (including the src folder) into the container.
+# Copy project files
 COPY . .
 
-# Expose port 8000 (the port FastAPI will run on).
+# Expose port (Docker best practice, but Railway uses dynamic ports anyway)
 EXPOSE 8000
 
-# Use the FastAPI CLI command to run your app (mimicking your local "fastapi dev src/main.py" command).
-CMD ["fastapi", "dev", "src/main.py", "--host", "0.0.0.0", "--port", "8000"]
+# ENTRYPOINT: use fastapi CLI, dynamically reading PORT and HOST
+CMD ["sh", "-c", "fastapi dev src/main.py --host ${HOST:-0.0.0.0} --port ${PORT:-8000}"]
 
 
 # to re build the image and container -> docker-compose up --build -d

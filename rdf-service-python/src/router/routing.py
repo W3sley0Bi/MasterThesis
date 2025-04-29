@@ -4,7 +4,7 @@ from fastapi import APIRouter, UploadFile, File
 from fastapi.responses import HTMLResponse, JSONResponse
 from ..modules.validation.validator import is_valid_rdf
 from ..modules.instance_generation.instance_generation_main import instance_generation_main, just_view_graph
-
+import time
 
 router = APIRouter()
 
@@ -22,7 +22,14 @@ async def scan_file(file: UploadFile = File(...), n: int = 2, property_search: b
     isValid = await is_valid_rdf(file)
     if isValid: 
         if edit: return await just_view_graph(file)
-        return await instance_generation_main(file, n, property_search)
+
+        instance_generation_start = time.time()
+        instance_generation = await instance_generation_main(file, n, property_search)
+        instance_generation_end = time.time() 
+
+        elapsed_time = instance_generation_end - instance_generation_start 
+        print(f"Function took {elapsed_time:.4f} seconds to complete.")
+        return instance_generation
     else: return {"turtle": "File is invalid, please upload one of the following formats: RDF/XML → .rdf or .xml; N3 (Notation3) → .n3; N-Triples → .nt; N-Quads → .nq; Turtle → .ttl; TriX (RDF Triples in XML) → .trix; JSON-LD → .jsonld; HexTuples → .hext"}
 
 
