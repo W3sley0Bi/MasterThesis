@@ -293,14 +293,14 @@ export function openWebView(context: vscode.ExtensionContext) {
         undefined,
         context.subscriptions
       );
-      exportGraph(panel)
+      exportGraph(panel);
     }
   );
   const runGraph = vscode.commands.registerCommand(
     "extension.runGraph",
     async () => {
       let nOfInstances = await inputBox(10);
-      if (!nOfInstances) return;
+      if (!nOfInstances) {return;};
       vscode.window.showInformationMessage("Graph is loaded");
 
       let panel = vscode.window.createWebviewPanel(
@@ -333,7 +333,7 @@ export function openWebView(context: vscode.ExtensionContext) {
         context.subscriptions
       );
 
-      exportGraph(panel)
+      exportGraph(panel);
 
     }
   );
@@ -342,7 +342,7 @@ export function openWebView(context: vscode.ExtensionContext) {
     "extension.searchProperty",
     async () => {
       let nOfInstances = await inputBox(3);
-      if (!nOfInstances) return;
+      if (!nOfInstances) {return;};
       vscode.window.showInformationMessage("Graph is loaded");
 
       let panel = vscode.window.createWebviewPanel(
@@ -376,7 +376,7 @@ export function openWebView(context: vscode.ExtensionContext) {
         undefined,
         context.subscriptions
       );
-      exportGraph(panel)
+      exportGraph(panel);
     }
   );
 
