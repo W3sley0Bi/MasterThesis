@@ -1,6 +1,6 @@
 \chapter{State of the Art\label{cha:chapter2}}
 
-This section is intended to give an introduction about relevant terms, technologies and standards in the field of Semantic Web. It also delves into similar and related implementations (i.e. GAIA) to provide a comprehensive understanding of the current state of the art.
+This chapter is intended to give an introduction about relevant terms, technologies and standards in the field of Semantic Web. It also delves into similar and related implementations (i.e. GAIA) to provide a comprehensive understanding of the current state of the art.
 
 \section{Technologies \label{sec:tech}}
 
@@ -110,57 +110,125 @@ The SPARQL Query Language it's a query language, not far from the most well know
         ?person foaf:knows ?friend . 
     } GROUP BY ?person ?name
 \end{lstlisting}
-    
+
+In order to make the exchange of query results among machines, SPARQL supports the following exchange formats: XML, JSON, CSV and TSV \cite{sparql}.
+
+
 
 \section{Related Work \label{sec:tech}}
 
-This section provides a detailed overview and analysis of the related work. 
+This section provides a detailed overview and analysis of the related work.
 
-% write about the current solutions like GAIA
+\subsection{GAIA (Automatic Instance Generator for Abox)}
 
+The GAIA project, is a RDF triple generation tool developed by CEDAR. 
+This research introduces an OWL-based generic RDF triple generator capable of loading any OWL ontology schema and generating compliant RDF instances, unlike the LUBM instance generator, which only supports its predefined LUBM ontology.
+It strictly relies on OWL because the majority of ontologies that are currently available are written using this language \cite{raynaud2014gaia}.
+\\
+\\
+GAIA is designed for performance and scalability, thanks to the multithreading implementation that allows to generate a large volume of triples, making it perfect for ontology benchmarking or synthetic dataset generation \cite{raynaud2014gaia}.
+\\
+\\
+Despite its performance and accuracy, GAIA has several limitations. The software is missing a schema visualization system or interactive graph explorer. This makes it hard for a human to visualize at glance the newly generated instances.
+The system is also not limited to machines with JAVA installed on it, and having it implemented as IDE extension is a very challenging task due to its architecture.
+\\
+Furthermore, GAIA does not natively support RDF Schema (RDFS) or lightweight RDF graphs in Turtle or JSON-LD format (it only supports $.RDF$ or $.XML$).
 
-\subsection{Comparison of Technologies\label{sec:comp}}
+\begin{lstlisting}[language=XML, caption={Example of RDF/XML Data}, basicstyle=\ttfamily\footnotesize, frame=single]
+    <?xml version="1.0" encoding="UTF-8"?>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:owl="http://www.w3.org/2002/07/owl#"
+             xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+             xmlns:ex="http://example.org/"
+             xml:base="http://example.org/ontology"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 
-\begin{table}[htb]
-\centering
-\begin{tabular}[t]{|l|l|l|l|}
-\hline
-Name & Vendor & Release Year & Platform \\
-\hline
-\hline
-A & Microsoft & 2000 & Windows \\
-\hline
-B & Yahoo! & 2003 & Windows, Mac OS \\
-\hline
-C & Apple & 2005 & Mac OS \\
-\hline
-D & Google & 2005 & Windows, Linux, Mac OS \\
-\hline
-\end{tabular}
-\caption{Comparison of technologies}
-\label{tab:enghistory}
-\end{table}
+        <owl:Ontology rdf:about="http://example.org/ontology">
+            <owl:versionInfo>1.0</owl:versionInfo>
+        </owl:Ontology>
 
-\section{Standardization \label{sec:standard}}
+        <rdf:Description rdf:about="http://example.org/Class/Person">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+            <rdfs:label>Person</rdfs:label>
+        </rdf:Description>
 
-This sections outlines standardization approaches regarding X.
+        <rdf:Description rdf:about="http://example.org/Class/Organization">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+            <rdfs:label>Organization</rdfs:label>
+        </rdf:Description>
 
-\subsection{Internet Engineering Task Force\label{sec:ietf}}
+        <rdf:Description rdf:about="http://example.org/Individual/JohnDoe">
+            <rdf:type rdf:resource="http://example.org/Class/Person"/>
+            <ex:name>John Doe</ex:name>
+        </rdf:Description>
 
-The IETF defines SIP as '...' \cite{rfcsip}
+        <rdf:Description rdf:about="http://example.org/Individual/AcmeCorp">
+            <rdf:type rdf:resource="http://example.org/Class/Organization"/>
+            <ex:name>Acme Corporation</ex:name>
+        </rdf:Description>
 
-\subsection{International Telecommunication Union\label{sec:itu}}
+    </rdf:RDF>
+\end{lstlisting}
 
-Lorem Ipsum...
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=13cm]{GAIA.png}\\
+    \caption{GAIA Instance Generator used via GUI}\label{fig:gaia}
+  \end{figure}
 
-\subsection{3GPP\label{sec:3gpp}}
+  \begin{lstlisting}[language=XML, caption={Results of RDF/XML generated instances}, basicstyle=\ttfamily\footnotesize, frame=single]
+    ...
+    <!-- Instances Generated by OWL_GENERATOR -->
 
-Lorem Ipsum...
+    <owl:NamedIndividual rdf:about="http://example.org/ontology#Organization_instance0">
+        <rdf:type rdf:resource="http://example.org/ontology#Organization"/>
+    </owl:NamedIndividual>
 
-\subsection{Open Mobile Alliance\label{sec:oma}}
+    <owl:NamedIndividual rdf:about="http://example.org/ontology#Organization_instance1">
+        <rdf:type rdf:resource="http://example.org/ontology#Organization"/>
+    </owl:NamedIndividual>
 
-Lorem Ipsum...
+    <owl:NamedIndividual rdf:about="http://example.org/ontology#Organization_instance2">
+        <rdf:type rdf:resource="http://example.org/ontology#Organization"/>
+    </owl:NamedIndividual>
 
-\section{Concurrent Approaches \label{sec:summ}}
+    <owl:NamedIndividual rdf:about="http://example.org/ontology#Person_instance0">
+        <rdf:type rdf:resource="http://example.org/ontology#Person"/>
+    </owl:NamedIndividual>
 
-There are lots of people who tried to implement Component X. The most relevant are ...
+    <owl:NamedIndividual rdf:about="http://example.org/ontology#Person_instance1">
+        <rdf:type rdf:resource="http://example.org/ontology#Person"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontology#Person_instance2">
+        <rdf:type rdf:resource="http://example.org/ontology#Person"/>
+    </owl:NamedIndividual>
+
+    </rdf:RDF>
+\end{lstlisting}
+
+\subsection{The instance Generator project suggested by the professor}
+...
+
+\subsection{RDF Graph Preview}
+
+The Graph RDF Graph Preview it's an open source project developed by Lucien Reboul \cite{rdfpreview2022}.
+\\
+It's a VSCode extension that allows to load RDF files and visualize them as graphs. It uses the D3.js library as core graph rendering system.
+\\
+\\
+One advantage of this extension is that it allows to quickly visualize RDF graph without leaving the current workspace. 
+\\
+But unfortunately, this plugin is only able to render RDF files written Turtle and N-Triples/N3 formats. The tool provides no support for automatic instance generation, forcing users to do all the heavy work manually.
+\\
+\\
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=13cm]{RDFPreviewExtension.png}\\
+    \caption{RDF Graph Preview VSCode Extension}\label{fig:RDFPreviewExtension}
+  \end{figure}
+  
+
+% write about  another RDF instance generation project,
+% the ontodia maybe? 
+% also protégé 

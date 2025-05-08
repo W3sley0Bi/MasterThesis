@@ -344,6 +344,13 @@ class RDFVisualizer extends HTMLElement {
 
     network.once('stabilizationIterationsDone', function () {
       network.setOptions({ physics: false });
+
+      //performance test
+      requestAnimationFrame(() => {
+        const end = performance.now();
+        const renderTime = end - window.renderStartTime;
+        console.log(`Render completed in ${renderTime.toFixed(2)} ms`);
+      });
     });
 
     // Highlighting behavior.
@@ -404,6 +411,7 @@ class RDFVisualizer extends HTMLElement {
         });
       }
     });
+
 
     // Toggle legend functionality.
     // this.shadowRoot.querySelector("#toggleLegend").addEventListener("click", () => {

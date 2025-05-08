@@ -95,6 +95,12 @@
 
 \usepackage{hyperref}
 
+\lstset{
+    escapeinside={(*@}{@*)}, % anything between (*@ and @*) will be interpreted as LaTeX
+    morekeywords={},
+    basicstyle=\ttfamily\small,
+}
+
 
 %
 % Packages that are only important for the design. 
@@ -179,7 +185,6 @@
 \input{./chapters/chapter4}
 \input{./chapters/chapter5}
 \input{./chapters/chapter6}
-\input{./chapters/chapter7}
 
 
 

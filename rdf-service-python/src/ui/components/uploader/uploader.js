@@ -147,10 +147,10 @@ class TurtleFileUploader extends HTMLElement {
             return;
         }
 
-        if(search && n > 3) {
-            responseDiv.innerHTML = "Please reduce the number of instances. The MAX number of this feature is 3.";
-            return;
-        }
+        // if(search && n > 3) {
+        //     responseDiv.innerHTML = "Please reduce the number of instances. The MAX number of this feature is 3.";
+        //     return;
+        // }
 
         const file = fileInput.files[0];
         const formData = new FormData();
@@ -168,6 +168,9 @@ class TurtleFileUploader extends HTMLElement {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
+
+            window.renderStartTime = performance.now();
+            console.log(window.renderStartTime)
 
             let res = await response.json();
             let data = res.data;

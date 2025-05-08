@@ -570,61 +570,59 @@ INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/listings/l
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/listings/lstlang3.sty
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/listings/lstlang3.sty
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/txfonts/t1xbtt.tfm
-INPUT ./chapters/chapter3.tex
-INPUT ./chapters/chapter3.tex
-INPUT ./chapters/chapter3.tex
-INPUT ./chapters/chapter3.tex
-INPUT ./chapters/chapter3.tex
-INPUT ./figures/client_server.png
-INPUT ./figures/client_server.png
-INPUT ./figures/client_server.png
-INPUT ./figures/client_server.png
-INPUT ./figures/mock dropzone.png
-INPUT ./figures/mock dropzone.png
-INPUT ./figures/mock dropzone.png
-INPUT ./figures/mock dropzone.png
-INPUT ./figures/mock_browser_new_RDF_instance.png
-INPUT ./figures/mock_browser_new_RDF_instance.png
-INPUT ./figures/mock_browser_new_RDF_instance.png
-INPUT ./figures/mock_browser_new_RDF_instance.png
-INPUT ./figures/mockup side panel view.png
-INPUT ./figures/mockup side panel view.png
-INPUT ./figures/mockup side panel view.png
-INPUT ./figures/mockup side panel view.png
-INPUT ./figures/mock_ide_new_RDF_instance.png
-INPUT ./figures/mock_ide_new_RDF_instance.png
-INPUT ./figures/mock_ide_new_RDF_instance.png
-INPUT ./figures/mock_ide_new_RDF_instance.png
-INPUT ./chapters/chapter4.tex
-INPUT ./chapters/chapter4.tex
-INPUT ./chapters/chapter4.tex
-INPUT ./chapters/chapter4.tex
-INPUT ./chapters/chapter4.tex
-INPUT ./figures/folder_structure.png
-INPUT ./figures/folder_structure.png
-INPUT ./figures/folder_structure.png
-INPUT ./figures/folder_structure.png
-INPUT ./figures/server_schema.png
-INPUT ./figures/server_schema.png
-INPUT ./figures/server_schema.png
-INPUT ./figures/server_schema.png
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
+INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/txfonts/t1xtt.tfm
+INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
+INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/txfonts/t1xbtt.tfm
+INPUT ./figures/GAIA.png
+INPUT ./figures/GAIA.png
+INPUT ./figures/GAIA.png
+INPUT ./figures/GAIA.png
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/vf/public/newpx/zplmi.vf
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/NewPXMI_gnu.tfm
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/NewPXMI.tfm
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/newpx/px-lms.enc
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/vf/public/newpx/zplmia.vf
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/pxmiaX.tfm
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newtx/txmiaSTbb.tfm
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/vf/public/newpx/zplmi.vf
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/NewPXMI_gnu.tfm
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/NewPXMI.tfm
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
+INPUT ./figures/RDFPreviewExtension.png
+INPUT ./figures/RDFPreviewExtension.png
+INPUT ./figures/RDFPreviewExtension.png
+INPUT ./figures/RDFPreviewExtension.png
+INPUT ./chapters/chapter3.tex
+INPUT ./chapters/chapter3.tex
+INPUT ./chapters/chapter3.tex
+INPUT ./chapters/chapter3.tex
+INPUT ./chapters/chapter3.tex
+INPUT ./figures/client_server.png
+INPUT ./figures/client_server.png
+INPUT ./figures/client_server.png
+INPUT ./figures/client_server.png
+INPUT ./figures/mock dropzone.png
+INPUT ./figures/mock dropzone.png
+INPUT ./figures/mock dropzone.png
+INPUT ./figures/mock dropzone.png
+INPUT ./figures/mock_browser_new_RDF_instance.png
+INPUT ./figures/mock_browser_new_RDF_instance.png
+INPUT ./figures/mock_browser_new_RDF_instance.png
+INPUT ./figures/mock_browser_new_RDF_instance.png
+INPUT ./figures/mockup side panel view.png
+INPUT ./figures/mockup side panel view.png
+INPUT ./figures/mockup side panel view.png
+INPUT ./figures/mockup side panel view.png
+INPUT ./figures/mock_ide_new_RDF_instance.png
+INPUT ./figures/mock_ide_new_RDF_instance.png
+INPUT ./figures/mock_ide_new_RDF_instance.png
+INPUT ./figures/mock_ide_new_RDF_instance.png
+INPUT ./chapters/chapter4.tex
+INPUT ./chapters/chapter4.tex
+INPUT ./chapters/chapter4.tex
+INPUT ./chapters/chapter4.tex
+INPUT ./chapters/chapter4.tex
+INPUT ./figures/folder_structure.png
+INPUT ./figures/folder_structure.png
+INPUT ./figures/folder_structure.png
+INPUT ./figures/folder_structure.png
+INPUT ./figures/server_schema.png
+INPUT ./figures/server_schema.png
+INPUT ./figures/server_schema.png
+INPUT ./figures/server_schema.png
 INPUT ./figures/dataflow-browser-rdf-request.png
 INPUT ./figures/dataflow-browser-rdf-request.png
 INPUT ./figures/dataflow-browser-rdf-request.png
@@ -649,16 +647,31 @@ INPUT ./chapters/chapter5.tex
 INPUT ./chapters/chapter5.tex
 INPUT ./chapters/chapter5.tex
 INPUT ./chapters/chapter5.tex
+INPUT ./figures/graphviewbrowserevaluation.png
+INPUT ./figures/graphviewbrowserevaluation.png
+INPUT ./figures/graphviewbrowserevaluation.png
+INPUT ./figures/graphviewbrowserevaluation.png
+INPUT ./figures/schemadownloadBrowser.png
+INPUT ./figures/schemadownloadBrowser.png
+INPUT ./figures/schemadownloadBrowser.png
+INPUT ./figures/schemadownloadBrowser.png
+INPUT ./figures/schemadownloadIDE.png
+INPUT ./figures/schemadownloadIDE.png
+INPUT ./figures/schemadownloadIDE.png
+INPUT ./figures/schemadownloadIDE.png
+INPUT ./figures/graphdownloadBrowser.png
+INPUT ./figures/graphdownloadBrowser.png
+INPUT ./figures/graphdownloadBrowser.png
+INPUT ./figures/graphdownloadBrowser.png
+INPUT ./figures/graphdownloadIDE.png
+INPUT ./figures/graphdownloadIDE.png
+INPUT ./figures/graphdownloadIDE.png
+INPUT ./figures/graphdownloadIDE.png
 INPUT ./chapters/chapter6.tex
 INPUT ./chapters/chapter6.tex
 INPUT ./chapters/chapter6.tex
 INPUT ./chapters/chapter6.tex
 INPUT ./chapters/chapter6.tex
-INPUT ./chapters/chapter7.tex
-INPUT ./chapters/chapter7.tex
-INPUT ./chapters/chapter7.tex
-INPUT ./chapters/chapter7.tex
-INPUT ./chapters/chapter7.tex
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-sc-t1.tfm
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc
 INPUT ./content/acknowledgment.tex
@@ -671,15 +684,12 @@ INPUT ./content/declaration.tex
 INPUT ./content/declaration.tex
 INPUT ./content/declaration.tex
 INPUT content/declaration.tex
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
 INPUT thesis.aux
 INPUT ./thesis.out
 INPUT ./thesis.out
 INPUT thesis.run.xml
 OUTPUT thesis.run.xml
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb
-INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb
 INPUT /usr/local/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/newpx/zplb.pfb

@@ -2390,9 +2390,12 @@
     <bcf:citekey order="13" intorder="1">rdf</bcf:citekey>
     <bcf:citekey order="14" intorder="1">rdf</bcf:citekey>
     <bcf:citekey order="15" intorder="1">sparql</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">rfcsip</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">fastapi</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">rdflib</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">sparql</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">raynaud2014gaia</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">raynaud2014gaia</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">rdfpreview2022</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">fastapi</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">rdflib</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -9,65 +9,95 @@
 \contentsline {subsection}{\numberline {2.1.1}RDF (Resource Description Framework)}{9}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}SPARQL }{11}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Related Work }{12}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Comparison of Technologies}{12}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Standardization }{12}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Internet Engineering Task Force}{12}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}International Telecommunication Union}{12}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}3GPP}{13}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Open Mobile Alliance}{13}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Concurrent Approaches }{13}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Concept}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Overview}{15}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Functional requirements}{15}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Instance Generation}{16}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Schema Validation}{16}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Multi-Vocabulary Support}{16}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Import and Export}{16}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Schema Visualization}{16}{subsection.3.2.5}%
-\contentsline {section}{\numberline {3.3}Non-functional requirements}{17}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Performance}{17}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Usability}{17}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Compatibility}{17}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Technical Requirements}{17}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Web Architecture}{17}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}IDE extension}{17}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Data privacy and Security}{18}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Security}{18}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Confidentiality}{18}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}Solution strategy}{18}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Client}{18}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Server}{21}{subsection.3.6.2}%
-\contentsline {chapter}{\numberline {4}Implementation}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Environment}{23}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Software and development tools}{23}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Programming languages, SDKs, and libraries}{23}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Project Structure}{24}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Implementation of the Web Service}{24}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Server}{25}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}RDF Validation}{26}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Graph generator}{26}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Instance and Graph generator}{26}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {2.2.1}GAIA (Automatic Instance Generator for Abox)}{12}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}The instance Generator project suggested by the professor}{15}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}RDF Graph Preview}{15}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}Concept}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Overview}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Functional requirements}{17}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Instance Generation}{18}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Schema Validation}{18}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Multi-Vocabulary Support}{18}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Import and Export}{18}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Schema Visualization}{18}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}Non-functional requirements}{19}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Performance}{19}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Usability}{19}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Compatibility}{19}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Technical Requirements}{19}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Web Architecture}{19}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}IDE extension}{19}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Data privacy and Security}{20}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Security}{20}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Confidentiality}{20}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Solution strategy}{20}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Client}{20}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Server}{23}{subsection.3.6.2}%
+\contentsline {chapter}{\numberline {4}Implementation}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Environment}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Software and development tools}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Programming languages, SDKs, and libraries}{25}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Project Structure}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Implementation of the Web Service}{26}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Server}{26}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}RDF Validation}{27}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Graph Generator}{28}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Instance and Graph Generator}{28}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Property Search}{29}{subsection.4.3.5}%
 \contentsline {section}{\numberline {4.4}Implementation of the Browser Application}{31}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}The Fetch}{31}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Graph Rendering}{32}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Implementation of the Visual Studio Code Extension}{36}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Commands Architecture}{36}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Implementation of the IntelliJ IDEA plugin}{39}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Documentation and Deployment Architecture}{43}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Evaluation}{45}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Test Environment}{45}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Scalability}{45}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Usability}{45}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Performance Measurements}{45}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusion}{47}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Summary}{47}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Dissemination}{47}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Problems Encountered}{47}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Outlook}{48}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Outlook}{49}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Summary}{49}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Dissemination}{49}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Problems Encountered}{49}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Outlook}{50}{section.7.4}%
+\contentsline {subsection}{\numberline {4.4.2}Graph Rendering}{31}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Implementation of the Visual Studio Code Extension}{35}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Commands Architecture}{35}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Implementation of the IntelliJ IDEA plugin}{38}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Documentation and Deployment Architecture}{41}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Evaluation}{43}{chapter.5}%
+\contentsline {paragraph}{Test Environment}{43}{section*.25}%
+\contentsline {section}{\numberline {5.1}Functional Evaluation}{43}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Instance Generation}{43}{subsection.5.1.1}%
+\contentsline {paragraph}{Goal}{43}{section*.26}%
+\contentsline {paragraph}{Test Description}{43}{section*.27}%
+\contentsline {subsubsection}{Expected Result}{43}{section*.28}%
+\contentsline {paragraph}{Test Environment}{44}{section*.29}%
+\contentsline {subsubsection}{Actual Results}{44}{section*.30}%
+\contentsline {paragraph}{Comments}{48}{section*.31}%
+\contentsline {subsection}{\numberline {5.1.2}Graph visualization}{48}{subsection.5.1.2}%
+\contentsline {paragraph}{Goal}{48}{section*.32}%
+\contentsline {paragraph}{Test Description}{48}{section*.33}%
+\contentsline {subsubsection}{Expected Result}{48}{section*.34}%
+\contentsline {subsubsection}{Actual Results}{49}{section*.35}%
+\contentsline {paragraph}{Comments}{49}{section*.37}%
+\contentsline {subsection}{\numberline {5.1.3}RDF Graph and Schema Export}{50}{subsection.5.1.3}%
+\contentsline {paragraph}{Goal}{50}{section*.38}%
+\contentsline {paragraph}{Test Description}{50}{section*.39}%
+\contentsline {subsubsection}{Expected Result}{50}{section*.40}%
+\contentsline {subsubsection}{Actual Results}{50}{section*.41}%
+\contentsline {paragraph}{Comments}{51}{section*.44}%
+\contentsline {section}{\numberline {5.2}Performance Evaluation}{52}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Rendering Time}{52}{subsection.5.2.1}%
+\contentsline {paragraph}{Goal}{52}{section*.45}%
+\contentsline {paragraph}{Method}{52}{section*.46}%
+\contentsline {subsubsection}{Results}{52}{section*.47}%
+\contentsline {paragraph}{Comments}{52}{section*.49}%
+\contentsline {subsection}{\numberline {5.2.2}Instance generation time}{53}{subsection.5.2.2}%
+\contentsline {paragraph}{Goal}{53}{section*.50}%
+\contentsline {paragraph}{Method}{53}{section*.51}%
+\contentsline {subsubsection}{Results}{53}{section*.52}%
+\contentsline {paragraph}{Comments}{53}{section*.54}%
+\contentsline {subsection}{\numberline {5.2.3}Instance generation time with property search}{54}{subsection.5.2.3}%
+\contentsline {paragraph}{Goal}{54}{section*.55}%
+\contentsline {paragraph}{Method}{54}{section*.56}%
+\contentsline {subsubsection}{Results}{54}{section*.57}%
+\contentsline {paragraph}{Comments}{54}{section*.59}%
+\contentsline {subsection}{\numberline {5.2.4}Edge Case Analysis}{55}{subsection.5.2.4}%
+\contentsline {paragraph}{Goal}{55}{section*.60}%
+\contentsline {paragraph}{Method}{55}{section*.61}%
+\contentsline {paragraph}{Results}{55}{section*.62}%
+\contentsline {paragraph}{Comments}{56}{section*.64}%
+\contentsline {chapter}{\numberline {6}Conclusion}{57}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Summary}{57}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Dissemination}{57}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Problems Encountered}{57}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Outlook}{58}{section.6.4}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 

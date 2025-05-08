@@ -137,6 +137,55 @@
       \field{note}{\url{https://www.sciencedirect.com/topics/computer-science/semantic-web-ontology/}}
       \field{title}{ldf.fi/}
     \endentry
+    \entry{raynaud2014gaia}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=42b4a4b62c39c34e3f5d10df1a664de5}{%
+           family={Raynaud},
+           familyi={R\bibinitperiod},
+           given={Yohan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ec34f3ad620d32fc05f358820f8d49d8}{%
+           family={Euzenat},
+           familyi={E\bibinitperiod},
+           given={Jérôme},
+           giveni={J\bibinitperiod}}}%
+        {{hash=556eeeabde7c2f6673552d086c3f6079}{%
+           family={Scharffe},
+           familyi={S\bibinitperiod},
+           given={François},
+           giveni={F\bibinitperiod}}}%
+        {{hash=2472f33c293d18b30767d8cd170089fd}{%
+           family={Zimmermann},
+           familyi={Z\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{9af50587e665657eea839eb570f15d81}
+      \strng{fullhash}{b378027a19b0070983a31b678eec83e6}
+      \strng{fullhashraw}{b378027a19b0070983a31b678eec83e6}
+      \strng{bibnamehash}{9af50587e665657eea839eb570f15d81}
+      \strng{authorbibnamehash}{9af50587e665657eea839eb570f15d81}
+      \strng{authornamehash}{9af50587e665657eea839eb570f15d81}
+      \strng{authorfullhash}{b378027a19b0070983a31b678eec83e6}
+      \strng{authorfullhashraw}{b378027a19b0070983a31b678eec83e6}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Semantic Web: ESWC 2014 Satellite Events}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{{GAIA: An OWL-Based Generic RDF Instance Generator}}
+      \field{volume}{8798}
+      \field{year}{2014}
+      \field{pages}{114\bibrangedash 119}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1007/978-3-319-11955-7_16
+      \endverb
+    \endentry
     \entry{rdflib}{manual}{}{}
       \list{organization}{1}{%
         {rdflib}%
@@ -147,6 +196,39 @@
       \field{note}{\url{https://rdflib.readthedocs.io/en/stable/}}
       \field{title}{rdflib}
     \endentry
+    \entry{rdfpreview2022}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a55796e088992c8f1def938e8382f845}{%
+           family={Rebuffel},
+           familyi={R\bibinitperiod},
+           given={Lucien},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{a55796e088992c8f1def938e8382f845}
+      \strng{fullhash}{a55796e088992c8f1def938e8382f845}
+      \strng{fullhashraw}{a55796e088992c8f1def938e8382f845}
+      \strng{bibnamehash}{a55796e088992c8f1def938e8382f845}
+      \strng{authorbibnamehash}{a55796e088992c8f1def938e8382f845}
+      \strng{authornamehash}{a55796e088992c8f1def938e8382f845}
+      \strng{authorfullhash}{a55796e088992c8f1def938e8382f845}
+      \strng{authorfullhashraw}{a55796e088992c8f1def938e8382f845}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{rdf-preview}
+      \field{urlday}{17}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/LucienRbl/rdf-preview
+      \endverb
+      \verb{url}
+      \verb https://github.com/LucienRbl/rdf-preview
+      \endverb
+    \endentry
     \entry{rdf}{manual}{}{}
       \list{organization}{1}{%
         {W3C}%
@@ -156,78 +238,6 @@
       \field{labeltitlesource}{title}
       \field{note}{\url{https://www.w3.org/RDF/}}
       \field{title}{Resource Description Framework}
-    \endentry
-    \entry{rfcsip}{misc}{}{}
-      \name{author}{8}{}{%
-        {{hash=54a9b22f20af354dc27ac5eabf6bc719}{%
-           family={Rosenberg},
-           familyi={R\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-        {{hash=d1a88d51d716baffb544899f6833bbcf}{%
-           family={Schulzrinne},
-           familyi={S\bibinitperiod},
-           given={H.},
-           giveni={H\bibinitperiod}}}%
-        {{hash=3520c2230558731191ef94380651e29d}{%
-           family={Camarillo},
-           familyi={C\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=fa4ac7fb04512d8e68501da2a8d343c3}{%
-           family={Johnston},
-           familyi={J\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=10ba489672482c6432c0b0e864d2f638}{%
-           family={Peterson},
-           familyi={P\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-        {{hash=0b56294d19e5d1be2148e91259b0f17a}{%
-           family={Sparks},
-           familyi={S\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod}}}%
-        {{hash=4823de8c8e55f4d46c21785b235d7261}{%
-           family={Handley},
-           familyi={H\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=4eeeca0479b15bdeecbf9a5345768ea6}{%
-           family={Schooler},
-           familyi={S\bibinitperiod},
-           given={E.},
-           giveni={E\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IETF}%
-      }
-      \strng{namehash}{ed01de86ac940b8221ebf0f6a8a94536}
-      \strng{fullhash}{7a3a4a29fc645b3d5feb353d9e5902ed}
-      \strng{fullhashraw}{7a3a4a29fc645b3d5feb353d9e5902ed}
-      \strng{bibnamehash}{ed01de86ac940b8221ebf0f6a8a94536}
-      \strng{authorbibnamehash}{ed01de86ac940b8221ebf0f6a8a94536}
-      \strng{authornamehash}{ed01de86ac940b8221ebf0f6a8a94536}
-      \strng{authorfullhash}{7a3a4a29fc645b3d5feb353d9e5902ed}
-      \strng{authorfullhashraw}{7a3a4a29fc645b3d5feb353d9e5902ed}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{RFC 3261 (Proposed Standard)}
-      \field{month}{6}
-      \field{note}{Updated by RFCs 3265, 3853, 4320, 4916, 5393}
-      \field{number}{3261}
-      \field{series}{Request for Comments}
-      \field{title}{SIP: Session Initiation Protocol}
-      \field{year}{2002}
-      \verb{urlraw}
-      \verb http://www.ietf.org/rfc/rfc3261.txt
-      \endverb
-      \verb{url}
-      \verb http://www.ietf.org/rfc/rfc3261.txt
-      \endverb
     \endentry
     \entry{ontology}{manual}{}{}
       \list{organization}{1}{%
