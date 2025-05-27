@@ -8,7 +8,7 @@ This project aims to simplify RDF schema exploration, validation, and instance g
     \item Functional requirements: Core features such as instance generation, schema validation, and visualization.
     \item Non-functional requirements: Considerations related to performance, usability, and cross-platform compatibility.
     \item Technical requirements: Specifications for the underlying technologies and system design.
-    \item Data privacy and security requirements: Measures to ensure the protection and confidentiality of user data.
+    \item Data Privacy and security requirements: Measures to ensure the protection and confidentiality of user data.
 \end{itemize}
 
 The design prioritizes a client-server architecture and cross-platform compatibility to enhance usability and efficiency. 
@@ -23,7 +23,7 @@ This section covers the functional requirements for the entire system.
 \subsection{Instance Generation\label{sec:reqsuba}}
 The first requirement for this project is the generation of synthetic RDF instances.
 \\
-When a user is writing an RDF file—in Turtle, N3, XML, or other RDF formats—the system will generate synthetic RDF instances to save time by avoiding manual insertion of test data.
+When a user is writing an RDF file, in Turtle, N3, XML, or other RDF formats, the system will generate synthetic RDF instances to save time by avoiding manual insertion of test data.
 \\
 The application will not only generate compatible RDF triples but will also allow users to modify the automatically generated instances.
 
@@ -35,7 +35,7 @@ If errors are found in the schema description, feedback should be provided to th
 
 \subsection{Multi-Vocabulary Support\label{sec:reqsuba}}
 Interoperability and semantic richness are crucial for ensuring seamless data integration, enhancing knowledge representation, and enabling efficient querying and reasoning across diverse RDF datasets.
-By supporting multiple vocabularies and ontologies—such as RDFS, FOAF, Schema.org, and others—the system should be able to handle a wide range of RDF data sources and visualize them as graphs.
+By supporting multiple vocabularies and ontologies, such as RDFS, FOAF, Schema.org, and others, the system should be able to handle a wide range of RDF data sources and visualize them as graphs.
 
 \subsection{Import and Export\label{sec:reqsuba}}
 The software should allow users to import their custom RDF files and export the files with automatically generated instances in the same format.
@@ -65,7 +65,7 @@ To validate this, minor features should also be implemented in a secondary IDE.
 \section{Technical Requirements\label{sec:techreq}}
 
 \subsection{Web Architecture\label{sec:reqsuba}}
-The system should follow a client-server architecture. While there are no constraints on the specific communication technologies (e.g., SOAP, REST, gRPC), the architecture must follow web principles and use web technologies—such as HTML, CSS, JavaScript, or WebAssembly—and protocols such as HTTP and WebSockets.
+The system should follow a client-server architecture. While there are no constraints on the specific communication technologies (e.g., SOAP, REST, gRPC), the architecture must follow web principles and use web technologies, such as HTML, CSS, JavaScript, or WebAssembly, and protocols such as HTTP and WebSockets.
 
 \subsection{IDE extension\label{sec:reqsuba}}
 The application should be accessible via a web-based client to ensure wide availability. However, the main emphasis should be placed on integration as an extension within widely used IDEs.
@@ -113,15 +113,15 @@ Additionally, the user should be able to view the RDF file alongside the generat
     \caption{Browser new RDF side panel view}\label{fig:BrowserRDFReader}
 \end{figure}
 
-Within the IDE, the user experience will be slightly different from the browser. Instead of uploading an RDF file, users will interact with the system directly in the IDE. While working on an RDF file and executing a predefined command, a web-based visualization panel will dynamically open beside the file, rendering an interactive graphical view of the RDF schema in real time. This allows users to examine relationships, structures, and dependencies without leaving their coding environment (see Figure \ref{fig:IDEGraphView}). 
+Within the IDE, the user experience will be slightly different from the browser. Instead of uploading an RDF file, users will interact with the system directly in the IDE. While working on an RDF file and executing a predefined command, a web-based visualization panel will dynamically open beside the file, rendering an interactive graphical view of the RDF schema in real-time. This allows users to examine relationships, structures, and dependencies without leaving their coding environment (see Figure \ref{fig:IDEGraphView}). 
 
-\begin{figure}[H]
+\begin{figure}[htb]
     \centering
     \includegraphics[width=14cm]{mockup side panel view.png}\\
     \caption{IDE Graph side panel view}\label{fig:IDEGraphView}
 \end{figure}
 
-The extension will not only support the visualization of RDF files in user-specified formats—like its browser counterpart—but will also allow real-time editing of the file (see Figure \ref{fig:IDERDFReader}).
+The extension will not only support the visualization of RDF files in user-specified formats, like its browser counterpart, but will also allow real-time editing of the file (see Figure \ref{fig:IDERDFReader}).
 
 \begin{figure}[htb]
     \centering
@@ -133,7 +133,7 @@ The extension will not only support the visualization of RDF files in user-speci
 To ensure system compatibility across various devices, operating systems, and user agents, the server is responsible for all computational tasks and data processing. By centralizing calculations and RDF graph handling on the server side, the system reduces client-side resource use and improves performance consistency.
 \\
 \\
-The server plays a critical role in managing RDF data—ensuring schema validation, instance generation, SPARQL query processing, and graph construction.
+The server plays a critical role in managing RDF data, ensuring schema validation, instance generation, SPARQL query processing, and graph construction.
 \\
 Upon receiving an RDF file, the server scans it for potential flaws, such as syntactic or semantic errors. It should be capable of handling multiple RDF serialization formats, including Turtle, N3, XML, and JSON-LD.
 \\

@@ -40,7 +40,7 @@ The implementation is divided into three distinct projects, as shown in Figure \
   \label{fig:projectstructure}
 \end{figure}
 
-The first project is the web service (\texttt{rdf-service-python}), the second is the VSCode extension (\texttt{rdf-instance-generator-schema-visualizer--rigvs}), and the third is the IntelliJ plugin (\texttt{rdf-IntelliJ}).
+The first project is the web service (\texttt{rdf-service-python}), and the second is the VSCode extension (\texttt{rdf-instance-generator-schema-visualizer--rigvs}), and the third is the IntelliJ plugin (\texttt{rdf-IntelliJ}).
 
 \section{Implementation of the Web Service\label{sec:webservice}}
 
@@ -108,7 +108,7 @@ If the class URI starts with \texttt{http://www.w3.org/2001/XMLSchema}, it is sk
 \\
 The function iterates \texttt{N} times to create instances. For each, a new URI is created (e.g., \texttt{ex:Employee\_Instance1}), linked to the class URI, and added to the graph. If an instance has properties, each is processed as follows:
 \begin{itemize}
-    \item If the value is a URI and maps to a primitive datatype, a literal is generated based on a predefined XSD hashmap.
+    \item If the value is a URI and maps to a primitive datatype, a literal is generated based on a predefined XSD hash map.
     \item If the URI refers to another class, the function is called recursively to generate a sub-instance.
     \item If the value is an XSD datatype URI, a default literal is created.
     \item If the value is already a literal, it is directly added.
@@ -200,7 +200,7 @@ The following describes the pipeline for converting JSON-LD into an interactive 
 When the \texttt{index.html} file is rendered, it loads two main JavaScript files: \texttt{uploader.js} and \texttt{visualizer.js}.  
 The first script creates a web component called \texttt{TurtleFileUploader}, which enables users to upload files and send POST requests.  
 Upon receiving a successful response, it injects the \texttt{json\_ld} data into the custom \texttt{rdf-visualizer} as a \texttt{jsondata} attribute.  
-Additionally, the new RDF file (\texttt{res.data}) is attached to the DOM so the user can inspect and download it.
+Additionally, the new RDF file (\texttt{res.data}) is attached to the DOM, so the user can inspect and download it.
 \\
 \\
 \begin{lstlisting}[caption={\texttt{TurtleFileUploader} component}, label={lst:turtle-file-uploader}, language=JavaScript]
@@ -329,7 +329,7 @@ To enhance user experience, when a node is clicked, all non-neighboring nodes ar
 
 Visual Studio Code, originally intended as a lightweight source code editor, has evolved into a fully functional IDE thanks to its extensive plugin ecosystem.
 \\
-Since VSCode is built on top of Electron—a framework for building desktop applications using web technologies—it is possible to build extensions using familiar web tools (HTML, CSS, JavaScript).
+Since VSCode is built on top of Electron, a framework for building desktop applications using web technologies, it is possible to build extensions using familiar web tools (HTML, CSS, JavaScript).
 \\
 This extension is developed using the Visual Studio Code Extension API, which provides interfaces and classes for interacting with the editor’s core features.
 \\
@@ -386,7 +386,7 @@ All commands in VSCode can be executed using \texttt{cmd + shift + p}. After ope
 \\
 The first command, \texttt{extension.viewGraph}, opens a WebView inside the VSCode workspace. This WebView displays the graph returned by the server.
 \\
-Currently, this command only works while an RDF file is focused in the editor. When executed, it creates a new panel via \texttt{vscode.window.createWebviewPanel}, with scripts enabled and placed beside the editor window. The \texttt{getWebviewContent} function is then called.
+Currently, this command only works while an RDF file is focused on the editor. When executed, it creates a new panel via \texttt{vscode.window.createWebviewPanel}, with scripts enabled and placed beside the editor window. The \texttt{getWebviewContent} function is then called.
 \\
 \\
 This function extracts the RDF content from the focused file using \texttt{getRDFContent} and sends it to the server via \texttt{sendRDFContent}. Then it injects static URLs for the necessary scripts (\texttt{visualizer.js} and \texttt{uploader.js}) into the HTML content.
@@ -454,12 +454,12 @@ export function openWebView(context: vscode.ExtensionContext) {
 }
 \end{lstlisting}
 
-Currently, these commands can only be used while an RDF file is focused in the editor.
+Currently, these commands can only be used while an RDF file is focused on the editor.
 \\
 To simplify access, a quick-access menu button has been added to the bottom-right corner of the VSCode window. Clicking the button opens a modal that allows users to select between the three available commands.
 \section{Implementation of the IntelliJ IDEA plugin}    
 
-The following section describes the implementation of the IntelliJ IDEA plugin and showcases its key feature.
+The following section describes the implementation of the IntelliJ IDEA plugin and showcases its key features.
 
 \begin{figure}[htb]
     \centering

@@ -1,6 +1,6 @@
 \chapter{Conclusion\label{cha:chapter6}}
-This final chapter describes the work that has been done throughout the course of this thesis. It revises the main ideas behind the application developemt and summarizing the key steps taken during the implementation. 
-It then highlights some of the challenges that has been addressed and problems that still remain unsolved.
+This final chapter describes the work that has been done throughout the course of this thesis. It revises the main ideas behind the application development and summarizes the key steps taken during the implementation. 
+It then highlights some of the challenges that have been addressed and problems that still remain unsolved.
 The chapter ends with a brief outlook on how the current solution could be improved and extended in the future.
 \section{Summary\label{sec:summary}}
 % \noindent The work done can be summarized into the following work steps
@@ -19,20 +19,50 @@ The chapter ends with a brief outlook on how the current solution could be impro
 % 		\item Evaluation of the proposed solution
 % \end{itemize}
 
-The first step that has been done for this project is a research and ananysis of RDFs and the technologies that are currently orbiting around like the semantic web or the owl ontology language.
+This thesis project has been developed over a period of six months and focuses on simplifying the way developers work with RDF data and schemas. RDF (Resource Description Framework) is a powerful standard for describing structured data, but its use in practical software development is still limited due to the lack of modern tools that integrate well with everyday coding environments. The aim of this work was to build a system that supports the creation, validation, and visualization of RDF data directly within popular development tools, helping developers to work more efficiently and with fewer interruptions.
 
-After ahving new know, a a review on the programs and applications that are made for the rdf generation or visualization like protege and the GAIA project. 
+At the beginning of the project, a detailed review of existing RDF technologies and tools was conducted. While many systems exist, such as Protégé, GAIA, and RDF Graph Preview, each one comes with its own limitations. Some are too complex, others do not support automatic instance generation, and many are not integrated into standard development environments like Visual Studio Code or IntelliJ IDEA. This creates a fragmented workflow, where developers often have to switch between tools just to understand or test their RDF schemas. This thesis addresses that gap by offering a new solution that unites multiple functionalities in one system.
 
+The result of the work is a web-based service built using Python and FastAPI that can receive RDF schemas, check them for correctness, generate example instances, and return a visual graph representation. This service is then connected to three different user interfaces: a browser application, a VSCode extension, and an IntelliJ plugin. 
 
+One of the core features developed is the automatic instance generator. This component scans RDF schemas, detects the defined classes and properties, and generates realistic example data for testing purposes. An additional feature allows developers to enrich their data by searching for properties in external knowledge bases like the Linked Open Vocabularies. This creates a smarter and more useful instance generation process. The system also includes RDF validation and graphical visualization using the vis.js library. All generated instances and graphs can be exported for later use.
+
+A large part of the work focused on evaluation and testing. Several tests were performed to check whether the system behaves correctly when generating instances, rendering graphs, and handling different input formats. Performance was also measured, especially for more complex operations like property search and large graphs. In general, the system performed well and remained stable even with unusual or incorrect inputs. Some known limits were identified, for example, delays when performing property lookups through external services, but these issues were managed with fallback strategies and can be improved in the future through caching or better performance optimization.
+
+Another important achievement of this thesis is its multi-platform architecture. The same core logic is shared across VSCode, IntelliJ, and browser applications, showing that the system is flexible and can be reused in different environments. This makes it easier for future developers to add support for other IDEs or expand the existing functionality. The open-source approach and use of standard technologies (e.g. REST APIs, RDFLib, TypeScript) make it accessible for the broader developer community to use and improve.
+
+In conclusion, this thesis provides a practical, usable system that simplifies RDF development workflows. It demonstrates that tools supporting RDF do not need to be complex or isolated, they can be integrated smoothly into modern coding environments. 
+
+By combining semantic data handling with strong usability principles and integration into existing developer tools, this work contributes a meaningful step toward making the Semantic Web is more accessible and developer-friendly.
 
 \section{Dissemination\label{sec:dissemination}}
 
-Who uses your component or who will use it? Industry projects, EU projects, open source...? Is it integrated into a larger environment? Did you publish any papers?
+This tool is intended to be used by scientists and developers who work with RDF data. It is open-source and available on GitHub, where users can contribute to its development. 
+
 
 \section{Problems Encountered\label{sec:problems}}
 
-Summarize the main problems. How did you solve them? Why didn't you solve them?
+Throughout this project, several challenges were encountered.
+
+The first big challenge was selecting the right database for the feature that enhances RDF instances with additional properties (property search).
+During its development, the feature stopped working due to a service functionality. The Yago knowledge service went down for more than a week. 
+Unfortunately, this was not an isolated case, since also another database (DBpedia) stopped working during the development phase of this project. 
+The first idea was to simply download the Yago Knowledge source code and run it locally. However, this was not possible due to its size and its system requirements. 
+Change service (now using Linked Open Vocabularies) and approach required a lot of time and effort, but it was the most suitable option. 
+
+The second big challenge was finding a nice graph library able to represent RDF triples and nodes in an interactive way. 
+The most suitable, technologically speaking, was Ontodia, but its lack of documentation and the fact that it is not very lightweight, brought to the decision to use a generic graph library (vis.js) and adapt it to the needs of this project.
+
+A third challenge that remains unresolved is related to the property search feature. When the system searches for a property such as a name, it can successfully retrieve and assign a value. However, the issue lies in the semantic ambiguity of such generic properties. For example, if the system is generating instances for a class like Car and looks up the name property, the retrieved value may not be appropriate, as it could be a human name, an organization, or even an animal name. This happens because a name is defined in general vocabularies like Schema.org as a property of the high-level class Thing, which is inherited by many subclasses including Car, Person, and Animal.
+
+Since the algorithm currently has no mechanism to understand contextual meaning or domain relevance, it cannot distinguish whether a given name refers to a car model, a brand, or something entirely unrelated. This can lead to unrealistic or misleading instance data. Addressing this issue would likely require the system to include a layer of semantic filtering or domain-specific context recognition, which is not part of the current implementation.
 
 \section{Outlook\label{sec:outlook}}
 
-Future work will enhance Component X with new services and features that can be used ...
+Semantic Web and RDF technologies are still evolving, and the work done is just the tip of the iceberg. There are many new features and improvements that could be added to the system. 
+
+The first improvement would be the implementation of new vocabularies and knowledge bases. Creating new modules to expand the current vocabularies list would help the user have more options to choose from when writing an RDF.
+
+The second feature scheduled for implementation is the introduction of a Large Language Model to enhance the instance generation feature by providing more meaning and context to the generated instances. For example, instead of having instances named "Car1", "Car2", etc., the system could generate instances with more meaningful names like "Toyota Corolla" or "Ford Focus". This would make the generated data more realistic and useful for testing and development purposes.
+
+The introduction of AI would just be beneficial not only for the feature stated above, but also for the property search problem that still remains unsolved.

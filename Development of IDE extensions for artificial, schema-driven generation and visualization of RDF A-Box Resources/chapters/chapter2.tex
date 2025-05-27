@@ -8,7 +8,7 @@ This section covers the fundamental technologies, specifically RDF and SPARQL, w
 
 \subsection{RDF (Resource Description Framework)\label{sec:rdf_primer}}
 
-The RDF is the foundation of the Semantic Web. It's a framework for describing resources on the Web thanks to URIs. A resource could be anything: a human being, a document, an object a concept \cite{rdf}. 
+The RDF is the foundation of the Semantic Web. It's a framework for describing resources on the Web thanks to URIs. A resource could be anything: a human being, a document, an object, or a concept \cite{rdf}. 
 \\
 \\
 Specifically, RDF can be used to share and interlinked data. For example, if the following URI \space \textbf{http://www.example.org/bob\#me} is retrieved, it can provide information about Bob, such as his name, his age, and his friend.
@@ -24,14 +24,12 @@ This RDF property can be useful for many use cases like:
 \end{itemize}
 
 RDF interlinks resource with "statements". A statement is a triple containing a subject, a predicate, and an object.
-The subject and the object stand for the resources that need to be represented. The predicate is the type of relation between those resources, and it is always phrased in one directional way (from the subject to the object). 
+The subject and the object stand for the resources that need to be represented. The predicate is the type of relation between those resources, and it is always phrased in one directional way (from the subject to the object). This relation between the two is called a Property \cite{rdf}.
 \\
-This relation between the two is called a Property \cite{rdf}.
-\\
-It is possible to visualize these Triples as Graphs (see Figure \ref{fig:RDFTriple}) and query them using SPARQL.
+It is possible to visualize these triples as Graphs (see Figure \ref{fig:RDFTriple}) and query them using SPARQL.
 \\
 \\
-In an RDF file, three type of data can  occur :IRIs, literals and blank nodes. 
+In an RDF file, three type of data can occur: IRIs, literals and blank nodes. 
 \begin{itemize}
 	\item IRIs are the identifiers of the resources. They are similar to the Uniform Resource Locators (URLs), but they don't provide information about where the resource is located or how to access it. They can only be used as mere identifiers. IRIs can appear in all three positions of a triple. 
 	\item Literals are all the values that are not IRIs. They can be strings, numbers, dates, etc. They can only appear in the object position of a triple.
@@ -48,10 +46,10 @@ RDF allows grouping multiple RDF statements into multiple graphs and associate t
 One of the related problems with RDF is that the data model doesn't make assumptions about what resource URIs stand for.
 For example the statement \space \textbf{ex:Apple ex:isLocated ex:California}, without any additional information about Apple, could be misleading. Without additional context Apple could refer to a fruit in California or Apple incorporated in Cupertino.
 \\
-One solution to this problem is to use IRIs in combinations with Vocabularies and other conventions that add semantic information about the resources.
+One solution to this problem is to use IRIs in combinations with vocabularies and other conventions that add semantic information about the resources.
 \\
 \\
-In order to include Vocabularies in an RDF graph, RDF provides a Schema language.
+In order to include vocabularies in an RDF graph, RDF provides a schema language.
 \\
 The RDF Schema allows the description of groups of related resources and the relations between them.
 The class and property system is close to an object-oriented programming language. The difference with this model is that the RDF schema defines the properties in terms of Class and not vice versa as in object-oriented programming.
@@ -86,22 +84,22 @@ The main properties for the construct of RDF schema are:
 	\item \textbf{range} is used to indicate the type of the property value.
 \end{itemize}
 
-RDF supports 4 main types of formats: The "Turtle family of RDFs", JSON-LD, RDF/XML and RDFa \cite{rdf}.
+RDF supports four main types of formats: The "Turtle family of RDFs", JSON-LD, RDF/XML and RDFa \cite{rdf}.
 
 
-%  fix the citations.
+%  fix the citations
 
 \subsection{SPARQL \label{sec:bbb}}
-In the RDF world, there are 2 main ways to retrieve data from an RDF store. The first one is to simple is to use a REST Endpoint and perform CRUD operations on the DB. This is in many cases the quickest solution, because it doesn't required new knowledge or new knowhow. 
+In the RDF world, there are two main ways to retrieve data from an RDF store. The first one is to simple is to use a REST Endpoint and perform CRUD operations on the DB. This is in many cases the quickest solution, because it doesn't required new knowledge or new knowhow. 
 The main problem is when the RDF store doesn't allow HTTP CRUD or doesn't provide a REST Endpoint.
 In these cases the second solution is to use SPARQL.
 \\
 \\
 SPARQL is a set of specifications that provide tools to retrieve and manipulate RDF graph content on the W3 or in an RDF store.
-One of this tool is the SPARQL Query Language \cite{sparql}.
+One of these tool is the SPARQL Query Language \cite{sparql}.
 \\
 \\
-The SPARQL Query Language it's a query language, not far from the most well known SQL, is used for query formulation and retrieval of on the web.
+The SPARQL Query Language is a query language, not far from the most well-known SQL, is used for query formulation and retrieval on the web.
 \begin{lstlisting}[language=SPARQL, caption={Example of SPARQL Query}, basicstyle=\ttfamily, frame=single]
     PREFIX foaf: <http://xmlns.com/foaf/0.1/>
     SELECT ?name (COUNT(?friend) AS ?count)
@@ -111,7 +109,7 @@ The SPARQL Query Language it's a query language, not far from the most well know
     } GROUP BY ?person ?name
 \end{lstlisting}
 
-In order to make the exchange of query results among machines, SPARQL supports the following exchange formats: XML, JSON, CSV and TSV \cite{sparql}.
+In order to make the exchange of query results among machines, SPARQL supports the following exchange formats: XML, JSON, CSV, and TSV \cite{sparql}.
 
 
 
@@ -119,9 +117,9 @@ In order to make the exchange of query results among machines, SPARQL supports t
 
 This section provides a detailed overview and analysis of the related work.
 
-\subsection{GAIA (Automatic Instance Generator for Abox)}
+\subsection{GAIA (Automatic Instance Generator for A-box) \label{sec:gaia}}
 
-The GAIA project, is a RDF triple generation tool developed by CEDAR. 
+The GAIA project is an RDF triple-generation tool developed by CEDAR. 
 This research introduces an OWL-based generic RDF triple generator capable of loading any OWL ontology schema and generating compliant RDF instances, unlike the LUBM instance generator, which only supports its predefined LUBM ontology.
 It strictly relies on OWL because the majority of ontologies that are currently available are written using this language \cite{raynaud2014gaia}.
 \\
@@ -129,8 +127,8 @@ It strictly relies on OWL because the majority of ontologies that are currently 
 GAIA is designed for performance and scalability, thanks to the multithreading implementation that allows to generate a large volume of triples, making it perfect for ontology benchmarking or synthetic dataset generation \cite{raynaud2014gaia}.
 \\
 \\
-Despite its performance and accuracy, GAIA has several limitations. The software is missing a schema visualization system or interactive graph explorer. This makes it hard for a human to visualize at glance the newly generated instances.
-The system is also not limited to machines with JAVA installed on it, and having it implemented as IDE extension is a very challenging task due to its architecture.
+Despite its performance and accuracy, GAIA has several limitations. The software is missing a schema visualization system or interactive graph explorer. This makes it hard for a human to visualize at a glance the newly generated instances.
+The system is also limited to machines with Java installed on it, and having it implemented as IDE extension is a very challenging task due to its architecture.
 \\
 Furthermore, GAIA does not natively support RDF Schema (RDFS) or lightweight RDF graphs in Turtle or JSON-LD format (it only supports $.RDF$ or $.XML$).
 
@@ -173,7 +171,7 @@ Furthermore, GAIA does not natively support RDF Schema (RDFS) or lightweight RDF
 \begin{figure}[H]
     \centering
     \includegraphics[width=13cm]{GAIA.png}\\
-    \caption{GAIA Instance Generator used via GUI}\label{fig:gaia}
+    \caption{GAIA Instance Generator used via GUI}\label{fig:gaiafigure}
   \end{figure}
 
   \begin{lstlisting}[language=XML, caption={Results of RDF/XML generated instances}, basicstyle=\ttfamily\footnotesize, frame=single]
@@ -207,19 +205,76 @@ Furthermore, GAIA does not natively support RDF Schema (RDFS) or lightweight RDF
     </rdf:RDF>
 \end{lstlisting}
 
-\subsection{The instance Generator project suggested by the professor}
-...
+\subsection{RDFGraphGen}
+The RDFGraphGen is a domain-independent RDF instance generator. Unlike the GAIA RDF instance generator fully based on OWL, the RDFGraphGen leverages the SHACL (Shape Constraint Language), usually used for data validation, to generate RDF instances.
+The great benefit of this approach is that the generator is not tight to one ontology, and multiple properties from different vocabularies can be used in one shape. 
+The biggest drawback of this system is that SHACL for generation could lead to less interlinked data due to its generation factor (shape-by-shape) \cite{vecovska2024rdfgraphgen}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=13cm]{shacl-terminal.png}\\
+    \caption{RDFGraphGen used via terminal}\label{fig:shaclfigure}
+  \end{figure}
+
+  \begin{lstlisting}[language=XML, caption={Results of RDFGraphGen with 5 instances generated}, basicstyle=\ttfamily\footnotesize, frame=single]
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix ns1: <http://example.org/> .
+    @prefix sh: <http://www.w3.org/ns/shacl#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    
+    <http://example.org/ns#Node100> a ns1:Employee ;
+        ns1:age 28 ;
+        ns1:hasProfilePic "qOLooPi5mfm" ;
+        ns1:isAtHome false ;
+        ns1:ishuman "VixnbVnRO" ;
+        sh:description ns1:EmployeeShape .
+    
+    <http://example.org/ns#Node101> a ns1:Employee ;
+        ns1:age 33 ;
+        ns1:isAtHome true ;
+        ns1:ishuman "CXfLrntRVAq6e" ;
+        sh:description ns1:EmployeeShape .
+    
+    <http://example.org/ns#Node102> a ns1:Employee ;
+        ns1:age 34 ;
+        ns1:isAtHome false ;
+        ns1:ishuman "qiXLu1FkM7uUmW" ;
+        sh:description ns1:EmployeeShape .
+    
+    <http://example.org/ns#Node103> a ns1:Employee ;
+        ns1:age 22 ;
+        ns1:ishuman "ncv9M4GeWPkqmL" ;
+        sh:description ns1:EmployeeShape .
+    
+    <http://example.org/ns#Node104> a ns1:Employee ;
+        ns1:age 46 ;
+        ns1:hasProfilePic "ZW0KGRx06CyOt" ;
+        ns1:ishuman "voriTXMxvyp5rW" ;
+        sh:description ns1:EmployeeShape .
+    
+    [] a foaf:Image .
+    
+    [] a foaf:Image .
+    
+\end{lstlisting}
+
+
+\subsection{Ontodia}
+
+The Ontodia is a project that allows to visualize and explore graphs in an interactive way. It is designed to visualize RDF data sets and OWL ontologies.
+
+The biggest advantage of this project is its user-friendly interface and the ability to connect directly to SPARQL endpoints, allowing real-time visualization. While this is very effective for small and medium datasets, it is not the case for large RDF graphs. The complexity of large graphs leads to slower responses harming the user experience.
 
 \subsection{RDF Graph Preview}
 
-The Graph RDF Graph Preview it's an open source project developed by Lucien Reboul \cite{rdfpreview2022}.
+The Graph RDF Graph Preview is an open-source project developed by Lucien Reboul \cite{rdfpreview2022}.
 \\
-It's a VSCode extension that allows to load RDF files and visualize them as graphs. It uses the D3.js library as core graph rendering system.
+It's a VSCode extension that allows to load RDF files and visualize them as graphs. It uses the D3.js library as a core graph rendering system.
 \\
 \\
 One advantage of this extension is that it allows to quickly visualize RDF graph without leaving the current workspace. 
 \\
-But unfortunately, this plugin is only able to render RDF files written Turtle and N-Triples/N3 formats. The tool provides no support for automatic instance generation, forcing users to do all the heavy work manually.
+Unfortunately, this plugin is only able to render RDF files written Turtle and N-Triples/N3 formats. The tool provides no support for automatic instance generation, forcing users to do all the heavy work manually.
 \\
 \\
 \begin{figure}[htb]
@@ -228,7 +283,3 @@ But unfortunately, this plugin is only able to render RDF files written Turtle a
     \caption{RDF Graph Preview VSCode Extension}\label{fig:RDFPreviewExtension}
   \end{figure}
   
-
-% write about  another RDF instance generation project,
-% the ontodia maybe? 
-% also protégé 

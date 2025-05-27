@@ -1,0 +1,29 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Example of RDF Graph}}{2}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Limited Support: A Search for 'RDF' in the Plugin Marketplace Yields Only 13 Results, Highlighting the Scarcity of RDF-Specific Extensions for Developers.}}{6}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces System Architecture: Information Flow and Data Exchange between Users, Development Environments (VSCode, IntelliJ), Chrome Browser, and a Python Server.}}{7}{figure.caption.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces GAIA Instance Generator used via GUI}}{14}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces RDFGraphGen used via terminal}}{15}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces RDF Graph Preview VSCode Extension}}{17}{figure.caption.11}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Client / Server}}{22}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Browser file drop zone and graph view}}{23}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Browser new RDF side panel view}}{24}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces IDE Graph side panel view}}{25}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces IDE new RDF side panel view}}{26}{figure.caption.16}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Project Structure}}{28}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Server Schema}}{29}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Web extension}}{33}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces VSCode extension}}{38}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces IntelliJ Extension}}{41}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Action call in IntelliJ}}{42}{figure.caption.22}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Rending of the RDF graph}}{51}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces RDF Schema download methods for Browsers client and IDE client}}{53}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces RClick action on the download button to download the RDF Graph}}{53}{figure.caption.41}%
+\addvspace {10\p@ }
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 

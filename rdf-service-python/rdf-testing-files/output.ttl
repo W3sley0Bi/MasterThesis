@@ -1,0 +1,39 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://example.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ns#Node100> a ns1:Employee ;
+    ns1:age 28 ;
+    ns1:hasProfilePic "qOLooPi5mfm" ;
+    ns1:isAtHome false ;
+    ns1:ishuman "VixnbVnRO" ;
+    sh:description ns1:EmployeeShape .
+
+<http://example.org/ns#Node101> a ns1:Employee ;
+    ns1:age 33 ;
+    ns1:isAtHome true ;
+    ns1:ishuman "CXfLrntRVAq6e" ;
+    sh:description ns1:EmployeeShape .
+
+<http://example.org/ns#Node102> a ns1:Employee ;
+    ns1:age 34 ;
+    ns1:isAtHome false ;
+    ns1:ishuman "qiXLu1FkM7uUmW" ;
+    sh:description ns1:EmployeeShape .
+
+<http://example.org/ns#Node103> a ns1:Employee ;
+    ns1:age 22 ;
+    ns1:ishuman "ncv9M4GeWPkqmL" ;
+    sh:description ns1:EmployeeShape .
+
+<http://example.org/ns#Node104> a ns1:Employee ;
+    ns1:age 46 ;
+    ns1:hasProfilePic "ZW0KGRx06CyOt" ;
+    ns1:ishuman "voriTXMxvyp5rW" ;
+    sh:description ns1:EmployeeShape .
+
+[] a foaf:Image .
+
+[] a foaf:Image .
+

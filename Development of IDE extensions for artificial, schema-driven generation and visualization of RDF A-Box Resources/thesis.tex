@@ -29,7 +29,7 @@
 \usepackage{float}		% adjustment of floating environments
 \usepackage{fancyhdr}		% customization of headers and footers
 \graphicspath{{./figures/}}
-\usepackage{biblatex}
+% \usepackage{biblatex}
 \usepackage{textcomp}
 \usepackage{xcolor}		% colours
 \usepackage{subcaption}	% subnumbering for illustrations
@@ -140,6 +140,7 @@
 %%
 %% Load literature database.
 %%
+\usepackage[style=ieee, sorting=none]{biblatex}
 \addbibresource{bibliography.bib}
 
 
@@ -160,10 +161,12 @@
 
 % given task/topic
 \cleardoublepage
-\input{content/topic}
 
 % table of contents
 \tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
 
 % TODO: directories
 % TODO: abbreviations
